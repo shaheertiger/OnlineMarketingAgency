@@ -257,7 +257,7 @@ export default function LocalSEOPage() {
           },
         ]}
         pricing={{
-          price: 'from $399',
+          price: 'from $499',
           period: '/ month',
           bullets: [
             'Full Google Business Profile optimization and ongoing management',

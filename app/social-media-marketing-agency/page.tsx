@@ -5,7 +5,7 @@ import ServicePageTemplate from '@/components/ServicePageTemplate'
 export const metadata: Metadata = {
   title: 'Facebook Ads Management Canada | Instagram Ads Agency | OMA Digital',
   description:
-    'Facebook Ads management for Canadian local businesses — drive more customers with Meta advertising. Instagram ads, retargeting, lead campaigns. From $299/month. Free audit.',
+    'Facebook Ads management for Canadian local businesses — drive more customers with Meta advertising. Instagram ads, retargeting, lead campaigns. From $499/month. Free audit.',
   alternates: { canonical: 'https://onlinemarketingagency.ca/social-media-marketing-agency' },
   keywords: [
     'Facebook Ads management Canada',
@@ -15,13 +15,13 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Facebook Ads Management Canada | Instagram Ads Agency | OMA Digital',
     description:
-      'Facebook Ads management for Canadian local businesses — drive more customers with Meta advertising. Instagram ads, retargeting, lead campaigns. From $299/month. Free audit.',
+      'Facebook Ads management for Canadian local businesses — drive more customers with Meta advertising. Instagram ads, retargeting, lead campaigns. From $499/month. Free audit.',
     url: 'https://onlinemarketingagency.ca/social-media-marketing-agency',
   },
   twitter: {
     title: 'Facebook Ads Management Canada | Instagram Ads Agency | OMA Digital',
     description:
-      'Facebook Ads management for Canadian local businesses — drive more customers with Meta advertising. Instagram ads, retargeting, lead campaigns. From $299/month. Free audit.',
+      'Facebook Ads management for Canadian local businesses — drive more customers with Meta advertising. Instagram ads, retargeting, lead campaigns. From $499/month. Free audit.',
   },
 }
 
@@ -261,7 +261,7 @@ export default function SocialMediaPage() {
           },
         ]}
         pricing={{
-          price: 'from $299',
+          price: 'from $499',
           period: '/ month + ad spend',
           bullets: [
             'Full Meta Ads campaign setup: audiences, campaign structure, ad copy, and lead forms',

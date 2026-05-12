@@ -5,7 +5,7 @@ import ServicePageTemplate from '@/components/ServicePageTemplate'
 export const metadata: Metadata = {
   title: 'Google Ads Management Canada | Google Ads Agency for Small Business | OMA',
   description:
-    'Google Ads management for Canadian local businesses — campaigns from $199/month. More calls and bookings, lower cost per lead, no lock-in contracts. Free audit.',
+    'Google Ads management for Canadian local businesses — campaigns from $499/month. More calls and bookings, lower cost per lead, no lock-in contracts. Free audit.',
   alternates: { canonical: 'https://onlinemarketingagency.ca/google-ads-management' },
   keywords: [
     'Google Ads management Canada',
@@ -15,13 +15,13 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Google Ads Management Canada | Google Ads Agency for Small Business | OMA',
     description:
-      'Google Ads management for Canadian local businesses — campaigns from $199/month. More calls and bookings, lower cost per lead, no lock-in contracts. Free audit.',
+      'Google Ads management for Canadian local businesses — campaigns from $499/month. More calls and bookings, lower cost per lead, no lock-in contracts. Free audit.',
     url: 'https://onlinemarketingagency.ca/google-ads-management',
   },
   twitter: {
     title: 'Google Ads Management Canada | Google Ads Agency for Small Business | OMA',
     description:
-      'Google Ads management for Canadian local businesses — campaigns from $199/month. More calls and bookings, lower cost per lead, no lock-in contracts. Free audit.',
+      'Google Ads management for Canadian local businesses — campaigns from $499/month. More calls and bookings, lower cost per lead, no lock-in contracts. Free audit.',
   },
 }
 
@@ -49,7 +49,7 @@ const faqSchema = {
       name: 'How much does Google Ads management cost in Canada?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Our Google Ads management starts from $199 per month plus your ad spend budget. Most local businesses in Canada start with $500–$1,500 per month in ad spend. We recommend a budget based on your service area, competition, and target cost per lead after your free audit.',
+        text: 'Our Google Ads management starts from $499 per month plus your ad spend budget. Most local businesses in Canada start with $500–$1,500 per month in ad spend. We recommend a budget based on your service area, competition, and target cost per lead after your free audit.',
       },
     },
     {
@@ -262,7 +262,7 @@ export default function GoogleAdsPage() {
           },
         ]}
         pricing={{
-          price: 'from $199',
+          price: 'from $499',
           period: '/ month + ad spend',
           bullets: [
             'Full campaign setup: keywords, ad copy, campaign structure, geo-targeting',
@@ -308,7 +308,7 @@ export default function GoogleAdsPage() {
           {
             question: 'How much does Google Ads management cost in Canada?',
             answer:
-              'Our Google Ads management starts from $199 per month plus your ad spend budget. Most local businesses in Canada start with $500–$1,500 per month in ad spend. We recommend a budget based on your service area, competition, and target cost per lead after your free audit.',
+              'Our Google Ads management starts from $499 per month plus your ad spend budget. Most local businesses in Canada start with $500–$1,500 per month in ad spend. We recommend a budget based on your service area, competition, and target cost per lead after your free audit.',
           },
           {
             question: 'How quickly can Google Ads generate leads for my business?',

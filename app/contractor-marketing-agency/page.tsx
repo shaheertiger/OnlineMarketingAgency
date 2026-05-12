@@ -93,7 +93,7 @@ export default function ContractorMarketingPage() {
         {
           question: 'How much do contractor marketing services cost?',
           answer:
-            'Our contractor marketing starts from $199 per month for Google Ads management. A full lead generation system with ads, SEO, and website optimization is priced on a custom basis.',
+            'Our contractor marketing starts from $499 per month for Google Ads management. A full lead generation system with ads, SEO, and website optimization is priced on a custom basis.',
         },
       ]}
       relatedIndustries={[
