@@ -44,7 +44,7 @@ const auditFindings: { label: string; severity: 'critical' | 'ok' | 'warning' }[
 const faqs = [
   {
     q: 'How much does Facebook Ads management cost in Toronto?',
-    a: 'Our Facebook Ads management starts at $750/month for growing businesses. This covers full campaign setup, audience research, creative direction, weekly optimization, and monthly reporting. Ad spend is separate and billed directly to your Meta account.',
+    a: 'Our Facebook Ads management starts at $499/month for growing businesses. This covers full campaign setup, audience research, creative direction, weekly optimization, and monthly reporting. Ad spend is separate and billed directly to your Meta account.',
   },
   {
     q: 'What is the minimum ad spend recommended for Toronto Facebook Ads?',
@@ -1194,9 +1194,9 @@ export default function FacebookAdsToronto() {
             {[
               {
                 tier: 'Starter',
-                price: '$750',
+                price: '$499',
                 period: '/month',
-                adSpend: 'Up to $2,000 ad spend',
+                adSpend: 'Up to $1,500 ad spend',
                 features: [
                   '1 campaign (Facebook or Instagram)',
                   'Up to 3 ad sets',
@@ -1209,9 +1209,9 @@ export default function FacebookAdsToronto() {
               },
               {
                 tier: 'Growth',
-                price: '$1,250',
+                price: '$749',
                 period: '/month',
-                adSpend: '$2,000–$5,000 ad spend',
+                adSpend: '$1,500–$3,500 ad spend',
                 features: [
                   'Up to 3 campaigns (Facebook + Instagram)',
                   'Lookalike & retargeting audiences',
@@ -1224,9 +1224,9 @@ export default function FacebookAdsToronto() {
               },
               {
                 tier: 'Scale',
-                price: '$2,000',
+                price: '$999',
                 period: '/month',
-                adSpend: '$5,000+ ad spend',
+                adSpend: '$3,500+ ad spend',
                 features: [
                   'Unlimited campaigns & ad sets',
                   'Full creative production support',
