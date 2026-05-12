@@ -1066,7 +1066,7 @@ export default function SEOConsultantPage() {
                         required
                         placeholder="Jane Smith"
                         className="w-full text-sm px-3.5 py-2.5 rounded-lg outline-none focus:ring-1"
-                        style={{ background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.08)', color: '#F8FAFC', ringColor: '#C8FF00' }}
+                        style={{ background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.08)', color: '#F8FAFC' }}
                       />
                     </div>
                     <div>
