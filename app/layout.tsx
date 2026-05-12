@@ -119,10 +119,8 @@ export default function RootLayout({
         {/* Preconnect to Google Fonts for faster LCP */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        {/* Favicon */}
-        <link rel="icon"             href="/favicon.ico" sizes="any" />
-        <link rel="icon"             href="/icon.svg" type="image/svg+xml" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        {/* SVG favicon fallback — PNG sizes served by app/icon.tsx and app/apple-icon.tsx */}
+        <link rel="icon" href="/icon.svg" type="image/svg+xml" />
       </head>
       <body>
         <Header />

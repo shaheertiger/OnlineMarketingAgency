@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+  <rect width="32" height="32" rx="7" fill="#0F0F12"/>
+  <rect width="32" height="32" rx="7" fill="none" stroke="rgba(200,255,0,0.25)" stroke-width="1"/>
+  <text
+    x="16"
+    y="23"
+    text-anchor="middle"
+    font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+    font-weight="900"
+    font-size="20"
+    letter-spacing="-0.8"
+    fill="#C8FF00"
+  >O</text>
+</svg>
