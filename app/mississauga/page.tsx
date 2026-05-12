@@ -4,17 +4,24 @@ import LocationPageTemplate from '@/components/LocationPageTemplate'
 export const metadata: Metadata = {
   title: 'Digital Marketing Agency Mississauga | Google Ads, SEO & Local Leads | OMA',
   description:
-    'OMA helps Mississauga local businesses get more calls, bookings, and customers with Google Ads, SEO, Local SEO, and lead generation. Free marketing audit.',
+    'Digital marketing agency Mississauga — Google Ads, SEO, Local SEO, and lead generation for Mississauga local businesses. Free marketing audit. 905-626-9919.',
   alternates: { canonical: 'https://onlinemarketingagency.ca/mississauga' },
   keywords: [
     'digital marketing agency Mississauga',
     'Google Ads management Mississauga',
-    'SEO services Mississauga',
     'local SEO Mississauga',
-    'lead generation Mississauga',
-    'small business marketing Mississauga',
-    'marketing agency Mississauga Ontario',
   ],
+  openGraph: {
+    title: 'Digital Marketing Agency Mississauga | Google Ads, SEO & Local Leads | OMA',
+    description:
+      'Digital marketing agency Mississauga — Google Ads, SEO, Local SEO, and lead generation for Mississauga local businesses. Free marketing audit. 905-626-9919.',
+    url: 'https://onlinemarketingagency.ca/mississauga',
+  },
+  twitter: {
+    title: 'Digital Marketing Agency Mississauga | Google Ads, SEO & Local Leads | OMA',
+    description:
+      'Digital marketing agency Mississauga — Google Ads, SEO, Local SEO, and lead generation for Mississauga local businesses. Free marketing audit. 905-626-9919.',
+  },
 }
 
 const localBusinessSchema = {

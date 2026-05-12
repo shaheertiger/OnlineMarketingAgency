@@ -5,17 +5,24 @@ import ServicePageTemplate from '@/components/ServicePageTemplate'
 export const metadata: Metadata = {
   title: 'SEO Services Canada | Small Business SEO Agency | OMA Digital',
   description:
-    'Rank higher on Google and get more organic leads with SEO services for small businesses across Canada. Technical SEO, content, local SEO, and link building. Free audit.',
+    'SEO services for small businesses across Canada — rank higher on Google, get more organic leads. Technical SEO, content, local SEO, and link building. Free audit.',
   alternates: { canonical: 'https://onlinemarketingagency.ca/seo-services' },
   keywords: [
     'SEO services Canada',
     'small business SEO services',
     'SEO agency Canada',
-    'SEO for small business',
-    'affordable SEO Canada',
-    'organic search optimization Canada',
-    'SEO company Canada',
   ],
+  openGraph: {
+    title: 'SEO Services Canada | Small Business SEO Agency | OMA Digital',
+    description:
+      'SEO services for small businesses across Canada — rank higher on Google, get more organic leads. Technical SEO, content, local SEO, and link building. Free audit.',
+    url: 'https://onlinemarketingagency.ca/seo-services',
+  },
+  twitter: {
+    title: 'SEO Services Canada | Small Business SEO Agency | OMA Digital',
+    description:
+      'SEO services for small businesses across Canada — rank higher on Google, get more organic leads. Technical SEO, content, local SEO, and link building. Free audit.',
+  },
 }
 
 const serviceSchema = {

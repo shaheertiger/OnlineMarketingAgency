@@ -4,17 +4,24 @@ import LocationPageTemplate from '@/components/LocationPageTemplate'
 export const metadata: Metadata = {
   title: 'Digital Marketing Agency Vaughan | Google Ads, SEO & Local Leads | OMA',
   description:
-    'OMA helps Vaughan local businesses get more calls, bookings, and customers with Google Ads, SEO, Local SEO, and lead generation. Free marketing audit. 905-626-9919.',
+    'Digital marketing agency Vaughan — Google Ads, SEO, Local SEO, and lead generation for Vaughan local businesses. Free marketing audit. 905-626-9919.',
   alternates: { canonical: 'https://onlinemarketingagency.ca/vaughan' },
   keywords: [
     'digital marketing agency Vaughan',
     'Google Ads management Vaughan',
-    'SEO services Vaughan',
     'local SEO Vaughan',
-    'lead generation Vaughan',
-    'small business marketing Vaughan',
-    'marketing agency Vaughan Ontario',
   ],
+  openGraph: {
+    title: 'Digital Marketing Agency Vaughan | Google Ads, SEO & Local Leads | OMA',
+    description:
+      'Digital marketing agency Vaughan — Google Ads, SEO, Local SEO, and lead generation for Vaughan local businesses. Free marketing audit. 905-626-9919.',
+    url: 'https://onlinemarketingagency.ca/vaughan',
+  },
+  twitter: {
+    title: 'Digital Marketing Agency Vaughan | Google Ads, SEO & Local Leads | OMA',
+    description:
+      'Digital marketing agency Vaughan — Google Ads, SEO, Local SEO, and lead generation for Vaughan local businesses. Free marketing audit. 905-626-9919.',
+  },
 }
 
 const localBusinessSchema = {

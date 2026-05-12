@@ -5,16 +5,24 @@ import ServicePageTemplate from '@/components/ServicePageTemplate'
 export const metadata: Metadata = {
   title: 'Lead Generation Agency Canada | More Calls & Bookings for Local Business | OMA',
   description:
-    'Build a consistent lead generation system for your local business in Canada. Google Ads, SEO, Local SEO, and conversion tracking combined. Free audit. No contracts.',
+    'Lead generation agency for Canadian local businesses — Google Ads, SEO, and Local SEO combined into one consistent lead pipeline. No lock-in contracts. Free audit.',
   alternates: { canonical: 'https://onlinemarketingagency.ca/lead-generation-agency' },
   keywords: [
     'lead generation agency Canada',
-    'lead generation for small business Canada',
+    'lead generation for local business Canada',
     'local lead generation Canada',
-    'inbound lead generation Canada',
-    'B2C lead generation Canada',
-    'more leads for local business',
   ],
+  openGraph: {
+    title: 'Lead Generation Agency Canada | More Calls & Bookings for Local Business | OMA',
+    description:
+      'Lead generation agency for Canadian local businesses — Google Ads, SEO, and Local SEO combined into one consistent lead pipeline. No lock-in contracts. Free audit.',
+    url: 'https://onlinemarketingagency.ca/lead-generation-agency',
+  },
+  twitter: {
+    title: 'Lead Generation Agency Canada | More Calls & Bookings for Local Business | OMA',
+    description:
+      'Lead generation agency for Canadian local businesses — Google Ads, SEO, and Local SEO combined into one consistent lead pipeline. No lock-in contracts. Free audit.',
+  },
 }
 
 const serviceSchema = {

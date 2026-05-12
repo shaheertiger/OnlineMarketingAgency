@@ -4,8 +4,24 @@ import IndustryPageTemplate from '@/components/IndustryPageTemplate'
 export const metadata: Metadata = {
   title: 'Contractor Marketing Agency | Get More Quote Requests & Project Leads',
   description:
-    'Digital marketing for contractors in Canada. Get more quote requests, project leads, and booked jobs with Google Ads, Local SEO, and a conversion-ready contractor website.',
+    'Contractor marketing agency for Canadian trades businesses — get more quote requests, project leads, and booked jobs with Google Ads, Local SEO, and a conversion-ready website.',
   alternates: { canonical: 'https://onlinemarketingagency.ca/contractor-marketing-agency' },
+  keywords: [
+    'contractor marketing agency',
+    'contractor digital marketing Canada',
+    'trades marketing agency Canada',
+  ],
+  openGraph: {
+    title: 'Contractor Marketing Agency | Get More Quote Requests & Project Leads',
+    description:
+      'Contractor marketing agency for Canadian trades businesses — get more quote requests, project leads, and booked jobs with Google Ads, Local SEO, and a conversion-ready website.',
+    url: 'https://onlinemarketingagency.ca/contractor-marketing-agency',
+  },
+  twitter: {
+    title: 'Contractor Marketing Agency | Get More Quote Requests & Project Leads',
+    description:
+      'Contractor marketing agency for Canadian trades businesses — get more quote requests, project leads, and booked jobs with Google Ads, Local SEO, and a conversion-ready website.',
+  },
 }
 
 export default function ContractorMarketingPage() {

@@ -5,17 +5,24 @@ import ServicePageTemplate from '@/components/ServicePageTemplate'
 export const metadata: Metadata = {
   title: 'Google Ads Management Canada | Google Ads Agency for Small Business | OMA',
   description:
-    'Get more calls and bookings with Google Ads management built for Canadian local businesses. No lock-in contracts. Campaigns from $199/month + ad spend. Free audit.',
+    'Google Ads management for Canadian local businesses — campaigns from $199/month. More calls and bookings, lower cost per lead, no lock-in contracts. Free audit.',
   alternates: { canonical: 'https://onlinemarketingagency.ca/google-ads-management' },
   keywords: [
     'Google Ads management Canada',
     'Google Ads agency for small business',
-    'Google Ads management',
     'PPC management Canada',
-    'Google Ads agency Canada',
-    'Google Search Ads for local business',
-    'pay per click management Canada',
   ],
+  openGraph: {
+    title: 'Google Ads Management Canada | Google Ads Agency for Small Business | OMA',
+    description:
+      'Google Ads management for Canadian local businesses — campaigns from $199/month. More calls and bookings, lower cost per lead, no lock-in contracts. Free audit.',
+    url: 'https://onlinemarketingagency.ca/google-ads-management',
+  },
+  twitter: {
+    title: 'Google Ads Management Canada | Google Ads Agency for Small Business | OMA',
+    description:
+      'Google Ads management for Canadian local businesses — campaigns from $199/month. More calls and bookings, lower cost per lead, no lock-in contracts. Free audit.',
+  },
 }
 
 const serviceSchema = {

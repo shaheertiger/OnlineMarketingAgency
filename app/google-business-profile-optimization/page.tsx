@@ -5,18 +5,26 @@ import ServicePageTemplate from '@/components/ServicePageTemplate'
 export const metadata: Metadata = {
   title: 'Google Business Profile Optimization Canada | More Calls from Google Maps | OMA',
   description:
-    'Optimize your Google Business Profile to rank higher in the local map pack and get more calls, bookings, and direction requests from nearby customers. Free GBP audit.',
+    'Google Business Profile optimization for Canadian businesses — rank higher in the local map pack and get more calls, bookings, and direction requests. Free GBP audit.',
   alternates: {
     canonical: 'https://onlinemarketingagency.ca/google-business-profile-optimization',
   },
   keywords: [
     'Google Business Profile optimization Canada',
-    'Google My Business optimization',
     'GBP optimization Canada',
-    'Google Maps optimization',
-    'local map pack ranking',
-    'Google Business Profile management Canada',
+    'Google Maps optimization Canada',
   ],
+  openGraph: {
+    title: 'Google Business Profile Optimization Canada | More Calls from Google Maps | OMA',
+    description:
+      'Google Business Profile optimization for Canadian businesses — rank higher in the local map pack and get more calls, bookings, and direction requests. Free GBP audit.',
+    url: 'https://onlinemarketingagency.ca/google-business-profile-optimization',
+  },
+  twitter: {
+    title: 'Google Business Profile Optimization Canada | More Calls from Google Maps | OMA',
+    description:
+      'Google Business Profile optimization for Canadian businesses — rank higher in the local map pack and get more calls, bookings, and direction requests. Free GBP audit.',
+  },
 }
 
 const serviceSchema = {

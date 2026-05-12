@@ -5,16 +5,24 @@ import ServicePageTemplate from '@/components/ServicePageTemplate'
 export const metadata: Metadata = {
   title: 'Website Design for Small Business Canada | Conversion-Focused Sites | OMA',
   description:
-    'Get a fast, mobile-friendly website built to convert visitors into calls and leads. Website design for Canadian small businesses starting from $499. Free audit.',
+    'Website design for small business Canada — fast, mobile-friendly sites that convert visitors into calls and leads, starting from $499. Free design consultation.',
   alternates: { canonical: 'https://onlinemarketingagency.ca/website-design-for-small-business' },
   keywords: [
     'website design for small business Canada',
-    'small business website design',
-    'website design Canada',
-    'affordable website design Canada',
-    'local business website design',
-    'conversion-focused website design Canada',
+    'small business website design Canada',
+    'conversion website design Canada',
   ],
+  openGraph: {
+    title: 'Website Design for Small Business Canada | Conversion-Focused Sites | OMA',
+    description:
+      'Website design for small business Canada — fast, mobile-friendly sites that convert visitors into calls and leads, starting from $499. Free design consultation.',
+    url: 'https://onlinemarketingagency.ca/website-design-for-small-business',
+  },
+  twitter: {
+    title: 'Website Design for Small Business Canada | Conversion-Focused Sites | OMA',
+    description:
+      'Website design for small business Canada — fast, mobile-friendly sites that convert visitors into calls and leads, starting from $499. Free design consultation.',
+  },
 }
 
 const serviceSchema = {

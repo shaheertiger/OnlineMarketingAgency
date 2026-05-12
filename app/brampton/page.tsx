@@ -4,17 +4,24 @@ import LocationPageTemplate from '@/components/LocationPageTemplate'
 export const metadata: Metadata = {
   title: 'Digital Marketing Agency Brampton | Google Ads, SEO & Local Leads | OMA',
   description:
-    'OMA helps Brampton local businesses get more calls, bookings, and customers with Google Ads, SEO, Local SEO, and lead generation. Free marketing audit. 905-626-9919.',
+    'Digital marketing agency Brampton — Google Ads, SEO, Local SEO, and lead generation for Brampton local businesses. Free marketing audit. 905-626-9919.',
   alternates: { canonical: 'https://onlinemarketingagency.ca/brampton' },
   keywords: [
     'digital marketing agency Brampton',
     'Google Ads management Brampton',
-    'SEO services Brampton',
     'local SEO Brampton',
-    'lead generation Brampton',
-    'small business marketing Brampton',
-    'marketing agency Brampton Ontario',
   ],
+  openGraph: {
+    title: 'Digital Marketing Agency Brampton | Google Ads, SEO & Local Leads | OMA',
+    description:
+      'Digital marketing agency Brampton — Google Ads, SEO, Local SEO, and lead generation for Brampton local businesses. Free marketing audit. 905-626-9919.',
+    url: 'https://onlinemarketingagency.ca/brampton',
+  },
+  twitter: {
+    title: 'Digital Marketing Agency Brampton | Google Ads, SEO & Local Leads | OMA',
+    description:
+      'Digital marketing agency Brampton — Google Ads, SEO, Local SEO, and lead generation for Brampton local businesses. Free marketing audit. 905-626-9919.',
+  },
 }
 
 const localBusinessSchema = {

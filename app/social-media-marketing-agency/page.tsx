@@ -5,16 +5,24 @@ import ServicePageTemplate from '@/components/ServicePageTemplate'
 export const metadata: Metadata = {
   title: 'Facebook Ads Management Canada | Instagram Ads Agency | OMA Digital',
   description:
-    'Drive more local customers with Facebook Ads and Instagram Ads for small businesses across Canada. Full Meta advertising management. No lock-in. Free audit available.',
+    'Facebook Ads management for Canadian local businesses — drive more customers with Meta advertising. Instagram ads, retargeting, lead campaigns. From $299/month. Free audit.',
   alternates: { canonical: 'https://onlinemarketingagency.ca/social-media-marketing-agency' },
   keywords: [
     'Facebook Ads management Canada',
     'Instagram Ads agency Canada',
-    'Meta Ads agency Canada',
-    'social media marketing agency Canada',
-    'Facebook Ads for small business Canada',
-    'Instagram Ads for local business',
+    'Meta advertising Canada',
   ],
+  openGraph: {
+    title: 'Facebook Ads Management Canada | Instagram Ads Agency | OMA Digital',
+    description:
+      'Facebook Ads management for Canadian local businesses — drive more customers with Meta advertising. Instagram ads, retargeting, lead campaigns. From $299/month. Free audit.',
+    url: 'https://onlinemarketingagency.ca/social-media-marketing-agency',
+  },
+  twitter: {
+    title: 'Facebook Ads Management Canada | Instagram Ads Agency | OMA Digital',
+    description:
+      'Facebook Ads management for Canadian local businesses — drive more customers with Meta advertising. Instagram ads, retargeting, lead campaigns. From $299/month. Free audit.',
+  },
 }
 
 const serviceSchema = {

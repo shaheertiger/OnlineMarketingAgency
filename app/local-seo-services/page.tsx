@@ -5,17 +5,24 @@ import ServicePageTemplate from '@/components/ServicePageTemplate'
 export const metadata: Metadata = {
   title: 'Local SEO Services Canada | Rank Higher on Google Maps | OMA',
   description:
-    'Get more local customers with local SEO services for small businesses across Canada. Google Maps optimization, citation building, and local keyword rankings. Free audit.',
+    'Local SEO services for businesses across Canada — rank higher on Google Maps and get more calls from nearby customers. GBP optimization, citations, local content. Free audit.',
   alternates: { canonical: 'https://onlinemarketingagency.ca/local-seo-services' },
   keywords: [
     'local SEO services Canada',
-    'local SEO agency',
-    'local SEO for small business',
+    'local SEO agency Canada',
     'Google Maps SEO Canada',
-    'near me SEO',
-    'local search optimization Canada',
-    'local SEO company Canada',
   ],
+  openGraph: {
+    title: 'Local SEO Services Canada | Rank Higher on Google Maps | OMA',
+    description:
+      'Local SEO services for businesses across Canada — rank higher on Google Maps and get more calls from nearby customers. GBP optimization, citations, local content. Free audit.',
+    url: 'https://onlinemarketingagency.ca/local-seo-services',
+  },
+  twitter: {
+    title: 'Local SEO Services Canada | Rank Higher on Google Maps | OMA',
+    description:
+      'Local SEO services for businesses across Canada — rank higher on Google Maps and get more calls from nearby customers. GBP optimization, citations, local content. Free audit.',
+  },
 }
 
 const serviceSchema = {

@@ -4,8 +4,24 @@ import IndustryPageTemplate from '@/components/IndustryPageTemplate'
 export const metadata: Metadata = {
   title: 'Barbershop Marketing Agency | Get More Haircut Bookings',
   description:
-    'Digital marketing for barbershops in Canada. Get more haircut bookings, phone calls, and walk-in customers with Google Ads, Local SEO, and Google Business Profile optimization.',
+    'Barbershop marketing agency for Canadian barbers — get more haircut bookings, walk-ins, and phone calls with Google Ads, Local SEO, and Google Business Profile optimization.',
   alternates: { canonical: 'https://onlinemarketingagency.ca/barber-marketing-agency' },
+  keywords: [
+    'barbershop marketing agency',
+    'barber marketing Canada',
+    'barbershop digital marketing',
+  ],
+  openGraph: {
+    title: 'Barbershop Marketing Agency | Get More Haircut Bookings',
+    description:
+      'Barbershop marketing agency for Canadian barbers — get more haircut bookings, walk-ins, and phone calls with Google Ads, Local SEO, and Google Business Profile optimization.',
+    url: 'https://onlinemarketingagency.ca/barber-marketing-agency',
+  },
+  twitter: {
+    title: 'Barbershop Marketing Agency | Get More Haircut Bookings',
+    description:
+      'Barbershop marketing agency for Canadian barbers — get more haircut bookings, walk-ins, and phone calls with Google Ads, Local SEO, and Google Business Profile optimization.',
+  },
 }
 
 export default function BarberMarketingPage() {

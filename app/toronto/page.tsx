@@ -4,17 +4,24 @@ import LocationPageTemplate from '@/components/LocationPageTemplate'
 export const metadata: Metadata = {
   title: 'Digital Marketing Agency Toronto | Google Ads, SEO & Local Leads | OMA',
   description:
-    'OMA is a Toronto digital marketing agency helping local businesses get more calls, bookings, and customers with Google Ads, SEO, Local SEO, and lead generation. Free audit.',
+    'Digital marketing agency Toronto — Google Ads, SEO, Local SEO, and lead generation for Toronto local businesses. Free marketing audit. 905-626-9919.',
   alternates: { canonical: 'https://onlinemarketingagency.ca/toronto' },
   keywords: [
     'digital marketing agency Toronto',
     'Google Ads management Toronto',
-    'SEO services Toronto',
     'local SEO Toronto',
-    'lead generation Toronto',
-    'small business marketing Toronto',
-    'marketing agency Toronto Ontario',
   ],
+  openGraph: {
+    title: 'Digital Marketing Agency Toronto | Google Ads, SEO & Local Leads | OMA',
+    description:
+      'Digital marketing agency Toronto — Google Ads, SEO, Local SEO, and lead generation for Toronto local businesses. Free marketing audit. 905-626-9919.',
+    url: 'https://onlinemarketingagency.ca/toronto',
+  },
+  twitter: {
+    title: 'Digital Marketing Agency Toronto | Google Ads, SEO & Local Leads | OMA',
+    description:
+      'Digital marketing agency Toronto — Google Ads, SEO, Local SEO, and lead generation for Toronto local businesses. Free marketing audit. 905-626-9919.',
+  },
 }
 
 const localBusinessSchema = {

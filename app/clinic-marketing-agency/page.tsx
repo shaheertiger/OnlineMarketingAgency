@@ -4,8 +4,24 @@ import IndustryPageTemplate from '@/components/IndustryPageTemplate'
 export const metadata: Metadata = {
   title: 'Clinic Marketing Agency | Get More Patient Bookings',
   description:
-    'Digital marketing for medical clinics and healthcare businesses in Canada. Get more patient bookings, consultation requests, and local visibility with Google Ads, SEO, and website design.',
+    'Clinic marketing agency for Canadian healthcare businesses — get more patient bookings, consultation requests, and local visibility with Google Ads, SEO, and website design.',
   alternates: { canonical: 'https://onlinemarketingagency.ca/clinic-marketing-agency' },
+  keywords: [
+    'clinic marketing agency',
+    'medical clinic marketing Canada',
+    'healthcare digital marketing Canada',
+  ],
+  openGraph: {
+    title: 'Clinic Marketing Agency | Get More Patient Bookings',
+    description:
+      'Clinic marketing agency for Canadian healthcare businesses — get more patient bookings, consultation requests, and local visibility with Google Ads, SEO, and website design.',
+    url: 'https://onlinemarketingagency.ca/clinic-marketing-agency',
+  },
+  twitter: {
+    title: 'Clinic Marketing Agency | Get More Patient Bookings',
+    description:
+      'Clinic marketing agency for Canadian healthcare businesses — get more patient bookings, consultation requests, and local visibility with Google Ads, SEO, and website design.',
+  },
 }
 
 export default function ClinicMarketingPage() {
