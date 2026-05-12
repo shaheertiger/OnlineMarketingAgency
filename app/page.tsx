@@ -1,15 +1,18 @@
 import type { Metadata } from 'next'
 import Hero from '@/components/Hero'
+import StatsStrip from '@/components/StatsStrip'
 import ServiceBar from '@/components/ServiceBar'
 import ProblemSection from '@/components/ProblemSection'
 import ServicesSection from '@/components/ServicesSection'
 import ValueSection from '@/components/ValueSection'
+import RiskReversal from '@/components/RiskReversal'
 import IndustriesSection from '@/components/IndustriesSection'
 import PackagesSection from '@/components/PackagesSection'
 import ProcessSection from '@/components/ProcessSection'
 import AboutSection from '@/components/AboutSection'
 import FAQSection from '@/components/FAQSection'
 import CTASection from '@/components/CTASection'
+import FloatingCTA from '@/components/FloatingCTA'
 
 export const metadata: Metadata = {
   title: 'Digital Marketing Agency Canada | Google Ads, SEO & Local Leads',
@@ -92,6 +95,7 @@ const localBusinessSchema = {
   description:
     'Digital marketing agency in Canada helping small businesses grow with Google Ads, SEO, Local SEO, website design, and lead generation.',
   url: 'https://onlinemarketingagency.ca',
+  telephone: '+19056269919',
   email: 'info@onlinemarketingagency.ca',
   address: {
     '@type': 'PostalAddress',
@@ -120,10 +124,12 @@ const organizationSchema = {
   name: 'OnlineMarketingAgency.ca',
   url: 'https://onlinemarketingagency.ca',
   logo: 'https://onlinemarketingagency.ca/logo.png',
+  telephone: '+19056269919',
   sameAs: [],
   contactPoint: {
     '@type': 'ContactPoint',
     contactType: 'customer service',
+    telephone: '+19056269919',
     email: 'info@onlinemarketingagency.ca',
     availableLanguage: 'English',
   },
@@ -147,7 +153,6 @@ const websiteSchema = {
 export default function HomePage() {
   return (
     <>
-      {/* Structured data */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
@@ -166,16 +171,19 @@ export default function HomePage() {
       />
 
       <Hero />
+      <StatsStrip />
       <ServiceBar />
       <ProblemSection />
       <ServicesSection />
       <ValueSection />
+      <RiskReversal />
       <IndustriesSection />
       <PackagesSection />
       <ProcessSection />
       <AboutSection />
       <FAQSection faqs={homepageFAQs} />
       <CTASection />
+      <FloatingCTA />
     </>
   )
 }
