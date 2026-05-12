@@ -79,6 +79,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 0.9,
     },
+    {
+      url: `${baseUrl}/dentist-google-ads`,
+      lastModified: LAST_UPDATED,
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
 
     // City / location pages
     {
