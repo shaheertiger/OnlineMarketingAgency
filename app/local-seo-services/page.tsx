@@ -336,6 +336,10 @@ export default function LocalSEOPage() {
           { label: 'Services', href: '/#services' },
           { label: 'Local SEO Services' },
         ]}
+        breadcrumb={[
+          { label: 'Services', href: '/#services' },
+          { label: 'Local SEO Services' },
+        ]}
       />
     </>
   )

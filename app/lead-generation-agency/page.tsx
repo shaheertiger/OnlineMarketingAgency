@@ -335,6 +335,10 @@ export default function LeadGenPage() {
           { label: 'Services', href: '/#services' },
           { label: 'Lead Generation Agency' },
         ]}
+        breadcrumb={[
+          { label: 'Services', href: '/#services' },
+          { label: 'Lead Generation Agency' },
+        ]}
       />
     </>
   )

@@ -336,6 +336,10 @@ export default function GBPPage() {
           { label: 'Services', href: '/#services' },
           { label: 'Google Business Profile Optimization' },
         ]}
+        breadcrumb={[
+          { label: 'Services', href: '/#services' },
+          { label: 'Google Business Profile Optimization' },
+        ]}
       />
     </>
   )
