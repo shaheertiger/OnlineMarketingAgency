@@ -22,6 +22,13 @@ function MetricCard({
   )
 }
 
+const trustBadges = [
+  'No lock-in contracts',
+  'Free marketing audit',
+  'Results in 30 days',
+  'Canadian agency',
+]
+
 export default function Hero() {
   return (
     <section className="relative bg-gradient-to-br from-slate-50 via-white to-blue-50 overflow-hidden">
@@ -35,31 +42,48 @@ export default function Hero() {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left: Copy */}
           <div>
-            <p className="section-label mb-4">Digital Marketing Agency Canada</p>
-            <h1 className="text-4xl sm:text-5xl lg:text-[3.25rem] font-bold text-slate-900 leading-[1.1] mb-6">
-              Digital Marketing Agency For Local Businesses That Need More Leads
+            {/* Urgency pill */}
+            <div className="inline-flex items-center gap-2 bg-blue-50 border border-blue-100 rounded-full px-3.5 py-1.5 mb-5">
+              <span className="w-2 h-2 rounded-full bg-blue-600 animate-pulse shrink-0" />
+              <span className="text-xs font-semibold text-blue-700">
+                Free audits available — limited spots this month
+              </span>
+            </div>
+
+            <h1 className="text-4xl sm:text-5xl lg:text-[3.25rem] font-bold text-slate-900 leading-[1.1] mb-5">
+              Digital Marketing Agency For Local Businesses That Need{' '}
+              <span className="text-blue-600">More Leads</span>
             </h1>
-            <p className="text-lg text-slate-600 leading-relaxed mb-8 max-w-xl">
-              We help small businesses get more calls, bookings, and customers with Google Ads, SEO,
-              Local SEO, website design, Facebook Ads, Instagram Ads, and Google Business Profile
-              optimization.
+
+            <p className="text-lg text-slate-600 leading-relaxed mb-4 max-w-xl">
+              More calls. More bookings. Better local visibility.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="/contact" className="btn-primary text-base px-7 py-3.5">
+            <p className="text-base text-slate-500 leading-relaxed mb-8 max-w-xl">
+              We help small businesses across Canada get more customers with Google Ads, SEO, Local
+              SEO, website design, Facebook Ads, and Google Business Profile optimization.
+            </p>
+
+            {/* Primary CTAs */}
+            <div className="flex flex-col sm:flex-row gap-4 mb-6">
+              <Link href="/contact" className="btn-primary text-base px-7 py-4 shadow-lg shadow-blue-100">
                 Get Free Marketing Audit
               </Link>
-              <Link href="/#services" className="btn-secondary text-base px-7 py-3.5">
-                View Our Services
-              </Link>
+              <a href="tel:9056269919" className="btn-secondary text-base px-7 py-4 flex items-center justify-center gap-2">
+                <svg className="w-4 h-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                </svg>
+                905-626-9919
+              </a>
             </div>
-            <div className="mt-8 flex flex-wrap gap-4">
-              {['Google Ads', 'Local SEO', 'Website Design', 'Google Business Profile'].map((tag) => (
-                <span
-                  key={tag}
-                  className="inline-flex items-center gap-1.5 text-sm text-slate-600 bg-white border border-slate-200 rounded-full px-3.5 py-1.5 shadow-sm"
-                >
-                  <span className="w-1.5 h-1.5 rounded-full bg-blue-600 shrink-0" />
-                  {tag}
+
+            {/* Trust badges */}
+            <div className="flex flex-wrap gap-3">
+              {trustBadges.map((badge) => (
+                <span key={badge} className="inline-flex items-center gap-1.5 text-sm text-slate-600">
+                  <svg className="w-4 h-4 text-emerald-500 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
+                  </svg>
+                  {badge}
                 </span>
               ))}
             </div>

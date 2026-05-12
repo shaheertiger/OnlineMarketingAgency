@@ -1,15 +1,18 @@
 import type { Metadata } from 'next'
 import Hero from '@/components/Hero'
+import StatsStrip from '@/components/StatsStrip'
 import ServiceBar from '@/components/ServiceBar'
 import ProblemSection from '@/components/ProblemSection'
 import ServicesSection from '@/components/ServicesSection'
 import ValueSection from '@/components/ValueSection'
+import RiskReversal from '@/components/RiskReversal'
 import IndustriesSection from '@/components/IndustriesSection'
 import PackagesSection from '@/components/PackagesSection'
 import ProcessSection from '@/components/ProcessSection'
 import AboutSection from '@/components/AboutSection'
 import FAQSection from '@/components/FAQSection'
 import CTASection from '@/components/CTASection'
+import FloatingCTA from '@/components/FloatingCTA'
 
 export const metadata: Metadata = {
   title: 'Digital Marketing Agency Canada | Google Ads, SEO & Local Leads',
@@ -166,16 +169,19 @@ export default function HomePage() {
       />
 
       <Hero />
+      <StatsStrip />
       <ServiceBar />
       <ProblemSection />
       <ServicesSection />
       <ValueSection />
+      <RiskReversal />
       <IndustriesSection />
       <PackagesSection />
       <ProcessSection />
       <AboutSection />
       <FAQSection faqs={homepageFAQs} />
       <CTASection />
+      <FloatingCTA />
     </>
   )
 }
