@@ -20,23 +20,58 @@ export default function CTASection({
   showPhone = true,
 }: CTASectionProps) {
   return (
-    <section className="section-pad bg-blue-600">
-      <div className="container-main text-center">
-        <h2 className="text-3xl md:text-4xl font-bold text-white leading-tight mb-4 max-w-2xl mx-auto">
+    <section
+      className="relative overflow-hidden section-pad"
+      style={{
+        background: 'linear-gradient(160deg, #0B1628 0%, #0E1A3A 40%, #0C1226 100%)',
+      }}
+    >
+      {/* Radial glow */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          background:
+            'radial-gradient(ellipse 70% 60% at 50% 50%, rgba(37,99,235,0.18) 0%, transparent 70%)',
+        }}
+        aria-hidden="true"
+      />
+      {/* Grid pattern */}
+      <div className="absolute inset-0 bg-grid opacity-20 pointer-events-none" aria-hidden="true" />
+
+      {/* Top / bottom accent lines */}
+      <div
+        className="absolute top-0 inset-x-0 h-px pointer-events-none"
+        style={{ background: 'linear-gradient(90deg, transparent, rgba(96,165,250,0.3), transparent)' }}
+        aria-hidden="true"
+      />
+      <div
+        className="absolute bottom-0 inset-x-0 h-px pointer-events-none"
+        style={{ background: 'linear-gradient(90deg, transparent, rgba(96,165,250,0.15), transparent)' }}
+        aria-hidden="true"
+      />
+
+      <div className="container-main relative text-center">
+        {/* Label */}
+        <p className="section-label mb-5">Ready To Grow?</p>
+
+        <h2
+          className="text-3xl md:text-4xl lg:text-5xl font-extrabold leading-[1.1] mb-5 max-w-3xl mx-auto"
+          style={{ color: '#F8FAFC' }}
+        >
           {heading}
         </h2>
-        <p className="text-lg text-blue-100 leading-relaxed mb-8 max-w-xl mx-auto">
+        <p className="text-lg leading-relaxed mb-10 max-w-xl mx-auto" style={{ color: '#64748B' }}>
           {subheading}
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
-          <Link href={ctaHref} className="btn-outline-white text-base px-8 py-3.5">
+          <Link href={ctaHref} className="btn-primary text-base px-9 py-4">
             {ctaText}
           </Link>
           {showPhone && (
             <a
               href="tel:9056269919"
-              className="inline-flex items-center justify-center gap-2 px-8 py-3.5 text-base font-semibold bg-white/10 hover:bg-white/20 text-white rounded-lg transition-colors"
+              className="btn-secondary text-base px-9 py-4 flex items-center justify-center gap-2"
             >
               <svg className="w-4 h-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
@@ -47,7 +82,8 @@ export default function CTASection({
           {secondaryText && secondaryHref && (
             <Link
               href={secondaryHref}
-              className="inline-flex items-center justify-center gap-2 px-8 py-3.5 text-base font-semibold text-blue-100 hover:text-white transition-colors"
+              className="inline-flex items-center justify-center gap-2 px-9 py-4 text-base font-semibold transition-colors duration-200"
+              style={{ color: '#60A5FA' }}
             >
               {secondaryText}
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -57,7 +93,7 @@ export default function CTASection({
           )}
         </div>
 
-        <p className="text-sm text-blue-200">
+        <p className="text-sm" style={{ color: '#334155' }}>
           No contracts. No commitment. Just a clear audit of your marketing opportunities.
         </p>
       </div>
