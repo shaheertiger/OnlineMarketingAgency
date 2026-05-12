@@ -17,6 +17,13 @@ const industries = [
   { label: 'Restaurant Marketing',   href: '/restaurant-marketing-agency' },
 ]
 
+const locations = [
+  { label: 'Toronto',      href: '/toronto' },
+  { label: 'Mississauga',  href: '/mississauga' },
+  { label: 'Brampton',     href: '/brampton' },
+  { label: 'Vaughan',      href: '/vaughan' },
+]
+
 const company = [
   { label: 'About',          href: '/about' },
   { label: 'Blog',           href: '/blog' },
@@ -28,7 +35,7 @@ export default function Footer() {
   return (
     <footer style={{ background: '#0A0A0C' }} role="contentinfo">
       <div className="container-main py-16">
-        <div className="grid grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-10 mb-14">
+        <div className="grid grid-cols-2 lg:grid-cols-6 gap-8 lg:gap-8 mb-14">
 
           {/* Brand */}
           <div className="col-span-2">
@@ -104,6 +111,23 @@ export default function Footer() {
               {industries.map((i) => (
                 <li key={i.href}>
                   <Link href={i.href} className="text-sm footer-link">{i.label}</Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Locations */}
+          <div>
+            <div
+              className="text-[10px] font-bold tracking-[0.14em] uppercase mb-5"
+              style={{ color: 'rgba(255,255,255,0.28)' }}
+            >
+              Locations
+            </div>
+            <ul className="space-y-2.5">
+              {locations.map((l) => (
+                <li key={l.href}>
+                  <Link href={l.href} className="text-sm footer-link">{l.label}</Link>
                 </li>
               ))}
             </ul>
