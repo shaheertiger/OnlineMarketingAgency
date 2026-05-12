@@ -1,12 +1,18 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import CTASection from '@/components/CTASection'
+import Breadcrumb from '@/components/Breadcrumb'
 
 export const metadata: Metadata = {
   title: 'Blog | Digital Marketing Insights For Local Businesses',
   description:
     'Digital marketing tips, guides, and insights for local businesses in Canada. Google Ads, SEO, Local SEO, and lead generation strategies for small business owners.',
   alternates: { canonical: 'https://onlinemarketingagency.ca/blog' },
+  openGraph: {
+    title: 'Digital Marketing Blog For Local Businesses | OnlineMarketingAgency.ca',
+    description: 'Practical guides and strategies for small business owners who want to grow their online presence and generate more leads.',
+    url: 'https://onlinemarketingagency.ca/blog',
+  },
 }
 
 const posts = [
@@ -68,17 +74,53 @@ const posts = [
 
 const categories = ['All', 'Google Ads', 'Local SEO', 'Website Design', 'Social Media', 'Lead Generation']
 
+const categoryColors: Record<string, string> = {
+  'Local SEO': '#34D399',
+  'Google Ads': '#60A5FA',
+  'Website Design': '#FBBF24',
+  'Social Media': '#F472B6',
+  'Lead Generation': '#818CF8',
+}
+
 export default function BlogPage() {
   return (
     <>
+      {/* Breadcrumb */}
+      <div style={{ background: '#060B18' }}>
+        <Breadcrumb items={[{ label: 'Blog' }]} />
+      </div>
+
       {/* Hero */}
-      <section className="bg-gradient-to-br from-slate-50 via-white to-blue-50 py-16 md:py-20">
-        <div className="container-main text-center">
+      <section
+        className="relative overflow-hidden section-pad"
+        style={{ background: 'linear-gradient(160deg, #060B18 0%, #0A1025 50%, #060B18 100%)' }}
+      >
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{ background: 'radial-gradient(ellipse 60% 70% at 50% 0%, rgba(37,99,235,0.1) 0%, transparent 70%)' }}
+          aria-hidden="true"
+        />
+        <div className="absolute inset-0 bg-grid opacity-20 pointer-events-none" aria-hidden="true" />
+
+        <div className="container-main relative text-center">
           <p className="section-label mb-4">Blog</p>
-          <h1 className="text-4xl sm:text-5xl font-bold text-slate-900 leading-tight mb-4">
-            Digital Marketing Insights For Local Businesses
+          <h1
+            className="text-4xl sm:text-5xl font-extrabold leading-[1.08] mb-5"
+            style={{ color: '#F8FAFC' }}
+          >
+            Digital Marketing Insights For{' '}
+            <span
+              style={{
+                background: 'linear-gradient(135deg, #60A5FA, #818CF8)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                backgroundClip: 'text',
+              }}
+            >
+              Local Businesses
+            </span>
           </h1>
-          <p className="text-lg text-slate-600 max-w-xl mx-auto">
+          <p className="text-lg leading-relaxed max-w-xl mx-auto" style={{ color: '#94A3B8' }}>
             Practical guides and strategies for small business owners who want to grow their online
             presence and generate more leads.
           </p>
@@ -86,51 +128,99 @@ export default function BlogPage() {
       </section>
 
       {/* Blog posts */}
-      <section className="section-pad bg-white">
+      <section
+        className="section-pad relative"
+        style={{ background: '#070C1A' }}
+        aria-labelledby="posts-heading"
+      >
+        <div
+          className="absolute top-0 inset-x-0 h-px pointer-events-none"
+          style={{ background: 'linear-gradient(90deg, transparent, rgba(96,165,250,0.15), transparent)' }}
+          aria-hidden="true"
+        />
         <div className="container-main">
-          {/* Category filter (static) */}
-          <div className="flex flex-wrap gap-2 mb-10">
+          <h2 id="posts-heading" className="sr-only">Blog Posts</h2>
+
+          {/* Category filter */}
+          <div className="flex flex-wrap gap-2 mb-10" role="list" aria-label="Filter by category">
             {categories.map((cat, i) => (
               <span
                 key={cat}
-                className={`text-sm font-medium px-4 py-2 rounded-full border cursor-pointer transition-colors ${
+                role="listitem"
+                className="text-sm font-semibold px-4 py-2 rounded-xl cursor-default"
+                style={
                   i === 0
-                    ? 'bg-blue-600 text-white border-blue-600'
-                    : 'bg-white text-slate-600 border-slate-200 hover:border-blue-300 hover:text-blue-600'
-                }`}
+                    ? {
+                        color: '#F8FAFC',
+                        background: 'linear-gradient(135deg, #2563EB, #4F46E5)',
+                        border: '1px solid rgba(37,99,235,0.4)',
+                      }
+                    : {
+                        color: '#64748B',
+                        background: 'rgba(11, 17, 32, 0.6)',
+                        border: '1px solid rgba(51, 65, 85, 0.4)',
+                      }
+                }
               >
                 {cat}
               </span>
             ))}
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-            {posts.map((post) => (
-              <article key={post.slug} className="card flex flex-col group">
-                <div className="flex items-center gap-2 mb-3">
-                  <span className="text-xs font-semibold text-blue-600 bg-blue-50 px-2.5 py-1 rounded-full">
-                    {post.category}
-                  </span>
-                  <span className="text-xs text-slate-400">{post.readTime}</span>
-                </div>
-                <h2 className="text-base font-semibold text-slate-900 mb-3 leading-snug group-hover:text-blue-600 transition-colors flex-1">
-                  {post.title}
-                </h2>
-                <p className="text-sm text-slate-500 leading-relaxed mb-4">{post.excerpt}</p>
-                <div className="flex items-center justify-between mt-auto pt-4 border-t border-slate-100">
-                  <span className="text-xs text-slate-400">{post.date}</span>
-                  <Link
-                    href={`/blog/${post.slug}`}
-                    className="text-sm font-semibold text-blue-600 hover:text-blue-700 flex items-center gap-1 transition-colors"
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            {posts.map((post) => {
+              const accentColor = categoryColors[post.category] ?? '#60A5FA'
+              return (
+                <article
+                  key={post.slug}
+                  className="rounded-2xl p-6 flex flex-col"
+                  style={{
+                    background: 'rgba(11, 17, 32, 0.7)',
+                    border: '1px solid rgba(51, 65, 85, 0.5)',
+                    backdropFilter: 'blur(8px)',
+                  }}
+                >
+                  <div className="flex items-center gap-2 mb-4">
+                    <span
+                      className="text-xs font-semibold px-2.5 py-1 rounded-full"
+                      style={{
+                        color: accentColor,
+                        background: `${accentColor}15`,
+                        border: `1px solid ${accentColor}25`,
+                      }}
+                    >
+                      {post.category}
+                    </span>
+                    <span className="text-xs" style={{ color: '#334155' }}>{post.readTime}</span>
+                  </div>
+                  <h2
+                    className="text-base font-bold leading-snug mb-3 flex-1"
+                    style={{ color: '#F8FAFC' }}
                   >
-                    Read more
-                    <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
-                  </Link>
-                </div>
-              </article>
-            ))}
+                    {post.title}
+                  </h2>
+                  <p className="text-sm leading-relaxed mb-5" style={{ color: '#475569' }}>
+                    {post.excerpt}
+                  </p>
+                  <div
+                    className="flex items-center justify-between mt-auto pt-4"
+                    style={{ borderTop: '1px solid rgba(51, 65, 85, 0.4)' }}
+                  >
+                    <span className="text-xs" style={{ color: '#334155' }}>{post.date}</span>
+                    <Link
+                      href={`/blog/${post.slug}`}
+                      className="text-sm font-semibold flex items-center gap-1 transition-colors duration-150"
+                      style={{ color: '#60A5FA' }}
+                    >
+                      Read more
+                      <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </Link>
+                  </div>
+                </article>
+              )
+            })}
           </div>
         </div>
       </section>

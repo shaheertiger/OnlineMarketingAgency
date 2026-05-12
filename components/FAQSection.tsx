@@ -62,32 +62,44 @@ const defaultFAQs: FAQItem[] = [
 
 function FAQItem({ faq, isOpen, onToggle }: { faq: FAQItem; isOpen: boolean; onToggle: () => void }) {
   return (
-    <div className="border border-slate-200 rounded-xl overflow-hidden">
+    <div
+      className="rounded-2xl overflow-hidden transition-all duration-200"
+      style={{
+        background: isOpen ? 'rgba(15, 23, 42, 0.9)' : 'rgba(11, 17, 32, 0.6)',
+        border: isOpen ? '1px solid rgba(96,165,250,0.2)' : '1px solid rgba(51, 65, 85, 0.4)',
+      }}
+    >
       <button
-        className="w-full flex items-center justify-between gap-4 px-6 py-4 text-left bg-white hover:bg-slate-50 transition-colors"
+        className="w-full flex items-center justify-between gap-4 px-6 py-5 text-left transition-colors duration-200"
         onClick={onToggle}
         aria-expanded={isOpen}
       >
-        <span className="text-base font-semibold text-slate-900">{faq.question}</span>
+        <span className="text-base font-semibold" style={{ color: isOpen ? '#F8FAFC' : '#CBD5E1' }}>
+          {faq.question}
+        </span>
         <span
-          className={`w-8 h-8 rounded-full border-2 border-slate-200 flex items-center justify-center shrink-0 transition-transform duration-200 ${
-            isOpen ? 'rotate-45 border-blue-600 bg-blue-50' : ''
-          }`}
+          className="w-8 h-8 rounded-full flex items-center justify-center shrink-0 transition-all duration-300"
+          style={{
+            background: isOpen ? 'rgba(37,99,235,0.2)' : 'rgba(51,65,85,0.4)',
+            border: isOpen ? '1px solid rgba(96,165,250,0.3)' : '1px solid rgba(71,85,105,0.4)',
+            transform: isOpen ? 'rotate(45deg)' : 'rotate(0deg)',
+          }}
           aria-hidden="true"
         >
           <svg
-            className={`w-4 h-4 ${isOpen ? 'text-blue-600' : 'text-slate-500'}`}
+            className="w-4 h-4"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
+            style={{ color: isOpen ? '#60A5FA' : '#475569' }}
           >
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
           </svg>
         </span>
       </button>
       {isOpen && (
-        <div className="px-6 pb-5 bg-white">
-          <p className="text-slate-600 leading-relaxed">{faq.answer}</p>
+        <div className="px-6 pb-6">
+          <p className="leading-relaxed" style={{ color: '#64748B' }}>{faq.answer}</p>
         </div>
       )}
     </div>
@@ -98,10 +110,19 @@ export default function FAQSection({ faqs = defaultFAQs }: { faqs?: FAQItem[] })
   const [openIndex, setOpenIndex] = useState<number | null>(0)
 
   return (
-    <section className="section-pad bg-slate-50">
+    <section
+      className="section-pad relative"
+      style={{ background: '#060B18' }}
+    >
+      <div
+        className="absolute top-0 inset-x-0 h-px pointer-events-none"
+        style={{ background: 'linear-gradient(90deg, transparent, rgba(96,165,250,0.15), transparent)' }}
+        aria-hidden="true"
+      />
+
       <div className="container-main">
         <div className="max-w-3xl mx-auto">
-          <div className="text-center mb-10">
+          <div className="text-center mb-12">
             <p className="section-label mb-4">FAQ</p>
             <h2 className="section-heading mb-4">Frequently Asked Questions</h2>
             <p className="section-subtext">

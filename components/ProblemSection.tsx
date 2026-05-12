@@ -1,60 +1,74 @@
-const problems = [
-  {
-    title: 'Not ranking on Google Search',
-    desc: 'Competitors appear above you for the searches that bring in paying customers.',
-  },
-  {
-    title: 'No visibility on Google Maps',
-    desc: 'Local customers searching nearby cannot find your business listing.',
-  },
-  {
-    title: 'Website not converting visitors',
-    desc: 'Traffic arrives but leaves without calling, booking, or filling out a form.',
-  },
-  {
-    title: 'Ad budget wasted on poor leads',
-    desc: 'Google or Meta ads are running but not generating qualified inquiries.',
-  },
+import Link from 'next/link'
+
+const proofPoints = [
+  { metric: '+127%', label: 'More phone calls',        sub: 'Avg. across Google Ads clients' },
+  { metric: '#1',    label: 'Map ranking achieved',    sub: 'For target local keywords' },
+  { metric: '–41%',  label: 'Cost per lead reduction', sub: 'Within first 60 days' },
+  { metric: '4.8×',  label: 'Return on ad spend',      sub: 'Google Ads average' },
+  { metric: '30d',   label: 'To first results',        sub: 'Typical new client timeline' },
+  { metric: '$0',    label: 'Lock-in contracts',       sub: 'Stay because results work' },
 ]
 
 export default function ProblemSection() {
   return (
-    <section className="section-pad bg-white">
+    <section
+      className="section-pad"
+      style={{ background: '#F7F6F2' }}
+      aria-labelledby="differentiator-heading"
+    >
       <div className="container-main">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-          {/* Left */}
-          <div>
-            <p className="section-label mb-4">The Problem</p>
-            <h2 className="section-heading mb-6">
-              Most Local Businesses Are Not Showing Up Where Customers Search
+        <div className="grid lg:grid-cols-2 gap-12 xl:gap-20 items-start">
+
+          {/* LEFT: Bold POV */}
+          <div className="lg:sticky lg:top-28">
+            <p className="section-label mb-5">Our Point of View</p>
+            <h2
+              id="differentiator-heading"
+              className="text-4xl md:text-[3.2rem] xl:text-[3.6rem] font-black leading-[1.0] mb-6"
+              style={{ color: '#0F0F12', letterSpacing: '-0.035em' }}
+            >
+              Most Agencies
+              <br />
+              Track Clicks.
+              <br />
+              <span className="gradient-text-lime">
+                We Track
+                <br />
+                Customers.
+              </span>
             </h2>
-            <p className="section-subtext mb-8">
-              Your customers are searching on Google, Google Maps, Facebook, Instagram, and local
-              search results every day. If your business is not visible, your competitors get the
-              calls, bookings, and leads. We help fix the full system: traffic, rankings, ads,
-              landing pages, tracking, and lead generation.
+            <p className="text-lg leading-relaxed mb-8 max-w-[420px]" style={{ color: '#6B7280' }}>
+              Click-through rates and impression counts don't pay your rent. We build every campaign around what
+              actually matters — calls, bookings, and form submissions from real customers in your market.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <a href="/contact" className="btn-primary">
-                Get Free Marketing Audit
-              </a>
-            </div>
+            <Link href="/contact" className="btn-dark text-sm px-6 py-3">
+              See How We Work
+              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+              </svg>
+            </Link>
           </div>
 
-          {/* Right: problem cards */}
-          <div className="grid sm:grid-cols-2 gap-4">
-            {problems.map((p) => (
-              <div key={p.title} className="bg-slate-50 rounded-xl p-5 border border-slate-100">
-                <div className="w-8 h-8 bg-red-100 rounded-lg flex items-center justify-center mb-3">
-                  <svg className="w-4 h-4 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                  </svg>
+          {/* RIGHT: Proof grid */}
+          <div className="grid sm:grid-cols-2 gap-3.5">
+            {proofPoints.map(({ metric, label, sub }) => (
+              <div
+                key={label}
+                className="p-5 rounded-2xl transition-all duration-200 group"
+                style={{ background: 'white', border: '1px solid rgba(0,0,0,0.07)' }}
+              >
+                <div
+                  className="text-[2.2rem] font-black leading-none mb-1.5"
+                  style={{ color: '#0F0F12', letterSpacing: '-0.04em' }}
+                >
+                  {metric}
                 </div>
-                <h3 className="text-sm font-semibold text-slate-900 mb-1.5">{p.title}</h3>
-                <p className="text-sm text-slate-500 leading-relaxed">{p.desc}</p>
+                <div className="text-sm font-bold mb-0.5" style={{ color: '#0F0F12' }}>{label}</div>
+                <div className="text-xs" style={{ color: '#9CA3AF' }}>{sub}</div>
               </div>
             ))}
           </div>
+
         </div>
       </div>
     </section>

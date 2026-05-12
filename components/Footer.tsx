@@ -1,67 +1,92 @@
 import Link from 'next/link'
 
 const services = [
-  { label: 'Google Ads Management', href: '/google-ads-management' },
-  { label: 'SEO Services', href: '/seo-services' },
-  { label: 'Local SEO Services', href: '/local-seo-services' },
-  { label: 'Google Business Profile Optimization', href: '/google-business-profile-optimization' },
-  { label: 'Website Design For Small Business', href: '/website-design-for-small-business' },
-  { label: 'Social Media Marketing Agency', href: '/social-media-marketing-agency' },
-  { label: 'Lead Generation Agency', href: '/lead-generation-agency' },
+  { label: 'Google Ads Management',   href: '/google-ads-management' },
+  { label: 'SEO Services',            href: '/seo-services' },
+  { label: 'Local SEO',               href: '/local-seo-services' },
+  { label: 'Google Business Profile', href: '/google-business-profile-optimization' },
+  { label: 'Website Design',          href: '/website-design-for-small-business' },
+  { label: 'Social Media Ads',        href: '/social-media-marketing-agency' },
+  { label: 'Lead Generation',         href: '/lead-generation-agency' },
 ]
 
 const industries = [
-  { label: 'Barbershop Marketing', href: '/barber-marketing-agency' },
-  { label: 'Contractor Marketing', href: '/contractor-marketing-agency' },
-  { label: 'Clinic Marketing', href: '/clinic-marketing-agency' },
-  { label: 'Restaurant Marketing', href: '/restaurant-marketing-agency' },
+  { label: 'Barbershop Marketing',   href: '/barber-marketing-agency' },
+  { label: 'Clinic Marketing',       href: '/clinic-marketing-agency' },
+  { label: 'Contractor Marketing',   href: '/contractor-marketing-agency' },
+  { label: 'Restaurant Marketing',   href: '/restaurant-marketing-agency' },
 ]
 
 const company = [
-  { label: 'About', href: '/about' },
-  { label: 'Blog', href: '/blog' },
-  { label: 'Contact', href: '/contact' },
+  { label: 'About',          href: '/about' },
+  { label: 'Blog',           href: '/blog' },
+  { label: 'Contact',        href: '/contact' },
   { label: 'Privacy Policy', href: '/privacy-policy' },
 ]
 
 export default function Footer() {
-  const year = new Date().getFullYear()
-
   return (
-    <footer className="bg-slate-900 text-slate-300" aria-label="Site footer">
-      <div className="container-main py-16 lg:py-20">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12">
-          {/* Brand column */}
-          <div className="sm:col-span-2 lg:col-span-1">
-            <Link href="/" className="text-white font-bold text-xl block mb-4">
-              OnlineMarketingAgency.ca
+    <footer style={{ background: '#0A0A0C' }} role="contentinfo">
+      <div className="container-main py-16">
+        <div className="grid grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-10 mb-14">
+
+          {/* Brand */}
+          <div className="col-span-2">
+            <Link href="/" className="inline-flex items-center gap-2.5 mb-5">
+              <div
+                className="w-[30px] h-[30px] rounded-md flex items-center justify-center font-black text-[13px]"
+                style={{
+                  background: '#0F0F12',
+                  border: '1px solid rgba(200,255,0,0.25)',
+                  color: '#C8FF00',
+                }}
+              >
+                O
+              </div>
+              <span className="font-extrabold text-[14px] tracking-tight text-white">
+                OnlineMarketing<span style={{ color: '#C8FF00' }}>.ca</span>
+              </span>
             </Link>
-            <p className="text-sm text-slate-400 leading-relaxed mb-4">
-              Digital marketing agency for Canadian small businesses. We help local businesses get more
-              calls, bookings, and customers through Google Ads, SEO, Local SEO, and lead generation.
+
+            <p className="text-sm leading-relaxed mb-6 max-w-[260px]" style={{ color: 'rgba(255,255,255,0.38)' }}>
+              Canadian digital marketing agency helping local businesses grow with Google Ads, SEO, Local SEO, and lead generation.
             </p>
-            <p className="text-xs text-slate-500 font-medium">Digital Marketing Agency Canada</p>
-            <div className="mt-6">
-              <Link href="/contact" className="btn-primary text-sm px-5 py-2.5">
-                Get Free Audit
-              </Link>
+
+            <div className="space-y-2">
+              <a
+                href="tel:+19056269919"
+                className="flex items-center gap-2 text-sm font-semibold"
+                style={{ color: '#C8FF00' }}
+              >
+                <svg className="w-4 h-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                </svg>
+                905-626-9919
+              </a>
+              <a
+                href="mailto:info@onlinemarketingagency.ca"
+                className="flex items-center gap-2 text-sm footer-link"
+              >
+                <svg className="w-4 h-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+                info@onlinemarketingagency.ca
+              </a>
             </div>
           </div>
 
           {/* Services */}
           <div>
-            <h3 className="text-white font-semibold text-sm uppercase tracking-widest mb-4">
+            <div
+              className="text-[10px] font-bold tracking-[0.14em] uppercase mb-5"
+              style={{ color: 'rgba(255,255,255,0.28)' }}
+            >
               Services
-            </h3>
+            </div>
             <ul className="space-y-2.5">
               {services.map((s) => (
                 <li key={s.href}>
-                  <Link
-                    href={s.href}
-                    className="text-sm text-slate-400 hover:text-white transition-colors"
-                  >
-                    {s.label}
-                  </Link>
+                  <Link href={s.href} className="text-sm footer-link">{s.label}</Link>
                 </li>
               ))}
             </ul>
@@ -69,89 +94,50 @@ export default function Footer() {
 
           {/* Industries */}
           <div>
-            <h3 className="text-white font-semibold text-sm uppercase tracking-widest mb-4">
+            <div
+              className="text-[10px] font-bold tracking-[0.14em] uppercase mb-5"
+              style={{ color: 'rgba(255,255,255,0.28)' }}
+            >
               Industries
-            </h3>
+            </div>
             <ul className="space-y-2.5">
               {industries.map((i) => (
                 <li key={i.href}>
-                  <Link
-                    href={i.href}
-                    className="text-sm text-slate-400 hover:text-white transition-colors"
-                  >
-                    {i.label}
-                  </Link>
+                  <Link href={i.href} className="text-sm footer-link">{i.label}</Link>
                 </li>
               ))}
             </ul>
-            <h3 className="text-white font-semibold text-sm uppercase tracking-widest mb-4 mt-8">
+          </div>
+
+          {/* Company */}
+          <div>
+            <div
+              className="text-[10px] font-bold tracking-[0.14em] uppercase mb-5"
+              style={{ color: 'rgba(255,255,255,0.28)' }}
+            >
               Company
-            </h3>
-            <ul className="space-y-2.5">
+            </div>
+            <ul className="space-y-2.5 mb-7">
               {company.map((c) => (
                 <li key={c.href}>
-                  <Link
-                    href={c.href}
-                    className="text-sm text-slate-400 hover:text-white transition-colors"
-                  >
-                    {c.label}
-                  </Link>
+                  <Link href={c.href} className="text-sm footer-link">{c.label}</Link>
                 </li>
               ))}
             </ul>
+            <Link href="/contact" className="btn-primary text-xs px-4 py-2.5">
+              Get Free Audit
+            </Link>
           </div>
 
-          {/* Contact info */}
-          <div>
-            <h3 className="text-white font-semibold text-sm uppercase tracking-widest mb-4">
-              Contact
-            </h3>
-            <address className="not-italic space-y-3 text-sm text-slate-400">
-              <p>Canada</p>
-              <p>
-                <a
-                  href="tel:9056269919"
-                  className="hover:text-white transition-colors"
-                >
-                  905-626-9919
-                </a>
-              </p>
-              <p>
-                <a
-                  href="mailto:info@onlinemarketingagency.ca"
-                  className="hover:text-white transition-colors"
-                >
-                  info@onlinemarketingagency.ca
-                </a>
-              </p>
-            </address>
-            <div className="mt-6 p-4 bg-slate-800 rounded-xl">
-              <p className="text-sm text-white font-semibold mb-1">Free Marketing Audit</p>
-              <p className="text-xs text-slate-400 mb-3">
-                Tell us about your business and we will identify your biggest growth opportunities.
-              </p>
-              <Link href="/contact" className="text-xs font-semibold text-blue-400 hover:text-blue-300 transition-colors">
-                Request audit &rarr;
-              </Link>
-            </div>
-          </div>
         </div>
 
-        <div className="border-t border-slate-800 mt-12 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
-          <p className="text-sm text-slate-500">
-            &copy; {year} OnlineMarketingAgency.ca. All rights reserved.
-          </p>
-          <p className="text-sm text-slate-600">
-            Project of{' '}
-            <a
-              href="https://shaheeralikhan.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-slate-400 hover:text-white transition-colors"
-            >
-              shaheeralikhan.com
-            </a>
-          </p>
+        {/* Bottom bar */}
+        <div
+          className="flex flex-col sm:flex-row items-center justify-between gap-3 pt-6 border-t text-xs"
+          style={{ borderColor: 'rgba(255,255,255,0.07)', color: 'rgba(255,255,255,0.2)' }}
+        >
+          <span>© {new Date().getFullYear()} OnlineMarketingAgency.ca. All rights reserved.</span>
+          <span>Canadian Digital Marketing Agency</span>
         </div>
       </div>
     </footer>

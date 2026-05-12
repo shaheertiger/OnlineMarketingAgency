@@ -3,62 +3,72 @@ import Link from 'next/link'
 interface CTASectionProps {
   heading?: string
   subheading?: string
-  ctaText?: string
-  ctaHref?: string
-  secondaryText?: string
-  secondaryHref?: string
-  showPhone?: boolean
 }
 
 export default function CTASection({
-  heading = 'Ready To Get More Calls, Bookings, And Leads?',
-  subheading = 'Tell us about your business and we will show you the biggest opportunities to improve your online visibility and lead generation.',
-  ctaText = 'Get Free Marketing Audit',
-  ctaHref = '/contact',
-  secondaryText,
-  secondaryHref,
-  showPhone = true,
+  heading = 'Ready to Turn Your Website and Ads Into Real Leads?',
+  subheading = 'Request a free marketing audit and we will show you exactly where your biggest growth opportunities are.',
 }: CTASectionProps) {
   return (
-    <section className="section-pad bg-blue-600">
-      <div className="container-main text-center">
-        <h2 className="text-3xl md:text-4xl font-bold text-white leading-tight mb-4 max-w-2xl mx-auto">
+    <section
+      className="section-pad relative overflow-hidden"
+      style={{ background: '#0A0E1C' }}
+      aria-labelledby="cta-heading"
+    >
+      <div className="absolute inset-0 bg-grid-dark pointer-events-none" aria-hidden="true" />
+
+      {/* Lime glow */}
+      <div
+        className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[480px] h-[280px] pointer-events-none"
+        style={{
+          background: 'radial-gradient(ellipse, rgba(200,255,0,0.11) 0%, transparent 70%)',
+        }}
+        aria-hidden="true"
+      />
+
+      <div className="container-main relative text-center">
+        {/* Social proof badge */}
+        <div className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full mb-6" style={{ background: 'rgba(200,255,0,0.08)', border: '1px solid rgba(200,255,0,0.18)' }}>
+          <div className="flex gap-0.5">
+            {[1,2,3,4,5].map((i) => (
+              <svg key={i} className="w-3 h-3" viewBox="0 0 20 20" fill="#C8FF00">
+                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+              </svg>
+            ))}
+          </div>
+          <span className="text-xs font-semibold" style={{ color: '#C8FF00' }}>
+            Join 50+ local businesses already growing with OMA
+          </span>
+        </div>
+
+        <p className="section-label-lime mb-5">Get Started</p>
+
+        <h2
+          id="cta-heading"
+          className="text-3xl md:text-5xl font-black mb-5 max-w-3xl mx-auto leading-[1.04]"
+          style={{ color: '#F8FAFC', letterSpacing: '-0.03em' }}
+        >
           {heading}
         </h2>
-        <p className="text-lg text-blue-100 leading-relaxed mb-8 max-w-xl mx-auto">
+
+        <p className="text-lg mb-9 max-w-lg mx-auto" style={{ color: 'rgba(255,255,255,0.5)' }}>
           {subheading}
         </p>
 
-        <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
-          <Link href={ctaHref} className="btn-outline-white text-base px-8 py-3.5">
-            {ctaText}
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <Link href="/contact" className="btn-primary text-base px-8 py-4">
+            Get Free Audit
+            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+            </svg>
           </Link>
-          {showPhone && (
-            <a
-              href="tel:9056269919"
-              className="inline-flex items-center justify-center gap-2 px-8 py-3.5 text-base font-semibold bg-white/10 hover:bg-white/20 text-white rounded-lg transition-colors"
-            >
-              <svg className="w-4 h-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-              </svg>
-              905-626-9919
-            </a>
-          )}
-          {secondaryText && secondaryHref && (
-            <Link
-              href={secondaryHref}
-              className="inline-flex items-center justify-center gap-2 px-8 py-3.5 text-base font-semibold text-blue-100 hover:text-white transition-colors"
-            >
-              {secondaryText}
-              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
-            </Link>
-          )}
+          <a href="tel:+19056269919" className="btn-outline-white text-base px-8 py-4">
+            Call 905-626-9919
+          </a>
         </div>
 
-        <p className="text-sm text-blue-200">
-          No contracts. No commitment. Just a clear audit of your marketing opportunities.
+        <p className="text-xs mt-4" style={{ color: 'rgba(255,255,255,0.22)' }}>
+          No contract required · Responds within 24 hours · 100% free audit
         </p>
       </div>
     </section>

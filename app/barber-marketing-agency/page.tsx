@@ -85,6 +85,10 @@ export default function BarberMarketingPage() {
         { label: 'Restaurant Marketing', href: '/restaurant-marketing-agency' },
         { label: 'Contractor Marketing', href: '/contractor-marketing-agency' },
       ]}
+      breadcrumb={[
+        { label: 'Industries', href: '/#industries' },
+        { label: 'Barbershop Marketing' },
+      ]}
     />
   )
 }

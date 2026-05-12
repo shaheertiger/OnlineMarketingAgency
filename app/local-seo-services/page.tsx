@@ -147,6 +147,10 @@ export default function LocalSEOPage() {
           { label: 'Google Ads Management', href: '/google-ads-management' },
           { label: 'Website Design For Small Business', href: '/website-design-for-small-business' },
         ]}
+        breadcrumb={[
+          { label: 'Services', href: '/#services' },
+          { label: 'Local SEO Services' },
+        ]}
       />
     </>
   )

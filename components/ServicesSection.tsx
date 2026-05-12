@@ -1,118 +1,149 @@
+'use client'
+
 import Link from 'next/link'
 
-const services = [
+const featured = [
   {
+    num: '01',
     title: 'Google Ads Management',
-    description:
-      'Build high-intent Google Search campaigns that generate calls, bookings, quote requests, and qualified leads.',
+    desc: 'High-intent search campaigns built around the keywords your customers use when they are ready to buy. We handle strategy, copy, bidding, tracking, and ongoing optimization.',
+    outcome: 'Result: More calls. Lower cost per lead.',
     href: '/google-ads-management',
-    icon: (
-      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-      </svg>
-    ),
-    keywords: 'Google Ads agency · PPC management · Google Search ads',
+    accent: '#C8FF00',
   },
   {
-    title: 'SEO Services',
-    description:
-      'Improve your organic visibility with keyword-focused content, technical SEO, on-page SEO, and local search optimization.',
-    href: '/seo-services',
-    icon: (
-      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-      </svg>
-    ),
-    keywords: 'SEO agency · SEO services Canada · organic rankings',
-  },
-  {
-    title: 'Local SEO Services',
-    description:
-      'Rank higher for city, neighbourhood, and "near me" searches so more local customers find your business.',
+    num: '02',
+    title: 'Local SEO + Google Maps',
+    desc: 'Rank at the top of Google Maps and local organic results for neighbourhood and city searches. Includes GBP optimization, citation building, and local keyword strategy.',
+    outcome: 'Result: More visibility. More walk-ins and calls.',
     href: '/local-seo-services',
-    icon: (
-      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-      </svg>
-    ),
-    keywords: 'Local SEO agency · near me SEO · Google Maps SEO',
+    accent: '#60A5FA',
   },
-  {
-    title: 'Google Business Profile Optimization',
-    description:
-      'Improve your Google Maps presence, profile visibility, call volume, direction requests, and local discovery.',
-    href: '/google-business-profile-optimization',
-    icon: (
-      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
-      </svg>
-    ),
-    keywords: 'Google Business Profile management · Google Maps ranking',
-  },
-  {
-    title: 'Website Design For Small Business',
-    description:
-      'Create fast, clean, mobile-friendly websites designed to convert visitors into leads, calls, and bookings.',
-    href: '/website-design-for-small-business',
-    icon: (
-      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-      </svg>
-    ),
-    keywords: 'Website design for small business · lead-gen websites',
-  },
-  {
-    title: 'Facebook And Instagram Ads',
-    description:
-      'Run Meta ad campaigns that build demand, retarget visitors, and drive customer inquiries for local businesses.',
-    href: '/social-media-marketing-agency',
-    icon: (
-      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 10l4.553-2.069A1 1 0 0121 8.876V15a1 1 0 01-1.447.894L15 14M3 8.5A1.5 1.5 0 014.5 7h8A1.5 1.5 0 0114 8.5v7A1.5 1.5 0 0112.5 17h-8A1.5 1.5 0 013 15.5v-7z" />
-      </svg>
-    ),
-    keywords: 'Social media marketing agency · Facebook Ads · Instagram Ads',
-  },
+]
+
+const secondary = [
+  { label: 'SEO Services',        desc: 'Organic rankings that compound over time.',          href: '/seo-services' },
+  { label: 'Website Design',      desc: 'Lead-gen sites that convert traffic into customers.', href: '/website-design-for-small-business' },
+  { label: 'GBP Optimization',    desc: 'Dominate Google Maps for local searches.',            href: '/google-business-profile-optimization' },
+  { label: 'Meta Ads',            desc: 'Facebook and Instagram for local demand generation.', href: '/social-media-marketing-agency' },
+  { label: 'Landing Pages',       desc: 'High-converting pages for specific campaigns.',       href: '/lead-generation-agency' },
+  { label: 'Conversion Tracking', desc: 'Know exactly which campaigns generate real leads.',   href: '/lead-generation-agency' },
 ]
 
 export default function ServicesSection() {
   return (
-    <section id="services" className="section-pad bg-slate-50">
-      <div className="container-main">
-        <div className="text-center mb-12">
-          <p className="section-label mb-4">What We Do</p>
-          <h2 className="section-heading mb-4 max-w-2xl mx-auto">
-            Online Marketing Services Built For Small Business Growth
-          </h2>
-          <p className="section-subtext max-w-2xl mx-auto">
-            Every service we offer is built around one outcome: more customers for your local
-            business.
-          </p>
+    <section
+      id="services"
+      className="section-pad relative"
+      style={{ background: '#0F0F12' }}
+      aria-labelledby="services-heading"
+    >
+      <div className="absolute inset-0 bg-grid-dark pointer-events-none" aria-hidden="true" />
+
+      <div className="container-main relative">
+        {/* Header */}
+        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-5 mb-10">
+          <div>
+            <p className="section-label-lime mb-4">What We Do</p>
+            <h2
+              id="services-heading"
+              className="text-3xl md:text-4xl font-extrabold leading-[1.06]"
+              style={{ color: '#F8FAFC', letterSpacing: '-0.025em' }}
+            >
+              Services That Drive
+              <br />
+              Real Business Growth
+            </h2>
+          </div>
+          <Link href="/contact" className="btn-outline-white text-[13px] px-5 py-2.5 shrink-0 self-start sm:self-auto">
+            Get Free Audit
+          </Link>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {services.map((service) => (
+        {/* Featured 2-up */}
+        <div className="grid md:grid-cols-2 gap-4 mb-4">
+          {featured.map((s) => (
             <Link
-              key={service.href}
-              href={service.href}
-              className="card group flex flex-col"
-              aria-label={`Learn about ${service.title}`}
+              key={s.href}
+              href={s.href}
+              className="group block rounded-2xl p-7 relative overflow-hidden transition-all duration-300"
+              style={{
+                background: 'rgba(255,255,255,0.04)',
+                border: '1px solid rgba(255,255,255,0.08)',
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.borderColor = `${s.accent}28`
+                e.currentTarget.style.background = 'rgba(255,255,255,0.06)'
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.borderColor = 'rgba(255,255,255,0.08)'
+                e.currentTarget.style.background = 'rgba(255,255,255,0.04)'
+              }}
             >
-              <div className="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center text-blue-600 mb-4 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-200">
-                {service.icon}
+              <div
+                className="text-[5rem] font-black leading-none mb-5 select-none"
+                style={{ color: 'rgba(255,255,255,0.05)', letterSpacing: '-0.06em' }}
+                aria-hidden="true"
+              >
+                {s.num}
               </div>
-              <h3 className="text-lg font-semibold text-slate-900 mb-2">{service.title}</h3>
-              <p className="text-sm text-slate-600 leading-relaxed mb-4 flex-1">
-                {service.description}
+              <h3 className="text-xl font-bold mb-3" style={{ color: '#F8FAFC' }}>{s.title}</h3>
+              <p className="text-sm leading-relaxed mb-6" style={{ color: 'rgba(255,255,255,0.48)' }}>
+                {s.desc}
               </p>
-              <p className="text-xs text-slate-400">{service.keywords}</p>
-              <div className="mt-4 flex items-center gap-1 text-sm font-semibold text-blue-600 group-hover:gap-2 transition-all">
-                Learn more
-                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              <div
+                className="inline-flex items-center gap-2 text-xs font-bold px-3 py-1.5 rounded-full"
+                style={{
+                  background: `${s.accent}12`,
+                  color: s.accent,
+                  border: `1px solid ${s.accent}22`,
+                }}
+              >
+                {s.outcome}
+              </div>
+              <div
+                className="absolute top-7 right-7 w-8 h-8 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-200"
+                style={{ background: s.accent }}
+                aria-hidden="true"
+              >
+                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="#0F0F12" strokeWidth={2.5}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
                 </svg>
               </div>
+            </Link>
+          ))}
+        </div>
+
+        {/* Secondary grid */}
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
+          {secondary.map((s) => (
+            <Link
+              key={s.href}
+              href={s.href}
+              className="group flex items-center justify-between p-4 rounded-xl transition-all duration-200"
+              style={{
+                background: 'rgba(255,255,255,0.03)',
+                border: '1px solid rgba(255,255,255,0.06)',
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.background = 'rgba(255,255,255,0.06)'
+                e.currentTarget.style.borderColor = 'rgba(200,255,0,0.15)'
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.background = 'rgba(255,255,255,0.03)'
+                e.currentTarget.style.borderColor = 'rgba(255,255,255,0.06)'
+              }}
+            >
+              <div>
+                <div className="text-sm font-bold mb-0.5" style={{ color: '#F8FAFC' }}>{s.label}</div>
+                <div className="text-xs" style={{ color: 'rgba(255,255,255,0.32)' }}>{s.desc}</div>
+              </div>
+              <svg
+                className="w-4 h-4 shrink-0 ml-3 transition-transform group-hover:translate-x-0.5"
+                fill="none" viewBox="0 0 24 24" stroke="rgba(255,255,255,0.2)" strokeWidth={2}
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+              </svg>
             </Link>
           ))}
         </div>

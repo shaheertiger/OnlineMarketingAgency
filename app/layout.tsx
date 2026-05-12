@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
 import Header from '@/components/Header'
@@ -11,48 +11,100 @@ const inter = Inter({
   display: 'swap',
 })
 
+const BASE_URL = 'https://onlinemarketingagency.ca'
+
+// ── Viewport (separate export per Next.js 14+ standard) ──────────────────────
+export const viewport: Viewport = {
+  themeColor: '#F7F6F2',
+  width: 'device-width',
+  initialScale: 1,
+  colorScheme: 'light dark',
+}
+
+// ── Global metadata ───────────────────────────────────────────────────────────
 export const metadata: Metadata = {
-  metadataBase: new URL('https://onlinemarketingagency.ca'),
+  metadataBase: new URL(BASE_URL),
+  applicationName: 'OnlineMarketingAgency.ca',
+
   title: {
     default: 'Digital Marketing Agency Canada | Google Ads, SEO & Local Leads',
     template: '%s | OnlineMarketingAgency.ca',
   },
+
   description:
-    'OnlineMarketingAgency.ca helps local businesses get more calls, bookings, and customers with Google Ads, SEO, Local SEO, websites, and lead generation.',
+    'OnlineMarketingAgency.ca helps Canadian small businesses get more calls, bookings, and customers with Google Ads, SEO, Local SEO, website design, and lead generation. Free marketing audit available.',
+
   keywords: [
-    'digital marketing agency',
-    'online marketing agency',
-    'marketing agency near me',
     'digital marketing agency Canada',
-    'small business marketing agency',
-    'Google Ads management',
+    'online marketing agency',
+    'Google Ads management Canada',
     'SEO services Canada',
     'local SEO services',
+    'Google Business Profile optimization',
+    'small business marketing Canada',
+    'lead generation agency',
+    'Facebook Ads agency Canada',
+    'marketing agency near me',
   ],
-  authors: [{ name: 'OnlineMarketingAgency.ca' }],
-  creator: 'OnlineMarketingAgency.ca',
+
+  authors: [
+    { name: 'OnlineMarketingAgency.ca', url: BASE_URL },
+  ],
+  creator:   'OnlineMarketingAgency.ca',
+  publisher: 'OnlineMarketingAgency.ca',
+  category:  'Digital Marketing',
+
+  // ── OpenGraph ─────────────────────────────────────────────────────────────
   openGraph: {
-    type: 'website',
-    locale: 'en_CA',
-    url: 'https://onlinemarketingagency.ca',
+    type:     'website',
+    locale:   'en_CA',
+    url:      BASE_URL,
     siteName: 'OnlineMarketingAgency.ca',
-    title: 'Digital Marketing Agency Canada | Google Ads, SEO & Local Leads',
+    title:    'Digital Marketing Agency Canada | Google Ads, SEO & Local Leads',
     description:
-      'OnlineMarketingAgency.ca helps local businesses get more calls, bookings, and customers with Google Ads, SEO, Local SEO, websites, and lead generation.',
+      'Canadian digital marketing agency helping local businesses grow with Google Ads, SEO, Local SEO, and lead generation. Free audit available.',
+    images: [
+      {
+        url:    '/og-image.jpg',
+        width:  1200,
+        height: 630,
+        alt:    'OnlineMarketingAgency.ca — Digital Marketing Agency Canada',
+      },
+    ],
   },
+
+  // ── Twitter / X ───────────────────────────────────────────────────────────
   twitter: {
-    card: 'summary_large_image',
-    title: 'Digital Marketing Agency Canada | Google Ads, SEO & Local Leads',
-    description:
-      'OnlineMarketingAgency.ca helps local businesses get more calls, bookings, and customers with Google Ads, SEO, Local SEO, websites, and lead generation.',
+    card:        'summary_large_image',
+    site:        '@OMAcanada',
+    creator:     '@OMAcanada',
+    title:       'Digital Marketing Agency Canada | Google Ads, SEO & Local Leads',
+    description: 'Canadian digital marketing agency helping local businesses grow with Google Ads, SEO, Local SEO, and lead generation.',
+    images:      ['/og-image.jpg'],
   },
+
+  // ── Crawl directives ──────────────────────────────────────────────────────
   robots: {
-    index: true,
+    index:  true,
     follow: true,
-    googleBot: { index: true, follow: true },
+    googleBot: {
+      index:                true,
+      follow:               true,
+      'max-image-preview':  'large',
+      'max-snippet':        -1,
+      'max-video-preview':  -1,
+    },
   },
+
+  // ── Canonical set per-page; default fallback ──────────────────────────────
   alternates: {
-    canonical: 'https://onlinemarketingagency.ca',
+    canonical: BASE_URL,
+    languages: { 'en-CA': BASE_URL },
+  },
+
+  // ── Verification placeholders ─────────────────────────────────────────────
+  verification: {
+    google: 'REPLACE_WITH_GOOGLE_VERIFICATION_CODE',
   },
 }
 
@@ -63,9 +115,20 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en-CA" className={inter.variable}>
+      <head>
+        {/* Preconnect to Google Fonts for faster LCP */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        {/* Favicon */}
+        <link rel="icon"             href="/favicon.ico" sizes="any" />
+        <link rel="icon"             href="/icon.svg" type="image/svg+xml" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+      </head>
       <body>
         <Header />
-        <main>{children}</main>
+        <main id="main-content" tabIndex={-1}>
+          {children}
+        </main>
         <Footer />
         <Analytics />
       </body>

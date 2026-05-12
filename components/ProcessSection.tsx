@@ -1,73 +1,79 @@
+'use client'
+
 const steps = [
   {
-    number: '01',
+    num: '01',
     title: 'Audit',
-    description:
-      'We review your website, ads, SEO, Google Business Profile, conversion tracking, and competitors to find exactly where you are losing leads.',
+    desc: 'We analyze your website, Google rankings, ad accounts, Google Business Profile, competitors, and current conversion setup to identify the biggest gaps and opportunities.',
+    color: '#1D4ED8',
   },
   {
-    number: '02',
+    num: '02',
     title: 'Strategy',
-    description:
-      'We identify the fastest opportunities to generate more calls, bookings, and leads based on your industry, location, and budget.',
+    desc: 'We build a focused action plan around the channels most likely to generate calls, bookings, and leads for your specific business and market.',
+    color: '#7C3AED',
   },
   {
-    number: '03',
-    title: 'Build',
-    description:
-      'We create or improve your campaigns, landing pages, website content, local SEO assets, and Google Business Profile to start driving results.',
+    num: '03',
+    title: 'Launch',
+    desc: 'We execute fast. Campaigns go live, websites get built, and your digital presence gets optimized — typically within 7 to 14 days of kickoff.',
+    color: '#C8FF00',
   },
   {
-    number: '04',
+    num: '04',
     title: 'Optimize',
-    description:
-      'We monitor results every month and improve performance based on real lead data, not just clicks or impressions.',
+    desc: 'Every month we review lead data, adjust bids, improve copy, and identify new growth opportunities. Performance compounds over time.',
+    color: '#10B981',
   },
 ]
 
 export default function ProcessSection() {
   return (
-    <section className="section-pad bg-slate-900">
+    <section
+      className="section-pad"
+      style={{ background: 'white' }}
+      aria-labelledby="process-heading"
+    >
       <div className="container-main">
-        <div className="text-center mb-12">
-          <p className="text-sm font-semibold tracking-widest uppercase text-blue-400 mb-4">
-            How It Works
-          </p>
-          <h2 className="text-3xl md:text-4xl font-bold text-white leading-tight mb-4">
-            How We Grow Your Business Online
+        <div className="text-center mb-14">
+          <p className="section-label mb-4">How It Works</p>
+          <h2
+            id="process-heading"
+            className="text-3xl md:text-4xl font-extrabold leading-[1.06]"
+            style={{ color: '#0F0F12', letterSpacing: '-0.025em' }}
+          >
+            A Clear Growth System,
+            <br />
+            Not Random Tactics.
           </h2>
-          <p className="text-lg text-slate-400 max-w-xl mx-auto">
-            A clear, repeatable process focused on generating real leads for your local business.
-          </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
-          {steps.map((step, index) => (
-            <div key={step.number} className="relative">
-              {/* Connector line */}
-              {index < steps.length - 1 && (
-                <div
-                  className="hidden lg:block absolute top-8 left-full w-full h-px bg-slate-700 -translate-y-1/2 z-0"
-                  style={{ width: 'calc(100% - 2rem)' }}
-                  aria-hidden="true"
-                />
-              )}
+        <div className="grid md:grid-cols-4 gap-6 lg:gap-10 relative">
+          {/* Connector line — desktop */}
+          <div
+            className="hidden md:block absolute top-8 left-[12.5%] right-[12.5%] h-px"
+            style={{ background: 'linear-gradient(90deg, #1D4ED8, #7C3AED, #9ca00040, #10B98140)' }}
+            aria-hidden="true"
+          />
 
-              <div className="relative z-10 bg-slate-800 rounded-2xl p-6 border border-slate-700 h-full">
-                <div className="w-14 h-14 bg-blue-600 rounded-xl flex items-center justify-center mb-4">
-                  <span className="text-lg font-bold text-white">{step.number}</span>
-                </div>
-                <h3 className="text-xl font-bold text-white mb-3">{step.title}</h3>
-                <p className="text-sm text-slate-400 leading-relaxed">{step.description}</p>
+          {steps.map(({ num, title, desc, color }) => (
+            <div key={num} className="relative">
+              {/* Step circle */}
+              <div
+                className="w-16 h-16 rounded-2xl flex items-center justify-center text-xl font-black mb-5 relative z-10"
+                style={{
+                  background: `${color}14`,
+                  border: `1.5px solid ${color}28`,
+                  color,
+                  letterSpacing: '-0.03em',
+                }}
+              >
+                {num}
               </div>
+              <h3 className="text-base font-bold mb-2.5" style={{ color: '#0F0F12' }}>{title}</h3>
+              <p className="text-sm leading-relaxed" style={{ color: '#6B7280' }}>{desc}</p>
             </div>
           ))}
-        </div>
-
-        <div className="text-center mt-12">
-          <a href="/contact" className="btn-primary text-base px-8 py-3.5">
-            Start With A Free Audit
-          </a>
         </div>
       </div>
     </section>
