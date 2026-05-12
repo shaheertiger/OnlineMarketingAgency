@@ -5,7 +5,7 @@ import ServicePageTemplate from '@/components/ServicePageTemplate'
 export const metadata: Metadata = {
   title: 'Google Ads Management Canada | Google Ads Agency for Small Business | OMA',
   description:
-    'Google Ads management for Canadian local businesses — campaigns from $199/month. More calls and bookings, lower cost per lead, no lock-in contracts. Free audit.',
+    'Google Ads management for Canadian local businesses — campaigns from $499/month. More calls and bookings, lower cost per lead, no lock-in contracts. Free audit.',
   alternates: { canonical: 'https://onlinemarketingagency.ca/google-ads-management' },
   keywords: [
     'Google Ads management Canada',
@@ -15,13 +15,13 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Google Ads Management Canada | Google Ads Agency for Small Business | OMA',
     description:
-      'Google Ads management for Canadian local businesses — campaigns from $199/month. More calls and bookings, lower cost per lead, no lock-in contracts. Free audit.',
+      'Google Ads management for Canadian local businesses — campaigns from $499/month. More calls and bookings, lower cost per lead, no lock-in contracts. Free audit.',
     url: 'https://onlinemarketingagency.ca/google-ads-management',
   },
   twitter: {
     title: 'Google Ads Management Canada | Google Ads Agency for Small Business | OMA',
     description:
-      'Google Ads management for Canadian local businesses — campaigns from $199/month. More calls and bookings, lower cost per lead, no lock-in contracts. Free audit.',
+      'Google Ads management for Canadian local businesses — campaigns from $499/month. More calls and bookings, lower cost per lead, no lock-in contracts. Free audit.',
   },
 }
 
@@ -49,7 +49,7 @@ const faqSchema = {
       name: 'How much does Google Ads management cost in Canada?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Our Google Ads management starts from $199 per month plus your ad spend budget. Most local businesses in Canada start with $500–$1,500 per month in ad spend. We recommend a budget based on your service area, competition, and target cost per lead after your free audit.',
+        text: 'Our Google Ads management starts from $499 per month plus your ad spend budget. Most local businesses in Canada start with $500–1,500 per month in ad spend. We recommend a budget based on your service area, competition, and target cost per lead after your free audit.',
       },
     },
     {
@@ -65,7 +65,7 @@ const faqSchema = {
       name: 'What is a good Google Ads budget for a small local business in Canada?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'For most local service businesses in Canada, $500–$1,500 per month in ad spend is a practical starting point. Competitive trades like HVAC, roofing, and legal services may require $2,000–$5,000+ to compete effectively. We will recommend a specific budget after reviewing your market.',
+        text: 'For most local service businesses in Canada, $500–1,500 per month in ad spend is a practical starting point. Competitive trades like HVAC, roofing, and legal services may require $2,000–5,000+ to compete effectively. We will recommend a specific budget after reviewing your market.',
       },
     },
     {
@@ -98,8 +98,8 @@ const bodyContent = (
         SEO services
       </Link>{' '}
       — which build momentum over months — Google Ads puts your business at the very top of search results
-      on day one. When someone in your city searches "emergency plumber near me" or "best HVAC company
-      Toronto," your ad appears before any organic result. That positioning directly translates into more
+      on day one. When someone in your city searches “emergency plumber near me” or “best HVAC company
+      Toronto,” your ad appears before any organic result. That positioning directly translates into more
       calls, more bookings, and more revenue.
     </p>
     <p>
@@ -113,7 +113,7 @@ const bodyContent = (
     <p>
       We build every campaign around your specific service area, your most profitable services, and the
       search terms your ideal customers actually use. We implement call tracking from day one so you can
-      hear which ads are generating inbound calls. We set up conversion tracking so Google's algorithm can
+      hear which ads are generating inbound calls. We set up conversion tracking so Google’s algorithm can
       learn and optimize toward the actions that matter — not just traffic. And we review search term
       reports weekly to add negative keywords that stop your budget being burned on irrelevant searches.
     </p>
@@ -262,7 +262,7 @@ export default function GoogleAdsPage() {
           },
         ]}
         pricing={{
-          price: 'from $199',
+          price: 'from $499',
           period: '/ month + ad spend',
           bullets: [
             'Full campaign setup: keywords, ad copy, campaign structure, geo-targeting',
@@ -308,7 +308,7 @@ export default function GoogleAdsPage() {
           {
             question: 'How much does Google Ads management cost in Canada?',
             answer:
-              'Our Google Ads management starts from $199 per month plus your ad spend budget. Most local businesses in Canada start with $500–$1,500 per month in ad spend. We recommend a budget based on your service area, competition, and target cost per lead after your free audit.',
+              'Our Google Ads management starts from $499 per month plus your ad spend budget. Most local businesses in Canada start with $500–1,500 per month in ad spend. We recommend a budget based on your service area, competition, and target cost per lead after your free audit.',
           },
           {
             question: 'How quickly can Google Ads generate leads for my business?',
@@ -318,7 +318,7 @@ export default function GoogleAdsPage() {
           {
             question: 'What is a good Google Ads budget for a small local business in Canada?',
             answer:
-              'For most local service businesses in Canada, $500–$1,500 per month in ad spend is a practical starting point. Competitive trades like HVAC, roofing, and legal services may require $2,000–$5,000+ to compete effectively. We will recommend a specific budget after reviewing your market.',
+              'For most local service businesses in Canada, $500–1,500 per month in ad spend is a practical starting point. Competitive trades like HVAC, roofing, and legal services may require $2,000–5,000+ to compete effectively. We will recommend a specific budget after reviewing your market.',
           },
           {
             question: 'Do you manage Google Ads for service-based businesses?',
