@@ -94,7 +94,7 @@ const bodyContent = (
     </h2>
     <p>
       When a homeowner in Mississauga needs a plumber, they do not flip through the Yellow Pages. They open
-      Google on their phone, type "plumber near me," and call one of the three businesses in the map pack.
+      Google on their phone, type “plumber near me,” and call one of the three businesses in the map pack.
       If your business is not in those top three Google Maps results, you are invisible to the majority of
       local customers who are ready to book right now. Local SEO is the discipline that puts you there —
       and keeps you there as your competitors try to displace you.
@@ -172,7 +172,7 @@ export default function LocalSEOPage() {
           },
           {
             title: 'Near Me Search Rankings',
-            desc: 'Rank for location-based searches like "plumber near me" or "dentist in Toronto" — the searches that convert at the highest rate.',
+            desc: 'Rank for location-based searches like “plumber near me” or “dentist in Toronto” — the searches that convert at the highest rate.',
           },
           {
             title: 'More Inbound Calls',
@@ -192,8 +192,8 @@ export default function LocalSEOPage() {
           },
         ]}
         problemsIntro={[
-          'The most common pain point we hear from local business owners is this: "I know I should be showing up on Google Maps, but I am not — and I do not know why." The frustrating truth is that local search rankings are not random. They are the result of specific, measurable signals that Google evaluates. When those signals are incomplete, inconsistent, or weak compared to your competitors, your business does not appear — no matter how good your actual service is.',
-          'Citation inconsistency is a hidden local SEO killer. Your business name might appear as "ABC Plumbing" on your website, "ABC Plumbing Inc." on Yelp, and "ABC Plumbing Services" on Yellow Pages. Your phone number might show two different area codes. These inconsistencies signal to Google that your business data is unreliable — and your local rankings suffer as a result. Most local businesses do not even know these inconsistencies exist until we run an audit.',
+          'The most common pain point we hear from local business owners is this: “I know I should be showing up on Google Maps, but I am not — and I do not know why.” The frustrating truth is that local search rankings are not random. They are the result of specific, measurable signals that Google evaluates. When those signals are incomplete, inconsistent, or weak compared to your competitors, your business does not appear — no matter how good your actual service is.',
+          'Citation inconsistency is a hidden local SEO killer. Your business name might appear as “ABC Plumbing” on your website, “ABC Plumbing Inc.” on Yelp, and “ABC Plumbing Services” on Yellow Pages. Your phone number might show two different area codes. These inconsistencies signal to Google that your business data is unreliable — and your local rankings suffer as a result. Most local businesses do not even know these inconsistencies exist until we run an audit.',
           'Neglected or incomplete Google Business Profiles are another widespread problem. A GBP with missing hours, outdated photos, no service descriptions, and zero recent posts signals to Google that the business is either not active or not authoritative. Competitors who actively maintain their profiles — adding photos weekly, responding to reviews, publishing posts, and answering Q&As — consistently outrank those who do not.',
           'At OMA, we address every one of these issues systematically. We audit your citations, clean up inconsistencies, fully optimize your Google Business Profile, build local authority through link building and review strategy, and create location-specific content that ranks across your service area. The result is a local presence that consistently appears at the top of Google Maps for the searches that matter most.',
         ]}
@@ -257,7 +257,7 @@ export default function LocalSEOPage() {
           },
         ]}
         pricing={{
-          price: 'from $399',
+          price: 'from $499',
           period: '/ month',
           bullets: [
             'Full Google Business Profile optimization and ongoing management',
@@ -303,7 +303,7 @@ export default function LocalSEOPage() {
           {
             question: 'What is local SEO?',
             answer:
-              'Local SEO is the process of optimizing your online presence to rank higher in Google Maps, the local map pack, and location-based search results. It targets searches like "dentist near me" or "plumber in Toronto" — the searches made by customers who are ready to book.',
+              'Local SEO is the process of optimizing your online presence to rank higher in Google Maps, the local map pack, and location-based search results. It targets searches like “dentist near me” or “plumber in Toronto” — the searches made by customers who are ready to book.',
           },
           {
             question: 'How long does local SEO take to show results?',
