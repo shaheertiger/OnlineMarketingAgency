@@ -134,6 +134,13 @@
 .orb-float  { animation: orb-float 8s ease-in-out infinite; }
 .fade-in-up { animation: fade-in-up 0.6s ease both; }
 
+/* ── Footer link hover (no JS event handlers needed) ── */
+.footer-link {
+  color: #334155;
+  transition: color 150ms;
+}
+.footer-link:hover { color: #94A3B8; }
+
 /* ── Glow utilities ── */
 .glow-blue   { box-shadow: 0 0 60px rgba(37, 99, 235, 0.2); }
 .glow-indigo { box-shadow: 0 0 60px rgba(79, 70, 229, 0.2); }

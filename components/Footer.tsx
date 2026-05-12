@@ -1,13 +1,13 @@
 import Link from 'next/link'
 
 const services = [
-  { label: 'Google Ads Management',           href: '/google-ads-management' },
-  { label: 'SEO Services',                    href: '/seo-services' },
-  { label: 'Local SEO Services',              href: '/local-seo-services' },
-  { label: 'Google Business Profile',         href: '/google-business-profile-optimization' },
-  { label: 'Website Design',                  href: '/website-design-for-small-business' },
-  { label: 'Social Media Marketing',          href: '/social-media-marketing-agency' },
-  { label: 'Lead Generation Agency',          href: '/lead-generation-agency' },
+  { label: 'Google Ads Management',    href: '/google-ads-management' },
+  { label: 'SEO Services',             href: '/seo-services' },
+  { label: 'Local SEO Services',       href: '/local-seo-services' },
+  { label: 'Google Business Profile',  href: '/google-business-profile-optimization' },
+  { label: 'Website Design',           href: '/website-design-for-small-business' },
+  { label: 'Social Media Marketing',   href: '/social-media-marketing-agency' },
+  { label: 'Lead Generation Agency',   href: '/lead-generation-agency' },
 ]
 
 const industries = [
@@ -23,6 +23,8 @@ const company = [
   { label: 'Contact',        href: '/contact' },
   { label: 'Privacy Policy', href: '/privacy-policy' },
 ]
+
+const footerLinkClass = 'text-sm footer-link transition-colors duration-150'
 
 export default function Footer() {
   const year = new Date().getFullYear()
@@ -45,11 +47,11 @@ export default function Footer() {
 
           {/* Brand column */}
           <div className="sm:col-span-2 lg:col-span-1">
-            {/* Logo */}
             <div className="flex items-center gap-2.5 mb-5">
               <div
                 className="w-8 h-8 rounded-lg flex items-center justify-center"
                 style={{ background: 'linear-gradient(135deg, #2563EB, #4F46E5)' }}
+                aria-hidden="true"
               >
                 <span className="text-white font-black text-sm">O</span>
               </div>
@@ -79,127 +81,72 @@ export default function Footer() {
           </div>
 
           {/* Services */}
-          <div>
-            <h3
-              className="text-xs font-bold uppercase tracking-widest mb-5"
-              style={{ color: '#475569', letterSpacing: '0.12em' }}
-            >
+          <nav aria-label="Footer services">
+            <h3 className="text-xs font-bold uppercase tracking-widest mb-5" style={{ color: '#475569', letterSpacing: '0.12em' }}>
               Services
             </h3>
             <ul className="space-y-2.5">
               {services.map((s) => (
                 <li key={s.href}>
-                  <Link
-                    href={s.href}
-                    className="text-sm transition-colors duration-150"
-                    style={{ color: '#334155' }}
-                    onMouseEnter={(e) => ((e.target as HTMLAnchorElement).style.color = '#94A3B8')}
-                    onMouseLeave={(e) => ((e.target as HTMLAnchorElement).style.color = '#334155')}
-                  >
-                    {s.label}
-                  </Link>
+                  <Link href={s.href} className={footerLinkClass}>{s.label}</Link>
                 </li>
               ))}
             </ul>
-          </div>
+          </nav>
 
           {/* Industries + Company */}
-          <div>
-            <h3
-              className="text-xs font-bold uppercase tracking-widest mb-5"
-              style={{ color: '#475569', letterSpacing: '0.12em' }}
-            >
+          <nav aria-label="Footer industries and company">
+            <h3 className="text-xs font-bold uppercase tracking-widest mb-5" style={{ color: '#475569', letterSpacing: '0.12em' }}>
               Industries
             </h3>
             <ul className="space-y-2.5 mb-8">
               {industries.map((i) => (
                 <li key={i.href}>
-                  <Link
-                    href={i.href}
-                    className="text-sm transition-colors duration-150"
-                    style={{ color: '#334155' }}
-                    onMouseEnter={(e) => ((e.target as HTMLAnchorElement).style.color = '#94A3B8')}
-                    onMouseLeave={(e) => ((e.target as HTMLAnchorElement).style.color = '#334155')}
-                  >
-                    {i.label}
-                  </Link>
+                  <Link href={i.href} className={footerLinkClass}>{i.label}</Link>
                 </li>
               ))}
             </ul>
-            <h3
-              className="text-xs font-bold uppercase tracking-widest mb-5"
-              style={{ color: '#475569', letterSpacing: '0.12em' }}
-            >
+            <h3 className="text-xs font-bold uppercase tracking-widest mb-5" style={{ color: '#475569', letterSpacing: '0.12em' }}>
               Company
             </h3>
             <ul className="space-y-2.5">
               {company.map((c) => (
                 <li key={c.href}>
-                  <Link
-                    href={c.href}
-                    className="text-sm transition-colors duration-150"
-                    style={{ color: '#334155' }}
-                    onMouseEnter={(e) => ((e.target as HTMLAnchorElement).style.color = '#94A3B8')}
-                    onMouseLeave={(e) => ((e.target as HTMLAnchorElement).style.color = '#334155')}
-                  >
-                    {c.label}
-                  </Link>
+                  <Link href={c.href} className={footerLinkClass}>{c.label}</Link>
                 </li>
               ))}
             </ul>
-          </div>
+          </nav>
 
           {/* Contact */}
           <div>
-            <h3
-              className="text-xs font-bold uppercase tracking-widest mb-5"
-              style={{ color: '#475569', letterSpacing: '0.12em' }}
-            >
+            <h3 className="text-xs font-bold uppercase tracking-widest mb-5" style={{ color: '#475569', letterSpacing: '0.12em' }}>
               Contact
             </h3>
+            {/* NAP — consistent with LocalBusiness schema */}
             <address className="not-italic space-y-3 text-sm mb-6" style={{ color: '#334155' }}>
-              <p>Canada</p>
+              <p itemProp="addressCountry">Canada</p>
               <p>
-                <a
-                  href="tel:9056269919"
-                  className="transition-colors duration-150"
-                  style={{ color: '#334155' }}
-                  onMouseEnter={(e) => ((e.target as HTMLAnchorElement).style.color = '#94A3B8')}
-                  onMouseLeave={(e) => ((e.target as HTMLAnchorElement).style.color = '#334155')}
-                >
+                <a href="tel:9056269919" className={footerLinkClass} itemProp="telephone">
                   905-626-9919
                 </a>
               </p>
               <p>
-                <a
-                  href="mailto:info@onlinemarketingagency.ca"
-                  className="transition-colors duration-150"
-                  style={{ color: '#334155' }}
-                  onMouseEnter={(e) => ((e.target as HTMLAnchorElement).style.color = '#94A3B8')}
-                  onMouseLeave={(e) => ((e.target as HTMLAnchorElement).style.color = '#334155')}
-                >
+                <a href="mailto:info@onlinemarketingagency.ca" className={footerLinkClass} itemProp="email">
                   info@onlinemarketingagency.ca
                 </a>
               </p>
             </address>
 
-            {/* Audit callout */}
             <div
               className="rounded-2xl p-4"
-              style={{
-                background: 'rgba(11, 17, 32, 0.8)',
-                border: '1px solid rgba(51, 65, 85, 0.4)',
-              }}
+              style={{ background: 'rgba(11, 17, 32, 0.8)', border: '1px solid rgba(51, 65, 85, 0.4)' }}
             >
               <p className="text-sm font-bold mb-1" style={{ color: '#E2E8F0' }}>Free Marketing Audit</p>
               <p className="text-xs leading-relaxed mb-3" style={{ color: '#334155' }}>
                 Tell us about your business and we will identify your biggest growth opportunities.
               </p>
-              <Link
-                href="/contact"
-                className="text-xs font-bold transition-colors duration-150"
-                style={{ color: '#60A5FA' }}
-              >
+              <Link href="/contact" className="text-xs font-bold text-blue-400 hover:text-blue-300 transition-colors duration-150">
                 Request audit &rarr;
               </Link>
             </div>
@@ -220,10 +167,7 @@ export default function Footer() {
               href="https://shaheeralikhan.com/"
               target="_blank"
               rel="noopener noreferrer"
-              className="transition-colors duration-150"
-              style={{ color: '#334155' }}
-              onMouseEnter={(e) => ((e.target as HTMLAnchorElement).style.color = '#64748B')}
-              onMouseLeave={(e) => ((e.target as HTMLAnchorElement).style.color = '#334155')}
+              className="footer-link transition-colors duration-150"
             >
               shaheeralikhan.com
             </a>
