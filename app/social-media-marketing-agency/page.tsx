@@ -5,7 +5,7 @@ import ServicePageTemplate from '@/components/ServicePageTemplate'
 export const metadata: Metadata = {
   title: 'Facebook Ads Management Canada | Instagram Ads Agency | OMA Digital',
   description:
-    'Facebook Ads management for Canadian local businesses — drive more customers with Meta advertising. Instagram ads, retargeting, lead campaigns. From $299/month. Free audit.',
+    'Facebook Ads management for Canadian local businesses — drive more customers with Meta advertising. Instagram ads, retargeting, lead campaigns. From $499/month. Free audit.',
   alternates: { canonical: 'https://onlinemarketingagency.ca/social-media-marketing-agency' },
   keywords: [
     'Facebook Ads management Canada',
@@ -15,13 +15,13 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Facebook Ads Management Canada | Instagram Ads Agency | OMA Digital',
     description:
-      'Facebook Ads management for Canadian local businesses — drive more customers with Meta advertising. Instagram ads, retargeting, lead campaigns. From $299/month. Free audit.',
+      'Facebook Ads management for Canadian local businesses — drive more customers with Meta advertising. Instagram ads, retargeting, lead campaigns. From $499/month. Free audit.',
     url: 'https://onlinemarketingagency.ca/social-media-marketing-agency',
   },
   twitter: {
     title: 'Facebook Ads Management Canada | Instagram Ads Agency | OMA Digital',
     description:
-      'Facebook Ads management for Canadian local businesses — drive more customers with Meta advertising. Instagram ads, retargeting, lead campaigns. From $299/month. Free audit.',
+      'Facebook Ads management for Canadian local businesses — drive more customers with Meta advertising. Instagram ads, retargeting, lead campaigns. From $499/month. Free audit.',
   },
 }
 
@@ -65,7 +65,7 @@ const faqSchema = {
       name: 'How much should I budget for Facebook Ads as a local business in Canada?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'For local businesses in Canada, a starting budget of $300–$1,000 per month in ad spend is typical. We recommend a minimum of $500 per month to give the Meta algorithm enough data to optimize your campaigns. We will recommend a specific budget based on your business and goals after your free audit.',
+        text: 'For local businesses in Canada, a starting budget of $300–1,000 per month in ad spend is typical. We recommend a minimum of $500 per month to give the Meta algorithm enough data to optimize your campaigns. We will recommend a specific budget based on your business and goals after your free audit.',
       },
     },
     {
@@ -261,7 +261,7 @@ export default function SocialMediaPage() {
           },
         ]}
         pricing={{
-          price: 'from $299',
+          price: 'from $499',
           period: '/ month + ad spend',
           bullets: [
             'Full Meta Ads campaign setup: audiences, campaign structure, ad copy, and lead forms',
@@ -315,7 +315,7 @@ export default function SocialMediaPage() {
           {
             question: 'How much should I budget for Facebook Ads as a local business in Canada?',
             answer:
-              'For local businesses in Canada, a starting budget of $300–$1,000 per month in ad spend is typical. We recommend a minimum of $500 per month to give the Meta algorithm enough data to optimize your campaigns. We will recommend a specific budget based on your business and goals after your free audit.',
+              'For local businesses in Canada, a starting budget of $300–1,000 per month in ad spend is typical. We recommend a minimum of $500 per month to give the Meta algorithm enough data to optimize your campaigns. We will recommend a specific budget based on your business and goals after your free audit.',
           },
           {
             question: 'Do you manage Instagram Ads as well as Facebook Ads?',
