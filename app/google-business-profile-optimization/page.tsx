@@ -257,7 +257,7 @@ export default function GBPPage() {
           },
         ]}
         pricing={{
-          price: 'from $199',
+          price: 'from $499',
           period: '/ month',
           bullets: [
             'Full Google Business Profile audit, category optimization, and content rewrite',
