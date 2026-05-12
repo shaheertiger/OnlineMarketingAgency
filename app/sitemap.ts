@@ -60,6 +60,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
 
+    // Keyword-targeted landing pages
+    {
+      url: `${baseUrl}/seo-consultant`,
+      lastModified: LAST_UPDATED,
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
+
     // City / location pages
     {
       url: `${baseUrl}/toronto`,
