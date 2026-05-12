@@ -19,14 +19,33 @@ const problems = [
 
 export default function ProblemSection() {
   return (
-    <section className="section-pad bg-white">
+    <section
+      className="section-pad relative"
+      style={{ background: '#0A0F1E' }}
+    >
+      <div
+        className="absolute top-0 inset-x-0 h-px pointer-events-none"
+        style={{ background: 'linear-gradient(90deg, transparent, rgba(248,113,113,0.15), transparent)' }}
+        aria-hidden="true"
+      />
+
       <div className="container-main">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Left */}
           <div>
             <p className="section-label mb-4">The Problem</p>
             <h2 className="section-heading mb-6">
-              Most Local Businesses Are Not Showing Up Where Customers Search
+              Most Local Businesses Are Not Showing Up{' '}
+              <span
+                style={{
+                  background: 'linear-gradient(135deg, #F87171, #FB923C)',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                  backgroundClip: 'text',
+                }}
+              >
+                Where Customers Search
+              </span>
             </h2>
             <p className="section-subtext mb-8">
               Your customers are searching on Google, Google Maps, Facebook, Instagram, and local
@@ -44,14 +63,25 @@ export default function ProblemSection() {
           {/* Right: problem cards */}
           <div className="grid sm:grid-cols-2 gap-4">
             {problems.map((p) => (
-              <div key={p.title} className="bg-slate-50 rounded-xl p-5 border border-slate-100">
-                <div className="w-8 h-8 bg-red-100 rounded-lg flex items-center justify-center mb-3">
-                  <svg className="w-4 h-4 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              <div
+                key={p.title}
+                className="rounded-2xl p-5 transition-all duration-200"
+                style={{
+                  background: 'rgba(11, 17, 32, 0.7)',
+                  border: '1px solid rgba(248,113,113,0.1)',
+                  backdropFilter: 'blur(8px)',
+                }}
+              >
+                <div
+                  className="w-8 h-8 rounded-xl flex items-center justify-center mb-3"
+                  style={{ background: 'rgba(248,113,113,0.12)', border: '1px solid rgba(248,113,113,0.2)' }}
+                >
+                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" style={{ color: '#F87171' }}>
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M6 18L18 6M6 6l12 12" />
                   </svg>
                 </div>
-                <h3 className="text-sm font-semibold text-slate-900 mb-1.5">{p.title}</h3>
-                <p className="text-sm text-slate-500 leading-relaxed">{p.desc}</p>
+                <h3 className="text-sm font-bold mb-1.5" style={{ color: '#E2E8F0' }}>{p.title}</h3>
+                <p className="text-sm leading-relaxed" style={{ color: '#475569' }}>{p.desc}</p>
               </div>
             ))}
           </div>

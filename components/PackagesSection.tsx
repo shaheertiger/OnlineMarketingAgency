@@ -3,7 +3,7 @@ import Link from 'next/link'
 const packages = [
   {
     name: 'Starter Website',
-    price: 'Starting From $499',
+    price: 'From $499',
     priceNote: 'one-time',
     description:
       'A clean, professional website for small businesses that need a stronger online presence.',
@@ -18,10 +18,11 @@ const packages = [
     cta: 'Get Website Quote',
     href: '/contact',
     highlighted: false,
+    badge: null,
   },
   {
     name: 'Ads Management',
-    price: 'Starting From $199',
+    price: 'From $199',
     priceNote: 'per month',
     description:
       'Google Ads and Facebook Ads management for local businesses that want more leads and calls.',
@@ -36,6 +37,7 @@ const packages = [
     cta: 'Start Ads Campaign',
     href: '/contact',
     highlighted: true,
+    badge: 'Most Popular',
   },
   {
     name: 'Local Growth System',
@@ -54,17 +56,46 @@ const packages = [
     cta: 'Request Custom Quote',
     href: '/contact',
     highlighted: false,
+    badge: 'Best Value',
   },
 ]
 
 export default function PackagesSection() {
   return (
-    <section id="packages" className="section-pad bg-white">
-      <div className="container-main">
-        <div className="text-center mb-12">
+    <section
+      id="packages"
+      className="section-pad relative overflow-hidden"
+      style={{ background: '#070C1A' }}
+    >
+      {/* Glow accent */}
+      <div
+        className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[200px] pointer-events-none"
+        style={{
+          background: 'radial-gradient(ellipse at top, rgba(37,99,235,0.08) 0%, transparent 70%)',
+        }}
+        aria-hidden="true"
+      />
+      <div
+        className="absolute top-0 inset-x-0 h-px pointer-events-none"
+        style={{ background: 'linear-gradient(90deg, transparent, rgba(96,165,250,0.15), transparent)' }}
+        aria-hidden="true"
+      />
+
+      <div className="container-main relative">
+        <div className="text-center mb-14">
           <p className="section-label mb-4">Packages</p>
           <h2 className="section-heading mb-4 max-w-2xl mx-auto">
-            Simple Marketing Packages For Small Businesses
+            Simple Marketing Packages For{' '}
+            <span
+              style={{
+                background: 'linear-gradient(135deg, #60A5FA, #818CF8)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                backgroundClip: 'text',
+              }}
+            >
+              Small Businesses
+            </span>
           </h2>
           <p className="section-subtext max-w-xl mx-auto">
             Straightforward pricing with no long-term lock-in contracts. Start with what you need
@@ -72,92 +103,117 @@ export default function PackagesSection() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6 lg:gap-8 items-start">
+        <div className="grid md:grid-cols-3 gap-6 lg:gap-7 items-stretch">
           {packages.map((pkg) => (
             <div
               key={pkg.name}
-              className={`rounded-2xl p-7 border flex flex-col ${
+              className="relative rounded-2xl p-7 flex flex-col transition-all duration-300"
+              style={
                 pkg.highlighted
-                  ? 'bg-blue-600 border-blue-500 shadow-xl shadow-blue-100'
-                  : 'bg-white border-slate-200 shadow-sm'
-              }`}
+                  ? {
+                      background: 'linear-gradient(160deg, #1E3A8A 0%, #1E1B4B 100%)',
+                      border: '1px solid rgba(96,165,250,0.3)',
+                      boxShadow: '0 24px 80px rgba(37,99,235,0.25), 0 0 0 1px rgba(96,165,250,0.2)',
+                    }
+                  : {
+                      background: 'rgba(11, 17, 32, 0.7)',
+                      border: '1px solid rgba(51, 65, 85, 0.5)',
+                      backdropFilter: 'blur(8px)',
+                    }
+              }
             >
-              {pkg.highlighted && (
-                <span className="inline-flex self-start text-xs font-bold uppercase tracking-widest text-blue-200 bg-blue-700 rounded-full px-3 py-1 mb-4">
-                  Most Popular
+              {/* Badge */}
+              {pkg.badge && (
+                <span
+                  className="inline-flex self-start text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-5"
+                  style={
+                    pkg.highlighted
+                      ? { color: '#93C5FD', background: 'rgba(147,197,253,0.15)', border: '1px solid rgba(147,197,253,0.25)' }
+                      : { color: '#34D399', background: 'rgba(52,211,153,0.1)', border: '1px solid rgba(52,211,153,0.2)' }
+                  }
+                >
+                  {pkg.badge}
                 </span>
               )}
+
               <h3
-                className={`text-xl font-bold mb-1 ${
-                  pkg.highlighted ? 'text-white' : 'text-slate-900'
-                }`}
+                className="text-xl font-bold mb-1"
+                style={{ color: '#F8FAFC' }}
               >
                 {pkg.name}
               </h3>
-              <div className="mb-3">
+
+              <div className="mb-4">
                 <span
-                  className={`text-2xl font-extrabold ${
-                    pkg.highlighted ? 'text-white' : 'text-slate-900'
-                  }`}
+                  className="text-3xl font-extrabold"
+                  style={{ color: pkg.highlighted ? '#FFFFFF' : '#F8FAFC' }}
                 >
                   {pkg.price}
                 </span>
                 <span
-                  className={`text-sm ml-1 ${
-                    pkg.highlighted ? 'text-blue-200' : 'text-slate-500'
-                  }`}
+                  className="text-sm ml-1.5"
+                  style={{ color: pkg.highlighted ? 'rgba(147,197,253,0.8)' : '#475569' }}
                 >
                   {pkg.priceNote}
                 </span>
               </div>
+
               <p
-                className={`text-sm leading-relaxed mb-6 ${
-                  pkg.highlighted ? 'text-blue-100' : 'text-slate-600'
-                }`}
+                className="text-sm leading-relaxed mb-6"
+                style={{ color: pkg.highlighted ? 'rgba(219,234,254,0.8)' : '#64748B' }}
               >
                 {pkg.description}
               </p>
-              <ul className="space-y-2.5 mb-8 flex-1">
+
+              {/* Divider */}
+              <div
+                className="mb-6 h-px"
+                style={{ background: pkg.highlighted ? 'rgba(147,197,253,0.15)' : 'rgba(51,65,85,0.5)' }}
+              />
+
+              <ul className="space-y-3 mb-8 flex-1">
                 {pkg.features.map((f) => (
-                  <li key={f} className="flex items-start gap-2.5">
-                    <svg
-                      className={`w-4 h-4 mt-0.5 shrink-0 ${
-                        pkg.highlighted ? 'text-blue-200' : 'text-blue-600'
-                      }`}
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
+                  <li key={f} className="flex items-start gap-3">
+                    <div
+                      className="w-4 h-4 rounded-full flex items-center justify-center shrink-0 mt-0.5"
+                      style={{
+                        background: pkg.highlighted ? 'rgba(147,197,253,0.2)' : 'rgba(59,130,246,0.15)',
+                        border: pkg.highlighted ? '1px solid rgba(147,197,253,0.3)' : '1px solid rgba(59,130,246,0.2)',
+                      }}
                     >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M5 13l4 4L19 7"
-                      />
-                    </svg>
+                      <svg
+                        className="w-2.5 h-2.5"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        style={{ color: pkg.highlighted ? '#93C5FD' : '#60A5FA' }}
+                      >
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                      </svg>
+                    </div>
                     <span
-                      className={`text-sm ${
-                        pkg.highlighted ? 'text-blue-50' : 'text-slate-600'
-                      }`}
+                      className="text-sm leading-relaxed"
+                      style={{ color: pkg.highlighted ? 'rgba(219,234,254,0.9)' : '#94A3B8' }}
                     >
                       {f}
                     </span>
                   </li>
                 ))}
               </ul>
+
               <Link
                 href={pkg.href}
-                className={
-                  pkg.highlighted
-                    ? 'btn-outline-white text-sm'
-                    : 'btn-primary text-sm'
-                }
+                className={pkg.highlighted ? 'btn-outline-white text-sm' : 'btn-primary text-sm'}
               >
                 {pkg.cta}
               </Link>
             </div>
           ))}
         </div>
+
+        <p className="text-center text-sm mt-8" style={{ color: '#334155' }}>
+          All packages include a free marketing audit before you spend a dollar.
+        </p>
       </div>
     </section>
   )

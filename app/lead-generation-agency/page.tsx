@@ -146,6 +146,10 @@ export default function LeadGenPage() {
           { label: 'SEO Services', href: '/seo-services' },
           { label: 'Website Design For Small Business', href: '/website-design-for-small-business' },
         ]}
+        breadcrumb={[
+          { label: 'Services', href: '/#services' },
+          { label: 'Lead Generation Agency' },
+        ]}
       />
     </>
   )

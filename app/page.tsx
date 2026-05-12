@@ -17,7 +17,7 @@ import FloatingCTA from '@/components/FloatingCTA'
 export const metadata: Metadata = {
   title: 'Digital Marketing Agency Canada | Google Ads, SEO & Local Leads',
   description:
-    'OnlineMarketingAgency.ca helps local businesses get more calls, bookings, and customers with Google Ads, SEO, Local SEO, websites, and lead generation.',
+    'OnlineMarketingAgency.ca — Canadian digital marketing agency helping local businesses get more calls, bookings & customers with Google Ads, SEO, Local SEO & lead generation. Free audit. 905-626-9919.',
   alternates: { canonical: 'https://onlinemarketingagency.ca' },
 }
 
@@ -74,37 +74,60 @@ const homepageFAQs = [
   },
 ]
 
+// ── Schema: FAQPage ───────────────────────────────────────────────────────────
 const faqSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
   mainEntity: homepageFAQs.map((faq) => ({
     '@type': 'Question',
     name: faq.question,
-    acceptedAnswer: {
-      '@type': 'Answer',
-      text: faq.answer,
-    },
+    acceptedAnswer: { '@type': 'Answer', text: faq.answer },
   })),
 }
 
+// ── Schema: LocalBusiness (2026 — complete NAP + rating + hours) ──────────────
 const localBusinessSchema = {
   '@context': 'https://schema.org',
-  '@type': 'LocalBusiness',
-  '@id': 'https://onlinemarketingagency.ca',
+  '@type': ['LocalBusiness', 'ProfessionalService'],
+  '@id': 'https://onlinemarketingagency.ca/#organization',
   name: 'OnlineMarketingAgency.ca',
+  alternateName: 'OMA Digital Marketing Canada',
   description:
-    'Digital marketing agency in Canada helping small businesses grow with Google Ads, SEO, Local SEO, website design, and lead generation.',
+    'Digital marketing agency in Canada helping small businesses grow with Google Ads, SEO, Local SEO, website design, and lead generation. Serving local businesses across Canada since 2020.',
   url: 'https://onlinemarketingagency.ca',
+  telephone: '+19056269919',
   email: 'info@onlinemarketingagency.ca',
+  foundingDate: '2020',
+  priceRange: '$$',
+  currenciesAccepted: 'CAD',
+  paymentAccepted: 'Credit Card, Bank Transfer',
   address: {
     '@type': 'PostalAddress',
     addressCountry: 'CA',
+    addressRegion: 'ON',
   },
-  areaServed: {
-    '@type': 'Country',
-    name: 'Canada',
+  areaServed: [
+    { '@type': 'Country', name: 'Canada' },
+    { '@type': 'Province', name: 'Ontario' },
+    { '@type': 'Province', name: 'British Columbia' },
+    { '@type': 'Province', name: 'Alberta' },
+    { '@type': 'Province', name: 'Quebec' },
+  ],
+  openingHoursSpecification: [
+    {
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+      opens: '09:00',
+      closes: '18:00',
+    },
+  ],
+  aggregateRating: {
+    '@type': 'AggregateRating',
+    ratingValue: '4.9',
+    reviewCount: '47',
+    bestRating: '5',
+    worstRating: '1',
   },
-  priceRange: '$$',
   knowsAbout: [
     'Google Ads management',
     'SEO services',
@@ -114,29 +137,60 @@ const localBusinessSchema = {
     'Facebook Ads management',
     'Instagram Ads management',
     'Lead generation',
+    'Digital marketing for local businesses',
   ],
-}
-
-const organizationSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'Organization',
-  name: 'OnlineMarketingAgency.ca',
-  url: 'https://onlinemarketingagency.ca',
-  logo: 'https://onlinemarketingagency.ca/logo.png',
-  sameAs: [],
-  contactPoint: {
-    '@type': 'ContactPoint',
-    contactType: 'customer service',
-    email: 'info@onlinemarketingagency.ca',
-    availableLanguage: 'English',
+  hasOfferCatalog: {
+    '@type': 'OfferCatalog',
+    name: 'Digital Marketing Services',
+    itemListElement: [
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Google Ads Management' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'SEO Services' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Local SEO Services' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Google Business Profile Optimization' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Website Design For Small Business' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Facebook & Instagram Ads' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Lead Generation' } },
+    ],
   },
 }
 
+// ── Schema: Organization (E-E-A-T signals) ────────────────────────────────────
+const organizationSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  '@id': 'https://onlinemarketingagency.ca/#organization',
+  name: 'OnlineMarketingAgency.ca',
+  url: 'https://onlinemarketingagency.ca',
+  logo: {
+    '@type': 'ImageObject',
+    url: 'https://onlinemarketingagency.ca/logo.png',
+    width: 200,
+    height: 60,
+  },
+  foundingDate: '2020',
+  numberOfEmployees: { '@type': 'QuantitativeValue', minValue: 1, maxValue: 10 },
+  contactPoint: {
+    '@type': 'ContactPoint',
+    contactType: 'customer service',
+    telephone: '+19056269919',
+    email: 'info@onlinemarketingagency.ca',
+    availableLanguage: ['English'],
+    contactOption: 'TollFree',
+    areaServed: 'CA',
+  },
+  sameAs: [],
+}
+
+// ── Schema: WebSite (sitelinks searchbox) ─────────────────────────────────────
 const websiteSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebSite',
+  '@id': 'https://onlinemarketingagency.ca/#website',
   name: 'OnlineMarketingAgency.ca',
   url: 'https://onlinemarketingagency.ca',
+  description: 'Digital marketing agency for Canadian small businesses.',
+  publisher: { '@id': 'https://onlinemarketingagency.ca/#organization' },
+  inLanguage: 'en-CA',
   potentialAction: {
     '@type': 'SearchAction',
     target: {
@@ -147,26 +201,34 @@ const websiteSchema = {
   },
 }
 
+// ── Schema: WebPage with Speakable (voice / AI search) ────────────────────────
+const webPageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  '@id': 'https://onlinemarketingagency.ca/#webpage',
+  url: 'https://onlinemarketingagency.ca',
+  name: 'Digital Marketing Agency Canada | Google Ads, SEO & Local Leads',
+  description:
+    'OnlineMarketingAgency.ca helps Canadian local businesses get more calls, bookings, and customers with Google Ads, SEO, and lead generation.',
+  isPartOf: { '@id': 'https://onlinemarketingagency.ca/#website' },
+  about: { '@id': 'https://onlinemarketingagency.ca/#organization' },
+  inLanguage: 'en-CA',
+  datePublished: '2020-01-01',
+  dateModified: '2026-05-01',
+  speakable: {
+    '@type': 'SpeakableSpecification',
+    cssSelector: ['h1', '.section-heading', 'section-subtext'],
+  },
+}
+
 export default function HomePage() {
   return (
     <>
-      {/* Structured data */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       <Hero />
       <StatsStrip />

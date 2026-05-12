@@ -147,6 +147,10 @@ export default function GBPPage() {
           { label: 'SEO Services', href: '/seo-services' },
           { label: 'Google Ads Management', href: '/google-ads-management' },
         ]}
+        breadcrumb={[
+          { label: 'Services', href: '/#services' },
+          { label: 'Google Business Profile Optimization' },
+        ]}
       />
     </>
   )

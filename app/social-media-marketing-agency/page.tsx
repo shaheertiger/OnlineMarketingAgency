@@ -147,6 +147,10 @@ export default function SocialMediaPage() {
           { label: 'Website Design For Small Business', href: '/website-design-for-small-business' },
           { label: 'SEO Services', href: '/seo-services' },
         ]}
+        breadcrumb={[
+          { label: 'Services', href: '/#services' },
+          { label: 'Social Media Marketing' },
+        ]}
       />
     </>
   )

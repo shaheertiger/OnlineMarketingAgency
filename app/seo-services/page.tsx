@@ -147,6 +147,10 @@ export default function SEOServicesPage() {
           { label: 'Google Business Profile Optimization', href: '/google-business-profile-optimization' },
           { label: 'Website Design For Small Business', href: '/website-design-for-small-business' },
         ]}
+        breadcrumb={[
+          { label: 'Services', href: '/#services' },
+          { label: 'SEO Services' },
+        ]}
       />
     </>
   )
