@@ -4,8 +4,24 @@ import ContactForm from '@/components/ContactForm'
 export const metadata: Metadata = {
   title: 'Contact | Get Your Free Marketing Audit',
   description:
-    'Contact OnlineMarketingAgency.ca to get your free marketing audit. We help local businesses in Canada grow with Google Ads, SEO, Local SEO, and lead generation.',
+    'Get your free marketing audit from OnlineMarketingAgency.ca. We review your website, Google rankings, Google Business Profile, and ads — then give you a clear action plan.',
   alternates: { canonical: 'https://onlinemarketingagency.ca/contact' },
+  keywords: [
+    'free marketing audit Canada',
+    'digital marketing consultation Canada',
+    'marketing audit for local business',
+  ],
+  openGraph: {
+    title: 'Contact | Get Your Free Marketing Audit',
+    description:
+      'Get your free marketing audit from OnlineMarketingAgency.ca. We review your website, Google rankings, Google Business Profile, and ads — then give you a clear action plan.',
+    url: 'https://onlinemarketingagency.ca/contact',
+  },
+  twitter: {
+    title: 'Contact | Get Your Free Marketing Audit',
+    description:
+      'Get your free marketing audit from OnlineMarketingAgency.ca. We review your website, Google rankings, Google Business Profile, and ads — then give you a clear action plan.',
+  },
 }
 
 const auditIncludes = [

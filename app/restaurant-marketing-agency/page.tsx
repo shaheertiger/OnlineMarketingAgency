@@ -4,8 +4,24 @@ import IndustryPageTemplate from '@/components/IndustryPageTemplate'
 export const metadata: Metadata = {
   title: 'Restaurant Marketing Agency | Get More Reservations & Orders',
   description:
-    'Digital marketing for restaurants in Canada. Get more reservations, online orders, and walk-in customers with Google Business Profile, Local SEO, and social media advertising.',
+    'Restaurant marketing agency for Canadian restaurants — get more reservations, online orders, and walk-in customers with Google Business Profile, Local SEO, and social media ads.',
   alternates: { canonical: 'https://onlinemarketingagency.ca/restaurant-marketing-agency' },
+  keywords: [
+    'restaurant marketing agency',
+    'restaurant digital marketing Canada',
+    'restaurant local SEO Canada',
+  ],
+  openGraph: {
+    title: 'Restaurant Marketing Agency | Get More Reservations & Orders',
+    description:
+      'Restaurant marketing agency for Canadian restaurants — get more reservations, online orders, and walk-in customers with Google Business Profile, Local SEO, and social media ads.',
+    url: 'https://onlinemarketingagency.ca/restaurant-marketing-agency',
+  },
+  twitter: {
+    title: 'Restaurant Marketing Agency | Get More Reservations & Orders',
+    description:
+      'Restaurant marketing agency for Canadian restaurants — get more reservations, online orders, and walk-in customers with Google Business Profile, Local SEO, and social media ads.',
+  },
 }
 
 export default function RestaurantMarketingPage() {

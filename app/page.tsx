@@ -19,8 +19,18 @@ import FloatingCTA from '@/components/FloatingCTA'
 export const metadata: Metadata = {
   title: 'Digital Marketing Agency Canada | Google Ads, SEO & Local Leads',
   description:
-    'OnlineMarketingAgency.ca — Canadian digital marketing agency helping local businesses get more calls, bookings & customers with Google Ads, SEO, Local SEO & lead generation. Free audit. 905-626-9919.',
+    'Digital marketing agency Canada — Google Ads, SEO, Local SEO, and lead generation for local businesses. More calls, bookings, and customers. Free audit. 905-626-9919.',
   alternates: { canonical: 'https://onlinemarketingagency.ca' },
+  keywords: ['digital marketing agency Canada', 'Google Ads management Canada', 'local SEO services Canada'],
+  openGraph: {
+    title: 'Digital Marketing Agency Canada | Google Ads, SEO & Local Leads',
+    description: 'Digital marketing agency Canada — Google Ads, SEO, Local SEO, and lead generation for local businesses. More calls, bookings, and customers. Free audit.',
+    url: 'https://onlinemarketingagency.ca',
+  },
+  twitter: {
+    title: 'Digital Marketing Agency Canada | Google Ads, SEO & Local Leads',
+    description: 'Digital marketing agency Canada — Google Ads, SEO, Local SEO, and lead generation for local businesses. More calls, bookings, and customers. Free audit.',
+  },
 }
 
 const homepageFAQs = [
