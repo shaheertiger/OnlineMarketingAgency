@@ -321,8 +321,8 @@ export default function AboutPage() {
                 </p>
                 <ul className="space-y-2">
                   {[
-                    'Google Ads campaign management (from $199/month)',
-                    'SEO for local service businesses (from $399/month)',
+                    'Google Ads campaign management (from $499/month)',
+                    'SEO for local service businesses (from $499/month)',
                     'Google Business Profile optimization',
                     'Conversion-focused website design (from $499)',
                     'Lead generation systems for local markets',
