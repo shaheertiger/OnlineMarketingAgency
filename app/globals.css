@@ -2,113 +2,169 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ── Brand design tokens ──────────────────────────────────────────────── */
+:root {
+  --lime:     #C8FF00;
+  --lime-dim: #B0E400;
+  --cobalt:   #1D4ED8;
+  --charcoal: #0F0F12;
+  --navy:     #0A0E1C;
+  --cream:    #F7F6F2;
+  --fog:      #EDECE8;
+  --muted:    #6B7280;
+}
+
+/* ── Base ─────────────────────────────────────────────────────────────── */
 @layer base {
-  html {
-    scroll-behavior: smooth;
-  }
+  html { scroll-behavior: smooth; }
 
   body {
-    background-color: #060B18;
-    color: #CBD5E1;
+    background-color: var(--cream);
+    color: var(--charcoal);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
 
+  /* Default headings are white — dark-section templates rely on this.
+     Light-section components override color explicitly via inline styles. */
   h1, h2, h3, h4, h5, h6 {
-    @apply font-bold leading-tight;
+    @apply font-bold;
     color: #F8FAFC;
+    letter-spacing: -0.025em;
+    line-height: 1.05;
   }
 }
 
+/* ── Components ───────────────────────────────────────────────────────── */
 @layer components {
-  .btn-primary {
-    @apply inline-flex items-center justify-center gap-2 px-6 py-3
-           text-white font-semibold rounded-xl
-           transition-all duration-200 text-base leading-none;
-    background: linear-gradient(135deg, #2563EB 0%, #4F46E5 100%);
-    box-shadow: 0 4px 24px rgba(37, 99, 235, 0.4), 0 1px 2px rgba(0,0,0,0.3);
-  }
-  .btn-primary:hover {
-    background: linear-gradient(135deg, #3B82F6 0%, #6366F1 100%);
-    box-shadow: 0 8px 32px rgba(37, 99, 235, 0.55), 0 1px 2px rgba(0,0,0,0.3);
-    transform: translateY(-1px);
-  }
-  .btn-primary:active {
-    transform: translateY(0);
-    box-shadow: 0 2px 12px rgba(37, 99, 235, 0.3);
-  }
 
-  .btn-secondary {
-    @apply inline-flex items-center justify-center gap-2 px-6 py-3
-           font-semibold rounded-xl
-           transition-all duration-200 text-base leading-none;
-    border: 1px solid rgba(71, 85, 105, 0.8);
-    color: #CBD5E1;
-    background: rgba(255, 255, 255, 0.04);
-    backdrop-filter: blur(8px);
-  }
-  .btn-secondary:hover {
-    border-color: rgba(148, 163, 184, 0.5);
-    background: rgba(255, 255, 255, 0.08);
-    color: #F8FAFC;
-    transform: translateY(-1px);
-  }
-
-  .btn-outline-white {
-    @apply inline-flex items-center justify-center gap-2 px-6 py-3
-           font-semibold rounded-xl
-           transition-all duration-300 text-base leading-none;
-    border: 1.5px solid rgba(255, 255, 255, 0.3);
-    color: white;
-    background: rgba(255, 255, 255, 0.06);
-    backdrop-filter: blur(8px);
-  }
-  .btn-outline-white:hover {
-    background: white;
-    color: #0F172A;
-    border-color: white;
-    transform: translateY(-1px);
-  }
-
-  .section-label {
-    @apply text-xs font-bold tracking-widest uppercase;
-    color: #60A5FA;
-    letter-spacing: 0.15em;
-  }
-
-  .section-heading {
-    @apply text-3xl md:text-4xl lg:text-5xl font-bold leading-[1.1];
-    color: #F8FAFC;
-  }
-
-  .section-subtext {
-    @apply text-lg leading-relaxed;
-    color: #94A3B8;
-  }
-
-  .card {
-    @apply rounded-2xl p-6 transition-all duration-300;
-    background: rgba(15, 23, 42, 0.7);
-    border: 1px solid rgba(51, 65, 85, 0.5);
-    backdrop-filter: blur(8px);
-  }
-  .card:hover {
-    background: rgba(15, 23, 42, 0.9);
-    border-color: rgba(96, 165, 250, 0.25);
-    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(96, 165, 250, 0.1);
-    transform: translateY(-2px);
-  }
-
+  /* === LAYOUT === */
   .container-main {
-    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+    @apply max-w-7xl mx-auto px-5 sm:px-8 lg:px-10;
   }
 
   .section-pad {
     @apply py-20 md:py-28;
   }
+
+  /* === BUTTONS === */
+
+  /* Lime — primary CTA everywhere */
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3
+           font-bold rounded-lg text-base leading-none
+           transition-all duration-150;
+    background: var(--lime);
+    color: var(--charcoal);
+  }
+  .btn-primary:hover {
+    background: #D6FF1A;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 24px rgba(200, 255, 0, 0.35);
+  }
+  .btn-primary:active { transform: translateY(0); }
+
+  /* Dark — charcoal bg, white text (for light sections) */
+  .btn-dark {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3
+           font-bold rounded-lg text-base leading-none text-white
+           transition-all duration-150;
+    background: var(--charcoal);
+  }
+  .btn-dark:hover {
+    background: #1a1a1e;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Secondary — outline on light backgrounds */
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3
+           font-semibold rounded-lg text-base leading-none
+           transition-all duration-150;
+    border: 1.5px solid rgba(15, 15, 18, 0.7);
+    color: var(--charcoal);
+    background: transparent;
+  }
+  .btn-secondary:hover {
+    background: var(--charcoal);
+    color: white;
+    transform: translateY(-1px);
+  }
+
+  /* Outline white — for dark section backgrounds */
+  .btn-outline-white {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3
+           font-semibold rounded-lg text-base leading-none text-white
+           transition-all duration-150;
+    border: 1.5px solid rgba(255, 255, 255, 0.35);
+    background: transparent;
+  }
+  .btn-outline-white:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.65);
+    transform: translateY(-1px);
+  }
+
+  /* === TYPOGRAPHY === */
+
+  /* Label above headings — cobalt on light, lime on dark (via .section-label-lime) */
+  .section-label {
+    @apply text-xs font-bold tracking-[0.15em] uppercase;
+    color: var(--cobalt);
+  }
+  .section-label-lime {
+    @apply text-xs font-bold tracking-[0.15em] uppercase;
+    color: var(--lime);
+  }
+
+  /* Headings — white default for backward compat (dark templates) */
+  .section-heading {
+    @apply text-3xl md:text-4xl lg:text-[2.75rem] font-extrabold leading-[1.06];
+    color: #F8FAFC;
+    letter-spacing: -0.025em;
+  }
+  /* Light variant for light-bg sections */
+  .section-heading-dark {
+    @apply text-3xl md:text-4xl lg:text-[2.75rem] font-extrabold leading-[1.06];
+    color: var(--charcoal);
+    letter-spacing: -0.025em;
+  }
+
+  /* Subtext — blue-gray default (readable on dark) */
+  .section-subtext {
+    @apply text-base md:text-lg leading-relaxed;
+    color: #94A3B8;
+  }
+
+  /* === CARDS === */
+
+  /* Light card (for cream/white sections) */
+  .card {
+    @apply rounded-2xl p-6 transition-all duration-300;
+    background: white;
+    border: 1px solid rgba(0, 0, 0, 0.07);
+  }
+  .card:hover {
+    border-color: rgba(0, 0, 0, 0.14);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+    transform: translateY(-2px);
+  }
+
+  /* Dark card */
+  .card-dark {
+    @apply rounded-2xl p-6 transition-all duration-300;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+  .card-dark:hover {
+    background: rgba(255, 255, 255, 0.07);
+    border-color: rgba(200, 255, 0, 0.2);
+    transform: translateY(-2px);
+  }
 }
 
-/* ── Gradient text ── */
+/* ── Gradient text ────────────────────────────────────────────────────── */
 .gradient-text {
   background: linear-gradient(135deg, #60A5FA 0%, #818CF8 100%);
   -webkit-background-clip: text;
@@ -116,39 +172,61 @@
   background-clip: text;
 }
 
-/* ── Animated background orbs ── */
-@keyframes orb-pulse {
-  0%, 100% { opacity: 0.35; transform: scale(1); }
-  50%       { opacity: 0.55; transform: scale(1.08); }
+.gradient-text-lime {
+  background: linear-gradient(135deg, #C8FF00 0%, #00E5B4 70%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
-@keyframes orb-float {
-  0%, 100% { transform: translateY(0px) scale(1); }
-  50%       { transform: translateY(-18px) scale(1.04); }
+
+/* ── Footer links ─────────────────────────────────────────────────────── */
+.footer-link {
+  color: rgba(255, 255, 255, 0.38);
+  transition: color 150ms;
 }
+.footer-link:hover { color: rgba(255, 255, 255, 0.82); }
+
+/* ── Grid patterns ────────────────────────────────────────────────────── */
+/* Dark grid (for dark sections) */
+.bg-grid,
+.bg-grid-dark {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.028) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.028) 1px, transparent 1px);
+  background-size: 44px 44px;
+}
+
+/* Light grid (for cream/white sections) */
+.bg-grid-light {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.038) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.038) 1px, transparent 1px);
+  background-size: 44px 44px;
+}
+
+/* ── Animations ───────────────────────────────────────────────────────── */
 @keyframes fade-in-up {
   from { opacity: 0; transform: translateY(20px); }
   to   { opacity: 1; transform: translateY(0); }
 }
-
-.orb-pulse  { animation: orb-pulse 6s ease-in-out infinite; }
-.orb-float  { animation: orb-float 8s ease-in-out infinite; }
-.fade-in-up { animation: fade-in-up 0.6s ease both; }
-
-/* ── Footer link hover (no JS event handlers needed) ── */
-.footer-link {
-  color: #334155;
-  transition: color 150ms;
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
 }
-.footer-link:hover { color: #94A3B8; }
-
-/* ── Glow utilities ── */
-.glow-blue   { box-shadow: 0 0 60px rgba(37, 99, 235, 0.2); }
-.glow-indigo { box-shadow: 0 0 60px rgba(79, 70, 229, 0.2); }
-
-/* ── Grid pattern overlay ── */
-.bg-grid {
-  background-image:
-    linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
-  background-size: 40px 40px;
+@keyframes orb-pulse {
+  0%, 100% { opacity: 0.35; transform: scale(1); }
+  50%       { opacity: 0.55; transform: scale(1.08); }
 }
+@keyframes pulse-lime {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.45; }
+}
+
+.fade-in-up       { animation: fade-in-up 0.6s ease both; }
+.animate-marquee  { animation: marquee 32s linear infinite; }
+.orb-pulse        { animation: orb-pulse 6s ease-in-out infinite; }
+.animate-pulse-lime { animation: pulse-lime 2s ease-in-out infinite; }
+
+/* ── Glow utilities (backward compat) ────────────────────────────────── */
+.glow-blue   { box-shadow: 0 0 60px rgba(37,  99, 235, 0.2); }
+.glow-indigo { box-shadow: 0 0 60px rgba(79,  70, 229, 0.2); }

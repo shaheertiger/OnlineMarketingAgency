@@ -14,10 +14,10 @@ const BASE_URL = 'https://onlinemarketingagency.ca'
 
 // ── Viewport (separate export per Next.js 14+ standard) ──────────────────────
 export const viewport: Viewport = {
-  themeColor: '#060B18',
+  themeColor: '#F7F6F2',
   width: 'device-width',
   initialScale: 1,
-  colorScheme: 'dark',
+  colorScheme: 'light dark',
 }
 
 // ── Global metadata ───────────────────────────────────────────────────────────

@@ -236,10 +236,10 @@ export default function HomePage() {
       <ProblemSection />
       <ServicesSection />
       <ValueSection />
-      <RiskReversal />
       <IndustriesSection />
-      <PackagesSection />
       <ProcessSection />
+      <PackagesSection />
+      <RiskReversal />
       <AboutSection />
       <FAQSection faqs={homepageFAQs} />
       <CTASection />
