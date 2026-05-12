@@ -68,6 +68,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
+      url: `${baseUrl}/seo-services-ontario`,
+      lastModified: LAST_UPDATED,
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
+    {
       url: `${baseUrl}/dental-seo-expert`,
       lastModified: LAST_UPDATED,
       changeFrequency: 'monthly',
