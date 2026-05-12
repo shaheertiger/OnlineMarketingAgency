@@ -342,10 +342,6 @@ export default function SEOServicesPage() {
           { label: 'Services', href: '/#services' },
           { label: 'SEO Services' },
         ]}
-        breadcrumb={[
-          { label: 'Services', href: '/#services' },
-          { label: 'SEO Services' },
-        ]}
       />
     </>
   )
