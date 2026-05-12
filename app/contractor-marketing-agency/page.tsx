@@ -85,6 +85,10 @@ export default function ContractorMarketingPage() {
         { label: 'Clinic Marketing', href: '/clinic-marketing-agency' },
         { label: 'Restaurant Marketing', href: '/restaurant-marketing-agency' },
       ]}
+      breadcrumb={[
+        { label: 'Industries', href: '/#industries' },
+        { label: 'Contractor Marketing' },
+      ]}
     />
   )
 }

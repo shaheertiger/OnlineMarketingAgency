@@ -147,6 +147,10 @@ export default function WebsiteDesignPage() {
           { label: 'Google Ads Management', href: '/google-ads-management' },
           { label: 'Lead Generation Agency', href: '/lead-generation-agency' },
         ]}
+        breadcrumb={[
+          { label: 'Services', href: '/#services' },
+          { label: 'Website Design' },
+        ]}
       />
     </>
   )

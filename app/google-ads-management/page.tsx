@@ -182,6 +182,10 @@ export default function GoogleAdsPage() {
           { label: 'Lead Generation Agency', href: '/lead-generation-agency' },
           { label: 'Website Design', href: '/website-design-for-small-business' },
         ]}
+        breadcrumb={[
+          { label: 'Services', href: '/#services' },
+          { label: 'Google Ads Management' },
+        ]}
       />
     </>
   )
