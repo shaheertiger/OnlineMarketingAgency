@@ -73,7 +73,7 @@ export default function TestimonialsSection() {
               ))}
             </div>
             <span className="text-sm font-semibold" style={{ color: 'rgba(255,255,255,0.7)' }}>
-              4.9 / 5 · 47 Google Reviews
+              4.9 / 5 · 485 Google Reviews
             </span>
           </div>
         </div>

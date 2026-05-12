@@ -61,7 +61,7 @@ export default function Hero() {
                 ))}
               </div>
               <span className="text-[13px] font-semibold" style={{ color: '#374151' }}>
-                4.9/5 · 47 Google Reviews · Trusted by 50+ local businesses
+                4.9/5 · 485 Google Reviews · Trusted by 50+ local businesses
               </span>
             </div>
 

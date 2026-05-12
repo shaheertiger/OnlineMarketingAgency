@@ -109,7 +109,7 @@ export default function LocationPageTemplate({
                 ))}
               </div>
               <span className="text-sm" style={{ color: 'rgba(255,255,255,0.5)' }}>
-                4.9 / 5 · 47 Google Reviews · Trusted by 50+ local businesses
+                4.9 / 5 · 485 Google Reviews · Trusted by 50+ local businesses
               </span>
             </div>
 
