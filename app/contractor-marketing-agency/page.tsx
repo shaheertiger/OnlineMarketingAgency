@@ -78,7 +78,7 @@ export default function ContractorMarketingPage() {
         {
           question: 'What is the best marketing strategy for a contractor?',
           answer:
-            'Google Ads targeting high-intent searches like "roofer in [city]" or "kitchen renovation contractor near me" generate the fastest leads. Combined with Local SEO and Google Business Profile optimization, this creates a consistent lead generation system.',
+            'Google Ads targeting high-intent searches like “roofer in [city]” or “kitchen renovation contractor near me” generate the fastest leads. Combined with Local SEO and Google Business Profile optimization, this creates a consistent lead generation system.',
         },
         {
           question: 'How do contractors get more leads online?',
@@ -93,7 +93,7 @@ export default function ContractorMarketingPage() {
         {
           question: 'How much do contractor marketing services cost?',
           answer:
-            'Our contractor marketing starts from $199 per month for Google Ads management. A full lead generation system with ads, SEO, and website optimization is priced on a custom basis.',
+            'Our contractor marketing starts from $499 per month for Google Ads management. A full lead generation system with ads, SEO, and website optimization is priced on a custom basis.',
         },
       ]}
       relatedIndustries={[
