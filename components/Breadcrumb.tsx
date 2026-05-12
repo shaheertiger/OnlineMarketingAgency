@@ -9,9 +9,14 @@ export interface BreadcrumbItem {
 
 interface BreadcrumbProps {
   items: BreadcrumbItem[]
+  /** 'dark' = light text on dark bg (default). 'light' = dark text on light bg. */
+  variant?: 'dark' | 'light'
 }
 
-export default function Breadcrumb({ items }: BreadcrumbProps) {
+export default function Breadcrumb({ items, variant = 'dark' }: BreadcrumbProps) {
+  const colorLink    = variant === 'dark' ? 'rgba(255,255,255,0.45)' : '#475569'
+  const colorCurrent = variant === 'dark' ? 'rgba(255,255,255,0.28)' : '#64748B'
+  const colorChevron = variant === 'dark' ? 'rgba(255,255,255,0.18)' : '#CBD5E1'
   const allItems = [
     { label: 'Home', href: '/' },
     ...items,
@@ -41,7 +46,6 @@ export default function Breadcrumb({ items }: BreadcrumbProps) {
       >
         <ol
           className="flex flex-wrap items-center gap-1 text-xs"
-          style={{ color: '#475569' }}
           itemScope
           itemType="https://schema.org/BreadcrumbList"
         >
@@ -58,15 +62,15 @@ export default function Breadcrumb({ items }: BreadcrumbProps) {
                 {!isLast && item.href ? (
                   <Link
                     href={item.href}
-                    className="hover:text-blue-400 transition-colors duration-150"
-                    style={{ color: '#475569' }}
+                    className="transition-opacity duration-150 hover:opacity-100"
+                    style={{ color: colorLink, opacity: 0.85 }}
                     itemProp="item"
                   >
                     <span itemProp="name">{item.label}</span>
                   </Link>
                 ) : (
                   <span
-                    style={{ color: '#64748B' }}
+                    style={{ color: colorCurrent }}
                     itemProp="name"
                     aria-current={isLast ? 'page' : undefined}
                   >
@@ -79,8 +83,7 @@ export default function Breadcrumb({ items }: BreadcrumbProps) {
                     className="w-3 h-3 shrink-0"
                     fill="none"
                     viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    style={{ color: '#1E293B' }}
+                    stroke={colorChevron}
                     aria-hidden="true"
                   >
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />

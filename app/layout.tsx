@@ -9,6 +9,8 @@ const inter = Inter({
   subsets: ['latin'],
   variable: '--font-inter',
   display: 'swap',
+  preload: true,
+  adjustFontFallback: true,
 })
 
 const BASE_URL = 'https://onlinemarketingagency.ca'
@@ -32,19 +34,12 @@ export const metadata: Metadata = {
   },
 
   description:
-    'OnlineMarketingAgency.ca helps Canadian small businesses get more calls, bookings, and customers with Google Ads, SEO, Local SEO, website design, and lead generation. Free marketing audit available.',
+    'Digital marketing agency Canada — Google Ads, SEO, Local SEO, and lead generation for local businesses. More calls, bookings, and customers. Free audit. 905-626-9919.',
 
   keywords: [
     'digital marketing agency Canada',
-    'online marketing agency',
     'Google Ads management Canada',
-    'SEO services Canada',
-    'local SEO services',
-    'Google Business Profile optimization',
-    'small business marketing Canada',
-    'lead generation agency',
-    'Facebook Ads agency Canada',
-    'marketing agency near me',
+    'local SEO services Canada',
   ],
 
   authors: [
@@ -106,6 +101,14 @@ export const metadata: Metadata = {
   verification: {
     google: 'REPLACE_WITH_GOOGLE_VERIFICATION_CODE',
   },
+
+  // ── Other / referrer ─────────────────────────────────────────────────────
+  referrer: 'origin-when-cross-origin',
+  other: {
+    'geo.region': 'CA',
+    'geo.placename': 'Canada',
+    'og:locale:alternate': 'fr_CA',
+  },
 }
 
 export default function RootLayout({
@@ -116,11 +119,15 @@ export default function RootLayout({
   return (
     <html lang="en-CA" className={inter.variable}>
       <head>
-        {/* Preconnect to Google Fonts for faster LCP */}
+        {/* DNS prefetch + preconnect for external origins */}
+        <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+        <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         {/* SVG favicon fallback — PNG sizes served by app/icon.tsx and app/apple-icon.tsx */}
         <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+        {/* Prevent iOS/Android from auto-detecting phone numbers (avoids CLS) */}
+        <meta name="format-detection" content="telephone=no, date=no, email=no, address=no" />
       </head>
       <body>
         <Header />

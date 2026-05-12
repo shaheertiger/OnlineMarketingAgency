@@ -227,6 +227,19 @@
 .orb-pulse        { animation: orb-pulse 6s ease-in-out infinite; }
 .animate-pulse-lime { animation: pulse-lime 2s ease-in-out infinite; }
 
+/* Respect user's motion preference — reduces CLS risk and improves accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .fade-in-up,
+  .animate-marquee,
+  .orb-pulse,
+  .animate-pulse-lime {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+  html { scroll-behavior: auto; }
+}
+
 /* ── Glow utilities (backward compat) ────────────────────────────────── */
 .glow-blue   { box-shadow: 0 0 60px rgba(37,  99, 235, 0.2); }
 .glow-indigo { box-shadow: 0 0 60px rgba(79,  70, 229, 0.2); }
