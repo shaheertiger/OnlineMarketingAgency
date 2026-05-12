@@ -1095,8 +1095,7 @@ export default function DentalSEOExpertPage() {
                     SEO strategy
                   </Link>{' '}
                   is paired with the on-page trust signals that turn organic search traffic into patient bookings.
-                  If your website also needs a structural redesign to support this,
-                  our{' '}
+                  If your website also needs a structural redesign to support this, our{' '}
                   <Link href="/website-design-for-small-business" className="font-semibold underline" style={{ color: '#0F0F12' }}>
                     website design for dental clinics
                   </Link>{' '}

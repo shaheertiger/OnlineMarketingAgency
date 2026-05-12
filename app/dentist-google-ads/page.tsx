@@ -418,7 +418,7 @@ export default function DentistGoogleAdsPage() {
         </div>
       </section>
 
-      {/* ── S1: Why Dentists Need Google Ads ──────────────────────────────── */}
+      {/* ── S1: Why Dentists Need Google Ads ────────────────────────────── */}
       <section
         className="section-pad"
         style={{ background: '#F7F6F2' }}
@@ -674,7 +674,7 @@ export default function DentistGoogleAdsPage() {
         </div>
       </section>
 
-      {/* ── S3: High-Intent Dental Campaigns ─────────────────────────────── */}
+      {/* ── S3: High-Intent Dental Campaigns ────────────────────────────── */}
       <section
         className="relative section-pad"
         style={{ background: '#0F0F12' }}
@@ -873,7 +873,7 @@ export default function DentistGoogleAdsPage() {
         </div>
       </section>
 
-      {/* ── S5: Process ───────────────────────────────────────────────────── */}
+      {/* ── S5: Process ────────────────────────────────────────────────────────── */}
       <section
         className="section-pad"
         style={{ background: '#ffffff' }}
@@ -958,7 +958,7 @@ export default function DentistGoogleAdsPage() {
         </div>
       </section>
 
-      {/* ── S6: Pricing ───────────────────────────────────────────────────── */}
+      {/* ── S6: Pricing ───────────────────────────────────────────────────────── */}
       <section
         className="section-pad"
         style={{ background: '#F7F6F2' }}
@@ -1057,7 +1057,7 @@ export default function DentistGoogleAdsPage() {
         </div>
       </section>
 
-      {/* ── S7: Why Choose OMA ────────────────────────────────────────────── */}
+      {/* ── S7: Why Choose OMA ──────────────────────────────────────────────── */}
       <section
         className="relative section-pad"
         style={{ background: '#0F0F12' }}
@@ -1122,7 +1122,7 @@ export default function DentistGoogleAdsPage() {
         </div>
       </section>
 
-      {/* ── S8: Trust and Compliance ──────────────────────────────────────── */}
+      {/* ── S8: Trust and Compliance ────────────────────────────────────────── */}
       <section
         className="section-pad"
         style={{ background: '#ffffff' }}
@@ -1207,7 +1207,7 @@ export default function DentistGoogleAdsPage() {
         </div>
       </section>
 
-      {/* ── S9: FAQ ───────────────────────────────────────────────────────── */}
+      {/* ── S9: FAQ ──────────────────────────────────────────────────────────── */}
       <section
         className="section-pad"
         style={{ background: '#F7F6F2' }}
@@ -1251,7 +1251,7 @@ export default function DentistGoogleAdsPage() {
         </div>
       </section>
 
-      {/* ── S10: Final CTA + Form ─────────────────────────────────────────── */}
+      {/* ── S10: Final CTA + Form ───────────────────────────────────────────── */}
       <section
         className="relative section-pad"
         style={{ background: '#0F0F12' }}
