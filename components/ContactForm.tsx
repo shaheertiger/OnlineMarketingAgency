@@ -92,51 +92,50 @@ export default function ContactForm() {
       <div
         className="rounded-2xl p-8 text-center"
         style={{
-          background: 'rgba(52, 211, 153, 0.08)',
-          border: '1px solid rgba(52, 211, 153, 0.25)',
+          background: 'rgba(200,255,0,0.06)',
+          border: '1px solid rgba(200,255,0,0.2)',
         }}
       >
         <div
           className="w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-4"
-          style={{ background: 'rgba(52, 211, 153, 0.15)', border: '1px solid rgba(52, 211, 153, 0.3)' }}
+          style={{ background: 'rgba(200,255,0,0.12)', border: '1px solid rgba(200,255,0,0.25)' }}
         >
-          <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" style={{ color: '#34D399' }}>
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
+          <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="#C8FF00" strokeWidth={2.5}>
+            <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
           </svg>
         </div>
-        <h3 className="text-xl font-bold mb-2" style={{ color: '#F8FAFC' }}>Audit Request Received</h3>
-        <p style={{ color: '#64748B' }}>
-          We will review your business and reach out within 1 business day with your free marketing
-          audit findings.
+        <h3 className="text-xl font-bold mb-2" style={{ color: '#0F0F12' }}>Audit Request Received</h3>
+        <p className="text-sm" style={{ color: '#6B7280' }}>
+          We will review your business and reach out within 1 business day with your free marketing audit findings.
         </p>
       </div>
     )
   }
 
   const inputStyle = {
-    background: 'rgba(11, 17, 32, 0.8)',
-    border: '1px solid rgba(51, 65, 85, 0.6)',
-    color: '#E2E8F0',
+    background: 'white',
+    border: '1.5px solid rgba(0,0,0,0.12)',
+    color: '#0F0F12',
     outline: 'none',
   }
 
   const inputClass =
-    'w-full rounded-xl px-4 py-3 text-sm transition-all duration-200 focus:ring-0'
+    'w-full rounded-xl px-4 py-3 text-sm transition-all duration-200 focus:ring-0 light-input'
 
-  const labelStyle = { color: '#64748B' }
+  const labelStyle = { color: '#374151' }
 
   return (
     <form onSubmit={handleSubmit} className="space-y-4" noValidate>
       <style>{`
-        .dark-input::placeholder { color: #334155; }
-        .dark-input:focus { border-color: rgba(96,165,250,0.4) !important; box-shadow: 0 0 0 3px rgba(37,99,235,0.12); }
-        .dark-input option { background: #0B1120; color: #E2E8F0; }
+        .light-input::placeholder { color: #9CA3AF; }
+        .light-input:focus { border-color: rgba(29,78,216,0.4) !important; box-shadow: 0 0 0 3px rgba(29,78,216,0.08); }
+        .light-input option { background: white; color: #0F0F12; }
       `}</style>
 
       <div className="grid sm:grid-cols-2 gap-4">
         <div>
           <label htmlFor="name" className="block text-sm font-medium mb-1.5" style={labelStyle}>
-            Name <span style={{ color: '#F87171' }}>*</span>
+            Your Name <span style={{ color: '#EF4444' }}>*</span>
           </label>
           <input
             id="name"
@@ -145,14 +144,14 @@ export default function ContactForm() {
             required
             value={form.name}
             onChange={handleChange}
-            placeholder="Your full name"
-            className={`${inputClass} dark-input`}
+            placeholder="First and last name"
+            className={inputClass}
             style={inputStyle}
           />
         </div>
         <div>
           <label htmlFor="businessName" className="block text-sm font-medium mb-1.5" style={labelStyle}>
-            Business Name <span style={{ color: '#F87171' }}>*</span>
+            Business Name <span style={{ color: '#EF4444' }}>*</span>
           </label>
           <input
             id="businessName"
@@ -162,7 +161,7 @@ export default function ContactForm() {
             value={form.businessName}
             onChange={handleChange}
             placeholder="Your business name"
-            className={`${inputClass} dark-input`}
+            className={inputClass}
             style={inputStyle}
           />
         </div>
@@ -171,7 +170,7 @@ export default function ContactForm() {
       <div className="grid sm:grid-cols-2 gap-4">
         <div>
           <label htmlFor="email" className="block text-sm font-medium mb-1.5" style={labelStyle}>
-            Email <span style={{ color: '#F87171' }}>*</span>
+            Email Address <span style={{ color: '#EF4444' }}>*</span>
           </label>
           <input
             id="email"
@@ -181,13 +180,13 @@ export default function ContactForm() {
             value={form.email}
             onChange={handleChange}
             placeholder="you@yourbusiness.com"
-            className={`${inputClass} dark-input`}
+            className={inputClass}
             style={inputStyle}
           />
         </div>
         <div>
           <label htmlFor="phone" className="block text-sm font-medium mb-1.5" style={labelStyle}>
-            Phone
+            Phone Number
           </label>
           <input
             id="phone"
@@ -196,7 +195,7 @@ export default function ContactForm() {
             value={form.phone}
             onChange={handleChange}
             placeholder="(416) 000-0000"
-            className={`${inputClass} dark-input`}
+            className={inputClass}
             style={inputStyle}
           />
         </div>
@@ -213,7 +212,7 @@ export default function ContactForm() {
           value={form.website}
           onChange={handleChange}
           placeholder="https://yourbusiness.com"
-          className={`${inputClass} dark-input`}
+          className={inputClass}
           style={inputStyle}
         />
       </div>
@@ -228,7 +227,7 @@ export default function ContactForm() {
             name="service"
             value={form.service}
             onChange={handleChange}
-            className={`${inputClass} dark-input`}
+            className={inputClass}
             style={inputStyle}
           >
             <option value="">Select a service</option>
@@ -246,7 +245,7 @@ export default function ContactForm() {
             name="budget"
             value={form.budget}
             onChange={handleChange}
-            className={`${inputClass} dark-input`}
+            className={inputClass}
             style={inputStyle}
           >
             <option value="">Select a budget range</option>
@@ -264,13 +263,25 @@ export default function ContactForm() {
         <textarea
           id="message"
           name="message"
-          rows={4}
+          rows={3}
           value={form.message}
           onChange={handleChange}
-          placeholder="What are your main marketing goals? What challenges are you facing?"
-          className={`${inputClass} dark-input`}
+          placeholder="What are your main marketing goals? What's not working right now?"
+          className={inputClass}
           style={{ ...inputStyle, resize: 'vertical' }}
         />
+      </div>
+
+      <div
+        className="flex items-center gap-2.5 px-4 py-3 rounded-xl"
+        style={{ background: 'rgba(29,78,216,0.05)', border: '1px solid rgba(29,78,216,0.12)' }}
+      >
+        <svg className="w-4 h-4 shrink-0" viewBox="0 0 20 20" fill="#1D4ED8">
+          <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+        </svg>
+        <span className="text-xs" style={{ color: '#374151' }}>
+          We typically respond within <strong>1 business day</strong> with your full audit findings.
+        </span>
       </div>
 
       <button
@@ -278,11 +289,11 @@ export default function ContactForm() {
         disabled={loading}
         className="btn-primary w-full text-base py-4 disabled:opacity-60 disabled:cursor-not-allowed disabled:transform-none"
       >
-        {loading ? 'Sending...' : 'Get Free Marketing Audit'}
+        {loading ? 'Sending...' : 'Get My Free Marketing Audit →'}
       </button>
 
-      <p className="text-xs text-center" style={{ color: '#334155' }}>
-        No spam. We will review your business and reply within 1 business day.
+      <p className="text-xs text-center" style={{ color: '#9CA3AF' }}>
+        No spam. No contract. Trusted by 50+ Canadian local businesses.
       </p>
     </form>
   )

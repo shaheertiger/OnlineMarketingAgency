@@ -5,8 +5,10 @@ import ServiceBar from '@/components/ServiceBar'
 import ProblemSection from '@/components/ProblemSection'
 import ServicesSection from '@/components/ServicesSection'
 import ValueSection from '@/components/ValueSection'
+import TestimonialsSection from '@/components/TestimonialsSection'
 import RiskReversal from '@/components/RiskReversal'
 import IndustriesSection from '@/components/IndustriesSection'
+import ComparisonSection from '@/components/ComparisonSection'
 import PackagesSection from '@/components/PackagesSection'
 import ProcessSection from '@/components/ProcessSection'
 import AboutSection from '@/components/AboutSection'
@@ -236,7 +238,9 @@ export default function HomePage() {
       <ProblemSection />
       <ServicesSection />
       <ValueSection />
+      <TestimonialsSection />
       <IndustriesSection />
+      <ComparisonSection />
       <ProcessSection />
       <PackagesSection />
       <RiskReversal />
