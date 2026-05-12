@@ -59,10 +59,32 @@ export default function ContactForm() {
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault()
     setLoading(true)
-    // In production, replace this with your form submission endpoint or service.
-    await new Promise((r) => setTimeout(r, 800))
-    setLoading(false)
-    setSubmitted(true)
+    try {
+      const res = await fetch('https://formsubmit.co/ajax/shaheertiger1@gmail.com', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+        },
+        body: JSON.stringify({
+          _subject: `New Marketing Audit Request – ${form.businessName}`,
+          Name: form.name,
+          'Business Name': form.businessName,
+          Email: form.email,
+          Phone: form.phone || 'Not provided',
+          Website: form.website || 'Not provided',
+          'Service Needed': form.service || 'Not specified',
+          'Monthly Budget': form.budget || 'Not specified',
+          Message: form.message || 'No message',
+        }),
+      })
+      if (!res.ok) throw new Error('Submission failed')
+      setSubmitted(true)
+    } catch {
+      alert('Something went wrong. Please email us directly at info@onlinemarketingagency.ca')
+    } finally {
+      setLoading(false)
+    }
   }
 
   if (submitted) {
