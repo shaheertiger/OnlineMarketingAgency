@@ -134,7 +134,15 @@ export default function Footer() {
             &copy; {year} OnlineMarketingAgency.ca. All rights reserved.
           </p>
           <p className="text-sm text-slate-600">
-            Digital marketing agency in Canada
+            Project of{' '}
+            <a
+              href="https://shaheeralikhan.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-slate-400 hover:text-white transition-colors"
+            >
+              shaheeralikhan.com
+            </a>
           </p>
         </div>
       </div>
