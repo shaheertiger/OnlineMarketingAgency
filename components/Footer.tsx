@@ -110,6 +110,14 @@ export default function Footer() {
               <p>Canada</p>
               <p>
                 <a
+                  href="tel:9056269919"
+                  className="hover:text-white transition-colors"
+                >
+                  905-626-9919
+                </a>
+              </p>
+              <p>
+                <a
                   href="mailto:info@onlinemarketingagency.ca"
                   className="hover:text-white transition-colors"
                 >
