@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
 import ServicePageTemplate from '@/components/ServicePageTemplate'
 
 export const metadata: Metadata = {
@@ -78,6 +79,57 @@ const faqSchema = {
   ],
 }
 
+const bodyContent = (
+  <div className="space-y-6 text-base leading-relaxed" style={{ color: '#374151' }}>
+    <h2 className="text-2xl font-black" style={{ color: '#0F0F12', letterSpacing: '-0.02em' }}>
+      Why Your Website Is the Foundation of Every Other Marketing Channel
+    </h2>
+    <p>
+      Every marketing channel you invest in — whether it is{' '}
+      <Link href="/google-ads-management" className="font-semibold underline" style={{ color: '#0F0F12' }}>
+        Google Ads
+      </Link>
+      ,{' '}
+      <Link href="/seo-services" className="font-semibold underline" style={{ color: '#0F0F12' }}>
+        SEO
+      </Link>
+      , or social media — sends traffic to your website. If your website does not convert that traffic into
+      calls, bookings, and contact form submissions, every marketing dollar you spend is partially wasted.
+      A well-designed, conversion-optimized website is the foundation that makes all other marketing
+      investments more effective. Without it, you are pouring traffic into a leaky bucket.
+    </p>
+    <p>
+      The most common website problem we see when we audit new client sites is not bad design — it is bad
+      structure. The phone number is buried in the footer. There is no clear call to action above the fold.
+      The services page lists everything the business does without speaking to the specific problems
+      customers have. The homepage loads in six seconds on mobile. These are conversion killers that cost
+      local businesses leads every single day.
+    </p>
+    <p>
+      We build websites specifically for local service businesses in Canada. That means every page is
+      structured around what local customers need to see to decide to call: clear service descriptions,
+      social proof (reviews, certifications, years in business), an easy contact form, and a prominently
+      displayed phone number. We write the copy, design the layout, build the site, and set up analytics
+      — so you launch with a complete, professional online presence that is ready to generate leads.
+    </p>
+    <p>
+      A new website also provides the technical foundation that{' '}
+      <Link href="/local-seo-services" className="font-semibold underline" style={{ color: '#0F0F12' }}>
+        local SEO
+      </Link>{' '}
+      and{' '}
+      <Link href="/seo-services" className="font-semibold underline" style={{ color: '#0F0F12' }}>
+        SEO services
+      </Link>{' '}
+      require to produce results. A fast, properly structured website with clean code, correct schema
+      markup, and logical internal linking gives Google everything it needs to crawl, index, and rank your
+      pages. Many businesses trying to do SEO on an old, slow, poorly-structured site are fighting an
+      uphill battle. A new site removes that constraint and gives your SEO efforts the best possible
+      foundation to build from.
+    </p>
+  </div>
+)
+
 export default function WebsiteDesignPage() {
   return (
     <>
@@ -132,6 +184,31 @@ export default function WebsiteDesignPage() {
             desc: 'Professional website design starting from $499 for a clean, fast, conversion-focused site — without agency price tags.',
           },
         ]}
+        problemsIntro={[
+          'The vast majority of small business websites we audit are losing potential customers every day. They load slowly on mobile, have no clear call to action, and make it difficult to find a phone number or contact form. Business owners often assume these visitors are "just browsing" — but the data tells a different story. Visitors who land on a slow, confusing website bounce within seconds and call the next business on the list instead.',
+          'Many small businesses are running on a website that was built 5–10 years ago by a family friend or on a DIY builder like Wix or Squarespace. These sites often lack proper SEO structure, have poor mobile performance, and fail Core Web Vitals assessments. Running Google Ads to a website that does not convert is one of the most common and most expensive mistakes local businesses make.',
+          'Template websites that are not customized for your specific services and customers also fail to differentiate your business. If your website looks identical to every other contractor or clinic in your city, potential customers have no reason to choose you over a competitor. Your website needs to communicate who you are, what you do differently, and why they should trust you — in the first few seconds.',
+          'We solve all of these problems by building custom, conversion-focused websites designed specifically for local service businesses in Canada. Every site we deliver is fast, mobile-first, SEO-ready, and structured around turning visitors into paying customers — not just presenting information.',
+        ]}
+        problems={[
+          {
+            title: 'Slow mobile load times killing conversions',
+            desc: 'A 1-second delay in page load time reduces conversions by up to 20%. Slow websites lose leads before they even see your services.',
+          },
+          {
+            title: 'No clear call to action above the fold',
+            desc: 'If visitors cannot find your phone number or contact form immediately, most will not scroll to find it — they will call a competitor.',
+          },
+          {
+            title: 'Poor SEO structure limiting organic rankings',
+            desc: 'Missing title tags, no schema markup, wrong heading hierarchy, and slow speeds prevent Google from properly ranking your pages.',
+          },
+          {
+            title: 'Generic design that fails to differentiate your business',
+            desc: 'Template websites that look like every competitor give customers no reason to choose you over the next result on Google.',
+          },
+        ]}
+        bodyContent={bodyContent}
         whatWeDoTitle="What Our Website Design Service Includes"
         whatWeDoBody="A complete website design and development service for small businesses, built to generate calls and leads."
         whatWeDo={[
@@ -172,6 +249,16 @@ export default function WebsiteDesignPage() {
             desc: 'We launch your site, test everything, and provide 30 days of post-launch support for any fixes.',
           },
         ]}
+        pricing={{
+          price: 'from $499',
+          period: '(one-time)',
+          bullets: [
+            'Full website design and development: up to 5 pages, mobile-first, fast-loading',
+            'Copywriting for home, services, about, and contact pages included',
+            'On-page SEO setup: title tags, meta descriptions, schema markup, and internal linking',
+            'Google Analytics and Search Console setup plus 30-day post-launch support',
+          ],
+        }}
         process={[
           {
             step: '01',

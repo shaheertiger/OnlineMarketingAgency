@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
 import ServicePageTemplate from '@/components/ServicePageTemplate'
 
 export const metadata: Metadata = {
@@ -78,6 +79,60 @@ const faqSchema = {
   ],
 }
 
+const bodyContent = (
+  <div className="space-y-6 text-base leading-relaxed" style={{ color: '#374151' }}>
+    <h2 className="text-2xl font-black" style={{ color: '#0F0F12', letterSpacing: '-0.02em' }}>
+      How Facebook and Instagram Ads Fit Into Your Local Marketing Strategy
+    </h2>
+    <p>
+      Facebook and Instagram Ads occupy a fundamentally different position in the marketing funnel compared
+      to{' '}
+      <Link href="/google-ads-management" className="font-semibold underline" style={{ color: '#0F0F12' }}>
+        Google Ads
+      </Link>
+      . Google captures demand — people who are already searching for your service right now. Meta
+      advertising creates demand — reaching people in your city who match your ideal customer profile
+      before they start searching. For local businesses, this distinction matters. If you only rely on
+      Google to capture active searchers, you miss the much larger pool of potential customers who have
+      not started searching yet but would choose your business if they knew about it.
+    </p>
+    <p>
+      The power of Facebook and Instagram advertising for local businesses lies in its targeting
+      precision. You can show your ads exclusively to people within 10 kilometres of your location, in
+      specific age ranges, with specific interests, and who have already visited your website. This means
+      your ad budget goes to the people most likely to become customers — not broad audiences that will
+      never convert. For a restaurant in Mississauga, this means reaching local residents who follow food
+      accounts. For a gym in Calgary, this means targeting fitness-interested adults within a 5km radius.
+    </p>
+    <p>
+      Retargeting is often the highest-ROI component of any Meta advertising strategy. When someone visits
+      your website but does not call or fill out a form, a retargeting campaign can show them your ad on
+      Facebook and Instagram over the next 30 days — keeping your business top of mind until they are
+      ready to take action. This dramatically increases the conversion rate of website traffic and makes
+      your{' '}
+      <Link href="/seo-services" className="font-semibold underline" style={{ color: '#0F0F12' }}>
+        SEO
+      </Link>{' '}
+      and{' '}
+      <Link href="/google-ads-management" className="font-semibold underline" style={{ color: '#0F0F12' }}>
+        Google Ads
+      </Link>{' '}
+      investment more efficient by converting visitors who would otherwise have been lost.
+    </p>
+    <p>
+      For businesses that want to maximize their lead generation across all channels, Meta advertising
+      integrates powerfully with our{' '}
+      <Link href="/lead-generation-agency" className="font-semibold underline" style={{ color: '#0F0F12' }}>
+        full lead generation system
+      </Link>
+      . Combining Google Ads for active search capture, Facebook and Instagram Ads for demand generation
+      and retargeting, and SEO for long-term organic growth creates a comprehensive local marketing
+      engine that generates leads from every direction — minimizing the risk that comes from depending on
+      any single channel.
+    </p>
+  </div>
+)
+
 export default function SocialMediaPage() {
   return (
     <>
@@ -132,6 +187,31 @@ export default function SocialMediaPage() {
             desc: 'Meta Pixel setup and full event tracking so you know exactly what your ad spend is generating in calls and leads.',
           },
         ]}
+        problemsIntro={[
+          'Running Facebook Ads without a clear strategy is one of the fastest ways to waste a marketing budget. Boosting posts from your Facebook page — the most common DIY approach — is not the same as running a properly structured campaign in Meta Ads Manager. Boosted posts reach a broad, unqualified audience and rarely generate actual leads. Real Facebook Ads campaigns are built with specific objectives, precise audience targeting, tested creative, and conversion tracking — none of which are included in a boosted post.',
+          'The Meta algorithm needs data to optimize. Campaigns with budgets that are too small, running for too short a period, or targeting audiences that are too narrow will never gather enough conversion data for the algorithm to learn and improve. Most businesses who "tried Facebook Ads and got nothing" made one of these structural mistakes — and then concluded that Meta advertising does not work for their industry. In most cases, it is the campaign that did not work, not the platform.',
+          'Creative fatigue is another major issue for local businesses running Meta ads. The same image or video shown to the same audience repeatedly produces diminishing returns quickly. Without a strategy for refreshing creative, testing new formats, and rotating audiences, performance degrades week by week. We manage this proactively — testing new creative formats, rotating audience segments, and analyzing what is generating leads versus what is generating likes.',
+          'At OMA, we build Meta advertising campaigns the right way from the start. We install the Meta Pixel properly, set up conversion events for calls and form submissions, build structured campaign funnels, write compelling local ad copy, and continuously test and optimize to improve cost per lead. You get full visibility into what your ad spend is generating — not just impressions and reach.',
+        ]}
+        problems={[
+          {
+            title: 'Boosted posts generating reach but no actual leads',
+            desc: 'Boosting posts is not advertising — it is paying Facebook to show your content to people who will never call. Real campaigns need proper objectives and audience targeting.',
+          },
+          {
+            title: 'No Meta Pixel installed or tracking misconfigured',
+            desc: 'Without proper pixel setup and conversion event tracking, you cannot retarget website visitors or measure which ads are actually generating customer calls.',
+          },
+          {
+            title: 'Ad creative fatiguing with no system to refresh it',
+            desc: 'Showing the same ads to the same audience week after week produces declining results. Without testing new creative, Meta campaigns stagnate.',
+          },
+          {
+            title: 'No clear funnel from awareness to lead conversion',
+            desc: 'Running only top-of-funnel awareness ads without a retargeting strategy means most of your ad spend never converts into actual customer inquiries.',
+          },
+        ]}
+        bodyContent={bodyContent}
         whatWeDoTitle="What Our Facebook & Instagram Ads Service Includes"
         whatWeDoBody="A complete Meta advertising service for local businesses — from audience strategy to monthly reporting."
         whatWeDo={[
@@ -172,6 +252,16 @@ export default function SocialMediaPage() {
             desc: 'Reports showing leads generated, cost per lead, reach, click-through rate, and campaign improvements made.',
           },
         ]}
+        pricing={{
+          price: 'from $299',
+          period: '/ month + ad spend',
+          bullets: [
+            'Full Meta Ads campaign setup: audiences, campaign structure, ad copy, and lead forms',
+            'Meta Pixel installation, conversion event setup, and retargeting audience creation',
+            'Ongoing A/B testing: creative rotation, audience testing, and bid optimization',
+            'Monthly report: leads generated, cost per lead, reach, and campaign improvements',
+          ],
+        }}
         process={[
           {
             step: '01',

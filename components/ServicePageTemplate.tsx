@@ -289,7 +289,7 @@ export default function ServicePageTemplate({
       {bodyContent && (
         <section
           className="section-pad"
-          style={{ background: '#FFFFFF' }}
+          style={{ background: '#F7F6F2' }}
         >
           <div className="container-main">
             <div className="max-w-3xl mx-auto prose-custom">

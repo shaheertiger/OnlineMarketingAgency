@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
 import ServicePageTemplate from '@/components/ServicePageTemplate'
 
 export const metadata: Metadata = {
@@ -78,6 +79,55 @@ const faqSchema = {
   ],
 }
 
+const bodyContent = (
+  <div className="space-y-6 text-base leading-relaxed" style={{ color: '#374151' }}>
+    <h2 className="text-2xl font-black" style={{ color: '#0F0F12', letterSpacing: '-0.02em' }}>
+      Why a Multi-Channel Lead Generation System Outperforms Any Single Channel
+    </h2>
+    <p>
+      Most local businesses generate leads from one or two channels — usually word of mouth and maybe
+      Google. This works until it stops working. A competitor ramps up their{' '}
+      <Link href="/google-ads-management" className="font-semibold underline" style={{ color: '#0F0F12' }}>
+        Google Ads
+      </Link>{' '}
+      spend, your referral network slows down for a season, or an algorithm change affects your rankings.
+      Businesses that depend on a single lead source are fragile. A proper lead generation system spreads
+      your lead acquisition across multiple channels — so no single change can shut off your pipeline.
+    </p>
+    <p>
+      The most effective local lead generation systems combine three types of channels: paid search for
+      immediate high-intent leads, organic search for long-term sustainable traffic, and local search
+      optimization for Google Maps visibility. Paid search through Google Ads captures customers who are
+      actively searching right now.{' '}
+      <Link href="/seo-services" className="font-semibold underline" style={{ color: '#0F0F12' }}>
+        SEO services
+      </Link>{' '}
+      build a foundation of organic visibility that generates leads without ongoing ad spend. And{' '}
+      <Link href="/local-seo-services" className="font-semibold underline" style={{ color: '#0F0F12' }}>
+        local SEO
+      </Link>{' '}
+      and Google Business Profile optimization put you at the top of Google Maps for location-based
+      searches — capturing the high-intent local search traffic that converts at the highest rate.
+    </p>
+    <p>
+      Conversion tracking is the missing piece for most local businesses attempting to manage their own
+      lead generation. Without knowing exactly which channel, campaign, keyword, or ad is generating each
+      inbound call and form submission, optimization is guesswork. We implement call tracking through
+      dedicated phone numbers, form submission tracking in Google Analytics, and conversion event
+      tracking in Google Ads — so every lead is attributed to a specific source. This data drives every
+      optimization decision we make month by month.
+    </p>
+    <p>
+      The long-term economics of a multi-channel lead generation system are compelling. In the first few
+      months, Google Ads carries the weight of lead generation while SEO builds. As organic rankings
+      improve over 6–12 months, the proportion of leads coming from free organic sources grows. Your cost
+      per lead decreases while total lead volume increases. The system becomes more efficient and more
+      valuable over time — the opposite of a pure ads approach where costs only increase as competition
+      grows and you get nothing if you pause.
+    </p>
+  </div>
+)
+
 export default function LeadGenPage() {
   return (
     <>
@@ -132,6 +182,31 @@ export default function LeadGenPage() {
             desc: 'A system you can scale by increasing ad spend, adding services, or expanding into new cities as your business grows.',
           },
         ]}
+        problemsIntro={[
+          'The biggest lead generation problem most small business owners face is inconsistency. Some months are great. Others are slow. They cannot predict revenue, cannot plan hiring, and cannot invest in growth because they never know where the next customer is coming from. This feast-or-famine cycle is not about having a bad business — it is about not having a system. Word of mouth and occasional referrals are not a system. A deliberately built multi-channel lead generation machine is.',
+          'Dependency on a single lead source is the root cause of this inconsistency. A business that relies exclusively on Google Ads is vulnerable to rising click costs, account suspensions, and increased competition. A business that relies on SEO alone will not see meaningful leads for months and has no immediate fallback if rankings drop. The businesses that generate leads consistently are the ones that have diversified across multiple channels — so that a change in one does not collapse their pipeline.',
+          'Most local businesses also have no visibility into where their leads come from. When someone calls, there is no way of knowing if they found the business through Google, Facebook, a referral, or a sign on the truck. This makes it impossible to know what is working and what to invest more in. Without attribution data, marketing budgets get spent on feelings rather than facts.',
+          'We solve all of these problems by building a complete, tracked, multi-channel lead generation system. We integrate Google Ads for immediate lead flow, local SEO and GBP optimization for organic local leads, and full conversion tracking across every channel — so you always know where your leads are coming from and exactly what each one cost. The result is a predictable, scalable lead pipeline you can actually plan a business around.',
+        ]}
+        problems={[
+          {
+            title: 'Unpredictable, feast-or-famine lead flow',
+            desc: 'Relying on referrals and occasional word of mouth means some months are great and others are dangerously slow — with no way to predict or control which.',
+          },
+          {
+            title: 'Over-dependence on a single channel',
+            desc: 'Any business that gets all its leads from one source is one algorithm change, one competitor, or one account suspension away from a revenue crisis.',
+          },
+          {
+            title: 'No tracking — no idea what is actually working',
+            desc: 'Without call tracking and source attribution, marketing spend decisions are based on guesswork rather than data — leading to budget waste.',
+          },
+          {
+            title: 'High cost per lead with no plan to reduce it',
+            desc: 'Businesses relying only on paid ads see costs rise year over year. Without SEO and organic channels building in parallel, the cost of leads never decreases.',
+          },
+        ]}
+        bodyContent={bodyContent}
         whatWeDoTitle="How Our Lead Generation System Works"
         whatWeDoBody="We combine multiple channels into one integrated lead generation strategy — built around what actually generates calls and bookings for your business."
         whatWeDo={[
@@ -172,6 +247,16 @@ export default function LeadGenPage() {
             desc: 'Leads by channel, cost per lead, and conversion rate — tracked and clearly reported every month.',
           },
         ]}
+        pricing={{
+          price: 'from $699',
+          period: '/ month (multi-channel)',
+          bullets: [
+            'Google Ads setup and management, local SEO, and GBP optimization combined',
+            'Full conversion tracking: call tracking, form tracking, and Google Analytics attribution',
+            'Landing page optimization to maximize lead conversion from all traffic sources',
+            'Monthly report: leads by channel, cost per lead, and optimization actions taken',
+          ],
+        }}
         process={[
           {
             step: '01',
