@@ -137,5 +137,43 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'yearly',
       priority: 0.2,
     },
+
+    // Blog posts
+    {
+      url: `${baseUrl}/blog/optimize-google-business-profile`,
+      lastModified: new Date('2026-05-01'),
+      changeFrequency: 'monthly',
+      priority: 0.6,
+    },
+    {
+      url: `${baseUrl}/blog/google-ads-vs-seo-local-business`,
+      lastModified: new Date('2026-04-15'),
+      changeFrequency: 'monthly',
+      priority: 0.6,
+    },
+    {
+      url: `${baseUrl}/blog/local-seo-ranking-factors`,
+      lastModified: new Date('2026-04-01'),
+      changeFrequency: 'monthly',
+      priority: 0.6,
+    },
+    {
+      url: `${baseUrl}/blog/website-not-generating-leads`,
+      lastModified: new Date('2026-03-15'),
+      changeFrequency: 'monthly',
+      priority: 0.6,
+    },
+    {
+      url: `${baseUrl}/blog/google-ads-budget-small-business`,
+      lastModified: new Date('2026-03-01'),
+      changeFrequency: 'monthly',
+      priority: 0.6,
+    },
+    {
+      url: `${baseUrl}/blog/facebook-ads-local-business`,
+      lastModified: new Date('2026-02-15'),
+      changeFrequency: 'monthly',
+      priority: 0.6,
+    },
   ]
 }
