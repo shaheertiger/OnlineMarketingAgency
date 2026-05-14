@@ -64,7 +64,7 @@ export const metadata: Metadata = {
       'Canadian digital marketing agency helping local businesses grow with Google Ads, SEO, Local SEO, and lead generation. Free audit available.',
     images: [
       {
-        url:    '/og-image.jpg',
+        url:    `${BASE_URL}/opengraph-image`,
         width:  1200,
         height: 630,
         alt:    'OnlineMarketingAgency.ca — Digital Marketing Agency Canada',
@@ -79,7 +79,7 @@ export const metadata: Metadata = {
     creator:     '@OMAcanada',
     title:       'Digital Marketing Agency Canada | Google Ads, SEO & Local Leads',
     description: 'Canadian digital marketing agency helping local businesses grow with Google Ads, SEO, Local SEO, and lead generation.',
-    images:      ['/og-image.jpg'],
+    images:      [`${BASE_URL}/opengraph-image`],
   },
 
   // ── Crawl directives ──────────────────────────────────────────────────────
