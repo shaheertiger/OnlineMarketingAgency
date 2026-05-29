@@ -107,9 +107,21 @@ const localBusinessSchema = {
   description:
     'Digital marketing agency in Canada helping small businesses grow with Google Ads, SEO, Local SEO, website design, and lead generation. Serving local businesses across Canada since 2020.',
   url: 'https://onlinemarketingagency.ca',
+  logo: {
+    '@type': 'ImageObject',
+    url: 'https://onlinemarketingagency.ca/logo.png',
+    width: 512,
+    height: 512,
+  },
+  image: 'https://onlinemarketingagency.ca/opengraph-image',
   telephone: '+19056269919',
   email: 'info@onlinemarketingagency.ca',
   foundingDate: '2020',
+  numberOfEmployees: { '@type': 'QuantitativeValue', minValue: 1, maxValue: 10 },
+  // Verified business profiles only — add real URLs as accounts are confirmed.
+  sameAs: [
+    'https://x.com/OMAcanada',
+  ],
   priceRange: '$$',
   currenciesAccepted: 'CAD',
   paymentAccepted: 'Credit Card, Bank Transfer',
@@ -140,6 +152,14 @@ const localBusinessSchema = {
     bestRating: '5',
     worstRating: '1',
   },
+  contactPoint: {
+    '@type': 'ContactPoint',
+    contactType: 'customer service',
+    telephone: '+19056269919',
+    email: 'info@onlinemarketingagency.ca',
+    availableLanguage: ['English'],
+    areaServed: 'CA',
+  },
   knowsAbout: [
     'Google Ads management',
     'SEO services',
@@ -164,33 +184,6 @@ const localBusinessSchema = {
       { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Lead Generation' } },
     ],
   },
-}
-
-// ── Schema: Organization (E-E-A-T signals) ──────────────────────────────────────────
-const organizationSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'Organization',
-  '@id': 'https://onlinemarketingagency.ca/#organization',
-  name: 'OnlineMarketingAgency.ca',
-  url: 'https://onlinemarketingagency.ca',
-  logo: {
-    '@type': 'ImageObject',
-    url: 'https://onlinemarketingagency.ca/logo.png',
-    width: 200,
-    height: 60,
-  },
-  foundingDate: '2020',
-  numberOfEmployees: { '@type': 'QuantitativeValue', minValue: 1, maxValue: 10 },
-  contactPoint: {
-    '@type': 'ContactPoint',
-    contactType: 'customer service',
-    telephone: '+19056269919',
-    email: 'info@onlinemarketingagency.ca',
-    availableLanguage: ['English'],
-    contactOption: 'TollFree',
-    areaServed: 'CA',
-  },
-  sameAs: [],
 }
 
 // ── Schema: WebSite (sitelinks searchbox) ───────────────────────────────────────────
@@ -237,7 +230,6 @@ export default function HomePage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />

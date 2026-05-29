@@ -24,6 +24,34 @@ export const metadata: Metadata = {
   },
 }
 
+// ── Schema: ContactPage + reachable ContactPoint ────────────────────────────
+const contactPageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ContactPage',
+  '@id': 'https://onlinemarketingagency.ca/contact#webpage',
+  url: 'https://onlinemarketingagency.ca/contact',
+  name: 'Contact | Get Your Free Marketing Audit',
+  description:
+    'Get your free marketing audit from OnlineMarketingAgency.ca. We review your website, Google rankings, Google Business Profile, and ads — then give you a clear action plan.',
+  inLanguage: 'en-CA',
+  isPartOf: { '@id': 'https://onlinemarketingagency.ca/#website' },
+  about: { '@id': 'https://onlinemarketingagency.ca/#organization' },
+  mainEntity: {
+    '@type': 'Organization',
+    '@id': 'https://onlinemarketingagency.ca/#organization',
+    name: 'OnlineMarketingAgency.ca',
+    url: 'https://onlinemarketingagency.ca',
+    contactPoint: {
+      '@type': 'ContactPoint',
+      contactType: 'sales',
+      telephone: '+19056269919',
+      email: 'info@onlinemarketingagency.ca',
+      availableLanguage: ['English'],
+      areaServed: 'CA',
+    },
+  },
+}
+
 const auditIncludes = [
   { icon: '🔍', label: 'Website performance & conversion audit' },
   { icon: '📍', label: 'Google Business Profile review' },
@@ -63,6 +91,8 @@ const miniTestimonials = [
 export default function ContactPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(contactPageSchema) }} />
+
       {/* Hero */}
       <section
         className="relative overflow-hidden"
