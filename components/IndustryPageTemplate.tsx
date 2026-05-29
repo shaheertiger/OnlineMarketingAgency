@@ -14,6 +14,8 @@ interface IndustryPageTemplateProps {
   breadcrumb?: BreadcrumbItem[]
 }
 
+const ORG_ID = 'https://onlinemarketingagency.ca/#organization'
+
 export default function IndustryPageTemplate({
   label,
   h1,
@@ -24,8 +26,41 @@ export default function IndustryPageTemplate({
   relatedIndustries = [],
   breadcrumb = [],
 }: IndustryPageTemplateProps) {
+  // ── Schema: Service (industry-specific offering) ──────────────────────────
+  const serviceSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name: h1,
+    serviceType: label,
+    description: intro,
+    provider: { '@id': ORG_ID },
+    areaServed: { '@type': 'Country', name: 'Canada' },
+    hasOfferCatalog: {
+      '@type': 'OfferCatalog',
+      name: `${label} Services`,
+      itemListElement: services.map((s) => ({
+        '@type': 'Offer',
+        itemOffered: { '@type': 'Service', name: s.title, description: s.desc },
+      })),
+    },
+  }
+
+  // ── Schema: FAQPage (FAQSection renders the UI but no JSON-LD) ─────────────
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqs.map((faq) => ({
+      '@type': 'Question',
+      name: faq.question,
+      acceptedAnswer: { '@type': 'Answer', text: faq.answer },
+    })),
+  }
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+
       {/* ── Breadcrumb ──────────────────────────────────────────────────────── */}
       {breadcrumb.length > 0 && (
         <div style={{ background: '#060B18' }}>

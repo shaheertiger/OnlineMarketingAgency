@@ -25,8 +25,8 @@ const organizationSchema = {
   logo: {
     '@type': 'ImageObject',
     url: 'https://onlinemarketingagency.ca/logo.png',
-    width: 200,
-    height: 60,
+    width: 512,
+    height: 512,
   },
   description:
     'Canadian digital marketing agency founded in 2020, specializing in Google Ads, SEO, Local SEO, Google Business Profile optimization, and website design for small local businesses across Canada.',
