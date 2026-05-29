@@ -4,7 +4,9 @@ import { ImageResponse } from 'next/og'
 // Referenced by Organization / LocalBusiness JSON-LD. Generated as a real PNG
 // so the schema `logo` URL always resolves (Google requires a fetchable raster
 // logo for the knowledge panel). Square 512×512 on a solid brand background.
-export const runtime = 'edge'
+// No runtime override → prerendered as a static asset at build (like
+// opengraph-image), so it is cached rather than generated per request.
+export const dynamic = 'force-static'
 
 export function GET() {
   return new ImageResponse(
