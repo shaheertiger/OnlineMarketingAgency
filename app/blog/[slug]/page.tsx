@@ -183,10 +183,12 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
     headline: post.title,
     description: post.description,
     url: `https://onlinemarketingagency.ca/blog/${post.slug}`,
+    image: ['https://onlinemarketingagency.ca/opengraph-image'],
     datePublished: post.date,
     dateModified: post.date,
     author: {
       '@type': 'Organization',
+      '@id': 'https://onlinemarketingagency.ca/#organization',
       name: 'OnlineMarketingAgency.ca',
       url: 'https://onlinemarketingagency.ca',
     },

@@ -103,7 +103,8 @@ export const metadata: Metadata = {
   other: {
     'geo.region': 'CA',
     'geo.placename': 'Canada',
-    'og:locale:alternate': 'fr_CA',
+    // Note: no 'og:locale:alternate' — the site is English-only (en-CA).
+    // Re-add fr_CA only once French pages + hreflang alternates exist.
   },
 }
 
