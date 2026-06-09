@@ -97,94 +97,9 @@ const faqSchema = {
   })),
 }
 
-// ── Schema: LocalBusiness (2026 — complete NAP + rating + hours) ──────────────
-const localBusinessSchema = {
-  '@context': 'https://schema.org',
-  '@type': ['LocalBusiness', 'ProfessionalService'],
-  '@id': 'https://onlinemarketingagency.ca/#organization',
-  name: 'OnlineMarketingAgency.ca',
-  alternateName: 'OMA Digital Marketing Canada',
-  description:
-    'Digital marketing agency in Canada helping small businesses grow with Google Ads, SEO, Local SEO, website design, and lead generation. Serving local businesses across Canada since 2020.',
-  url: 'https://onlinemarketingagency.ca',
-  logo: {
-    '@type': 'ImageObject',
-    url: 'https://onlinemarketingagency.ca/logo.png',
-    width: 512,
-    height: 512,
-  },
-  image: 'https://onlinemarketingagency.ca/opengraph-image',
-  telephone: '+19056269919',
-  email: 'info@onlinemarketingagency.ca',
-  foundingDate: '2020',
-  numberOfEmployees: { '@type': 'QuantitativeValue', minValue: 1, maxValue: 10 },
-  // Verified business profiles only — add real URLs as accounts are confirmed.
-  sameAs: [
-    'https://x.com/OMAcanada',
-  ],
-  priceRange: '$$',
-  currenciesAccepted: 'CAD',
-  paymentAccepted: 'Credit Card, Bank Transfer',
-  address: {
-    '@type': 'PostalAddress',
-    addressCountry: 'CA',
-    addressRegion: 'ON',
-  },
-  areaServed: [
-    { '@type': 'Country', name: 'Canada' },
-    { '@type': 'Province', name: 'Ontario' },
-    { '@type': 'Province', name: 'British Columbia' },
-    { '@type': 'Province', name: 'Alberta' },
-    { '@type': 'Province', name: 'Quebec' },
-  ],
-  openingHoursSpecification: [
-    {
-      '@type': 'OpeningHoursSpecification',
-      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
-      opens: '09:00',
-      closes: '18:00',
-    },
-  ],
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: '4.9',
-    reviewCount: '485',
-    bestRating: '5',
-    worstRating: '1',
-  },
-  contactPoint: {
-    '@type': 'ContactPoint',
-    contactType: 'customer service',
-    telephone: '+19056269919',
-    email: 'info@onlinemarketingagency.ca',
-    availableLanguage: ['English'],
-    areaServed: 'CA',
-  },
-  knowsAbout: [
-    'Google Ads management',
-    'SEO services',
-    'Local SEO',
-    'Google Business Profile optimization',
-    'Website design for small business',
-    'Facebook Ads management',
-    'Instagram Ads management',
-    'Lead generation',
-    'Digital marketing for local businesses',
-  ],
-  hasOfferCatalog: {
-    '@type': 'OfferCatalog',
-    name: 'Digital Marketing Services',
-    itemListElement: [
-      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Google Ads Management' } },
-      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'SEO Services' } },
-      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Local SEO Services' } },
-      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Google Business Profile Optimization' } },
-      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Website Design For Small Business' } },
-      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Facebook & Instagram Ads' } },
-      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Lead Generation' } },
-    ],
-  },
-}
+// NOTE: The LocalBusiness / ProfessionalService organization entity (#organization)
+// is now rendered sitewide from the root layout via <OrganizationSchema />
+// (see lib/site.ts) so every page carries one consistent entity.
 
 // ── Schema: WebSite (sitelinks searchbox) ───────────────────────────────────────────
 const websiteSchema = {
@@ -229,7 +144,6 @@ const webPageSchema = {
 export default function HomePage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />

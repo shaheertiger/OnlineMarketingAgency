@@ -5,12 +5,12 @@ import Link from 'next/link'
 const industries = [
   { name: 'Barbershops',       outcome: 'More bookings and walk-ins',       href: '/barber-marketing-agency' },
   { name: 'Medical Clinics',   outcome: 'More patient appointments',         href: '/clinic-marketing-agency' },
-  { name: 'Dentists',          outcome: 'More new patient calls',            href: '/clinic-marketing-agency' },
+  { name: 'Dentists',          outcome: 'More new patient calls',            href: '/dental-marketing-agency' },
   { name: 'Contractors',       outcome: 'More quote requests',               href: '/contractor-marketing-agency' },
   { name: 'Restaurants',       outcome: 'More reservations and orders',      href: '/restaurant-marketing-agency' },
-  { name: 'Law Firms',         outcome: 'More consultation inquiries',       href: '/barber-marketing-agency' },
-  { name: 'Real Estate',       outcome: 'More buyer and seller leads',       href: '/barber-marketing-agency' },
-  { name: 'Auto Businesses',   outcome: 'More service appointments',         href: '/barber-marketing-agency' },
+  { name: 'Law Firms',         outcome: 'More consultation inquiries',       href: '/law-firm-marketing-agency' },
+  { name: 'Real Estate',       outcome: 'More buyer and seller leads',       href: '/real-estate-marketing-agency' },
+  { name: 'Auto Businesses',   outcome: 'More service appointments',         href: '/auto-shop-marketing-agency' },
   { name: 'Home Services',     outcome: 'More calls and quote requests',     href: '/contractor-marketing-agency' },
 ]
 

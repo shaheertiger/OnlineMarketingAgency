@@ -27,6 +27,21 @@ const nextConfig = {
     formats: ['image/avif', 'image/webp'],
   },
 
+  // ── Host canonicalisation ────────────────────────────────────────────────────
+  // The codebase is consistently non-www (canonicals, sitemap, robots, schema
+  // @id). 301 the www host → non-www so there is exactly one indexable host.
+  // http → https is handled by the host/CDN (and `upgrade-insecure-requests`).
+  async redirects() {
+    return [
+      {
+        source: '/:path*',
+        has: [{ type: 'host', value: 'www.onlinemarketingagency.ca' }],
+        destination: 'https://onlinemarketingagency.ca/:path*',
+        permanent: true,
+      },
+    ]
+  },
+
   async headers() {
     return [
       {

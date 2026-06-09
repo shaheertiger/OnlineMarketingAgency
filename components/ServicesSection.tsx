@@ -26,8 +26,8 @@ const secondary = [
   { label: 'Website Design',      desc: 'Lead-gen sites that convert traffic into customers.', href: '/website-design-for-small-business' },
   { label: 'GBP Optimization',    desc: 'Dominate Google Maps for local searches.',            href: '/google-business-profile-optimization' },
   { label: 'Meta Ads',            desc: 'Facebook and Instagram for local demand generation.', href: '/social-media-marketing-agency' },
-  { label: 'Landing Pages',       desc: 'High-converting pages for specific campaigns.',       href: '/lead-generation-agency' },
-  { label: 'Conversion Tracking', desc: 'Know exactly which campaigns generate real leads.',   href: '/lead-generation-agency' },
+  { label: 'Landing Pages',       desc: 'High-converting pages for specific campaigns.',       href: '/lead-generation-agency#landing-pages' },
+  { label: 'Conversion Tracking', desc: 'Know exactly which campaigns generate real leads.',   href: '/lead-generation-agency#conversion-tracking' },
 ]
 
 export default function ServicesSection() {
