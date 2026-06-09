@@ -34,7 +34,8 @@ const localBusinessSchema = {
   email: 'info@onlinemarketingagency.ca',
   areaServed: { '@type': 'City', name: 'Brampton', containedInPlace: { '@type': 'Province', name: 'Ontario' } },
   priceRange: '$$',
-  aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.9', reviewCount: '47', bestRating: '5' },
+  // Rating is declared once on the sitewide organization entity (see lib/site.ts)
+  // to avoid conflicting review counts across per-city LocalBusiness nodes.
 }
 
 const faqSchema = {
@@ -113,6 +114,16 @@ We are a local agency that works with local businesses. No offshore teams, no ge
           },
         ]}
         nearbyAreas={['Bramalea', 'Castlemore', 'Mount Pleasant', 'Heart Lake', 'Springdale', 'Mississauga', 'Vaughan', 'Caledon', 'Bolton', 'Georgetown']}
+        caseStudy={{
+          title: 'Prestige Barbershop — Brampton, ON',
+          role: 'Ahmad K., Owner',
+          metric: '+500%',
+          metricLabel: 'New Clients',
+          quote:
+            'We went from 3 new walk-in clients a week to over 18 after they fixed our Google Ads and Google Business Profile. The cost per new client dropped so much it felt like cheating.',
+          detail:
+            'This Brampton barbershop was invisible on Google Maps for "barbershop near me" searches in its own neighbourhood. We rebuilt the Google Business Profile, launched a tightly targeted local Google Ads campaign, and set up a review-request system. Within three months new-client bookings increased fivefold while cost per new client fell sharply.',
+        }}
       />
     </>
   )

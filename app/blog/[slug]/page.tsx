@@ -13,10 +13,96 @@ type Post = {
   dateLabel: string
   readTime: string
   relatedService: { label: string; href: string }
+  relatedLocation?: { label: string; href: string }
   body: string[]
 }
 
 const posts: Post[] = [
+  {
+    slug: 'rank-google-map-pack-brampton',
+    title: 'How to Rank in the Google Map Pack in Brampton: A Step-by-Step Guide',
+    description:
+      'A practical, step-by-step guide to getting your Brampton business into the Google Map Pack — the three local results that capture most "near me" calls.',
+    category: 'Local SEO',
+    date: '2026-06-01',
+    dateLabel: 'June 1, 2026',
+    readTime: '8 min read',
+    relatedService: { label: 'Local SEO Services', href: '/local-seo-services' },
+    relatedLocation: { label: 'Digital Marketing in Brampton', href: '/brampton' },
+    body: [
+      'If you run a local business in Brampton, the Google Map Pack is the prize worth chasing. The Map Pack is the block of three business listings — with a map — that appears at the top of local search results when someone searches "plumber Brampton," "dentist near me," or "barbershop Bramalea." Those three spots capture the majority of clicks and calls. This guide walks through exactly how to get there.',
+      'Step one is your Google Business Profile. Claim it, verify it, and complete every single field. Your primary category must match precisely what you do — "Dentist," not "Health." Add accurate secondary categories, your service area, hours, services with descriptions, and a full set of real photos. In our experience auditing Brampton businesses, an incomplete profile is the single most common reason a business does not rank, and it is the fastest thing to fix.',
+      'Step two is reviews — the strongest signal in local search. Google rewards both the total number of reviews and the velocity of new ones. Build a simple system: after every completed job or visit, send the customer a direct link to your Google review page by text or email. A Brampton business going from 12 reviews to 60 over a few months, with steady new reviews each week, will almost always climb the Map Pack. Respond to every review, mentioning the service naturally.',
+      'Step three is NAP consistency. Your Name, Address, and Phone number must be identical everywhere your business appears online — your website, Yelp, YellowPages.ca, BBB, and industry directories. Inconsistent listings (an old phone number, a "St" vs "Street" mismatch) confuse Google and weaken your local authority. Audit and fix these before chasing new citations.',
+      'Step four is local on-page SEO. Your website should have a dedicated, substantive page for Brampton with genuine local content — neighbourhoods you serve like Bramalea, Mount Pleasant, Heart Lake, and Castlemore; local landmarks; and LocalBusiness schema with your complete NAP. Thin, keyword-stuffed location pages do not work anymore; real, useful local content does.',
+      'Step five is proximity and prominence. Proximity to the searcher still matters, but a strong profile with many reviews and solid citations can outrank a closer competitor with a weak presence. This is good news for Brampton businesses that are not downtown — you can win on prominence. Keep your profile active with weekly Google Posts and fresh photos; engagement signals increasingly separate the businesses that hold the top three spots from those that drift down.',
+      'Step six is local links. A link from the Brampton Board of Trade, a local news mention, a community sponsorship, or a relevant industry association all build the local authority Google uses to rank you. One genuinely local, relevant link is worth far more than dozens of generic directory submissions.',
+      'Realistically, expect Google Business Profile improvements within 4–8 weeks and meaningful Map Pack movement within 3–6 months. Brampton is competitive but many profiles are under-optimized — so a disciplined, consistent effort across these six steps reliably moves local businesses into the top three. If you want a shortcut, our Local SEO team does exactly this for Brampton businesses every day.',
+    ],
+  },
+  {
+    slug: 'google-business-profile-checklist-canada',
+    title: 'Google Business Profile Optimization Checklist for Canadian Businesses',
+    description:
+      'A complete, no-fluff Google Business Profile checklist for Canadian local businesses — every field, signal, and ongoing habit that drives local rankings.',
+    category: 'Local SEO',
+    date: '2026-05-20',
+    dateLabel: 'May 20, 2026',
+    readTime: '7 min read',
+    relatedService: { label: 'Google Business Profile Optimization', href: '/google-business-profile-optimization' },
+    relatedLocation: { label: 'Locations We Serve', href: '/locations' },
+    body: [
+      'Your Google Business Profile (GBP) is the most valuable free marketing asset a Canadian local business has. It determines whether you appear in the Map Pack, Google Maps, and the local results that drive calls and direction requests. This is the complete checklist we use when optimizing a profile — work through it top to bottom.',
+      'Business name: use your real-world business name exactly as it appears on your signage. Do not stuff keywords or city names into it — that violates Google guidelines and risks suspension. Categories: choose the most precise primary category that describes your core business, then add every relevant secondary category. Categories are one of the strongest relevance signals, so accuracy here matters enormously.',
+      'Contact and location: add a consistent NAP (Name, Address, Phone) that matches your website and directory listings character-for-character. If you serve customers at their location rather than yours, set a service area with the Canadian cities and regions you cover, and hide your address. Add a local phone number where possible and a UTM-tagged website link so you can measure GBP traffic in Google Analytics.',
+      'Hours and attributes: set accurate regular hours and special hours for Canadian statutory holidays. Complete every applicable attribute — "wheelchair accessible," "free Wi-Fi," "online appointments," "Indigenous-owned," and so on. These attributes appear to customers and feed Google additional context about your business.',
+      'Services and products: list your services with clear descriptions and pricing where appropriate. This both helps customers and gives Google keyword-rich content to match against searches. For product businesses, populate the product catalogue with photos and prices.',
+      'Photos and video: add a strong set of real photos — exterior, interior, team, work samples, and your logo. Then keep adding a few every month. Profiles with regularly updated photos earn more direction requests and clicks, and fresh media signals an active, operating business.',
+      'Reviews: this is where most Canadian businesses underperform. Build a repeatable system to request reviews after every positive interaction, aim for a steady cadence rather than bursts, and reply to every review within a couple of days — mentioning the service naturally. Review quantity, quality, velocity, and your responses are all ranking and trust signals.',
+      'Ongoing habits: publish a Google Post every week (an offer, an update, a link to a blog article), seed the Q&A section with the questions customers actually ask, and enable messaging so you can respond quickly. A profile that "looks alive" — recent posts, fresh photos, steady reviews, answered questions — consistently outranks a complete-but-dormant one. Set a recurring monthly reminder to review insights (calls, direction requests, searches) and keep every field current.',
+    ],
+  },
+  {
+    slug: 'ontario-google-ads-budget-2026',
+    title: 'How Much Should a Small Business in Ontario Spend on Google Ads in 2026?',
+    description:
+      'A practical 2026 guide to Google Ads budgets for Ontario small businesses — realistic minimums, cost-per-click benchmarks by industry, and how to work backwards from your cost per lead.',
+    category: 'Google Ads',
+    date: '2026-05-10',
+    dateLabel: 'May 10, 2026',
+    readTime: '7 min read',
+    relatedService: { label: 'Google Ads Management', href: '/google-ads-management' },
+    relatedLocation: { label: 'Google Ads Management in Toronto', href: '/google-ads-management-toronto' },
+    body: [
+      'The short answer: most Ontario small businesses should budget a minimum of $500–$1,500 per month in Google Ads spend to start, with competitive categories in the Greater Toronto Area often needing $1,500–$3,000+ to generate consistent leads. But the right number depends on your industry, your market, and your cost per lead — here is how to figure out yours for 2026.',
+      'Start with the realistic minimum. Below roughly $500/month in ad spend, your ads show inconsistently, data accumulates too slowly to optimize, and results tend to disappoint — leading many owners to wrongly conclude "Google Ads does not work." In reality the budget was simply too thin to compete. For most Ontario local services, $500/month is the floor, not the target.',
+      'Cost per click varies widely by industry in Ontario. Lower-competition local services might see $2–$6 per click, while competitive categories — legal, dental implants, HVAC, roofing — routinely run $15–$30+ per click in the GTA. At those rates, a $500 monthly budget in a competitive Toronto category might buy only 20–30 clicks, which is rarely enough to produce steady leads. Smaller Ontario markets like Barrie, Kingston, or London generally cost less per click than Toronto, Mississauga, or Vaughan.',
+      'The better way to set a budget is to work backwards from your economics. If a new customer is worth $2,000 in profit and you close 30% of leads, you can afford roughly $600 per lead and still profit. If your category averages $8 per click and your landing page converts at 10%, your cost per lead is about $80 — comfortably profitable, and a signal you can scale spend. Doing this math turns budgeting from guesswork into a decision.',
+      'Remember that management fees are separate from ad spend. Our Google Ads management starts from $199/month on top of what you spend on the ads themselves. Be cautious of agencies that charge a percentage of ad spend — it creates an incentive to push your budget up regardless of whether the extra spend is producing profitable leads.',
+      'Geography matters within Ontario. The GTA is the most expensive and competitive market in the province; the same campaign that needs $2,500/month to compete in Toronto might perform well on $800/month in a smaller Ontario city. If you serve a metro area, expect to invest more — but also expect higher demand volume to match.',
+      'Our recommendation for 2026: start with a focused budget aimed at your highest-value services, insist on full call and conversion tracking from day one, establish your true cost per lead over the first 30–60 days, then scale spend into exactly what is working. That disciplined approach beats a big unfocused budget every time — and it is how Ontario small businesses get a real return from Google Ads.',
+    ],
+  },
+  {
+    slug: 'dental-marketing-mississauga',
+    title: 'Dental Marketing in Mississauga: How Clinics Win New Patients in 2026',
+    description:
+      'How dental clinics in Mississauga attract new patients in 2026 — the mix of Google Business Profile, local SEO, and Google Ads that fills the schedule.',
+    category: 'Local SEO',
+    date: '2026-04-28',
+    dateLabel: 'April 28, 2026',
+    readTime: '6 min read',
+    relatedService: { label: 'Dental Marketing Agency', href: '/dental-marketing-agency' },
+    relatedLocation: { label: 'Digital Marketing in Mississauga', href: '/mississauga' },
+    body: [
+      'Dental is one of the most competitive local categories in Mississauga, and new-patient acquisition is where most clinics either thrive or quietly stagnate. The clinics winning new patients in 2026 are not necessarily the best dentists — they are the ones that show up first when a Mississauga resident searches "dentist near me," with strong reviews and an easy way to book. Here is the marketing mix that works.',
+      'The foundation is the Google Business Profile. For a Mississauga dental clinic, that means an exact "Dentist" primary category, relevant secondaries (cosmetic dentist, emergency dental service, teeth whitening service), complete services with descriptions, real photos of the practice and team, and accurate hours. This is what gets you into the Map Pack, where most new-patient searches convert.',
+      'Reviews decide who wins. Prospective patients compare clinics in seconds, and a profile with 150 reviews at 4.9 stars beats one with 20 reviews almost every time. Build a system to request a review after positive visits — a front-desk ask plus a follow-up text with a direct link works well — and reply to every review. Steady review velocity is one of the strongest local ranking signals there is.',
+      'Local SEO extends your reach across Mississauga. A substantive page targeting "dentist Mississauga," plus content for high-value services like Invisalign and dental implants and for neighbourhoods such as Port Credit, Streetsville, Erin Mills, and Meadowvale, helps you rank organically and in the Map Pack. Add LocalBusiness schema and consistent citations so Google trusts your data.',
+      'Google Ads fills the schedule faster. While local SEO builds, a focused new-patient Google Ads campaign captures high-intent searches — "emergency dentist Mississauga," "Invisalign Mississauga" — and routes them to a dedicated landing page with a clear new-patient offer and online booking. With call tracking in place, you know your true cost per booked new patient, not just per click.',
+      'Put together, this is exactly how a Mississauga clinic moves from page three of the Map Pack to the top: optimize the profile, build reviews relentlessly, add real local content, and run tightly targeted ads for the treatments that matter most. If you would rather have it handled, our dental marketing team does this for clinics across Mississauga and the GTA.',
+    ],
+  },
   {
     slug: 'optimize-google-business-profile',
     title: 'How To Optimize Your Google Business Profile For More Local Customers',
@@ -317,6 +403,15 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                 <Link href={post.relatedService.href} className="btn-primary text-sm px-5 py-2.5 inline-block">
                   Learn More →
                 </Link>
+                {post.relatedLocation && (
+                  <Link
+                    href={post.relatedLocation.href}
+                    className="text-sm font-semibold ml-4 inline-flex items-center gap-1"
+                    style={{ color: '#C8FF00' }}
+                  >
+                    {post.relatedLocation.label} →
+                  </Link>
+                )}
               </div>
             </article>
 

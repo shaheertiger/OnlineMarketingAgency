@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google'
 import './globals.css'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
+import OrganizationSchema from '@/components/OrganizationSchema'
 import { Analytics } from '@vercel/analytics/next'
 
 const inter = Inter({
@@ -123,10 +124,12 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         {/* SVG favicon fallback — PNG sizes served by app/icon.tsx and app/apple-icon.tsx */}
         <link rel="icon" href="/icon.svg" type="image/svg+xml" />
-        {/* Prevent iOS/Android from auto-detecting phone numbers (avoids CLS) */}
-        <meta name="format-detection" content="telephone=no, date=no, email=no, address=no" />
+        {/* Allow mobile phone-number detection so tap-to-call works from the
+            sitewide NAP. Dates/email/address detection stays off to avoid CLS. */}
+        <meta name="format-detection" content="telephone=yes, date=no, email=no, address=no" />
       </head>
       <body>
+        <OrganizationSchema />
         <Header />
         <main id="main-content" tabIndex={-1}>
           {children}

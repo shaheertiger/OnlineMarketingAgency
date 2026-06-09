@@ -34,7 +34,8 @@ const localBusinessSchema = {
   email: 'info@onlinemarketingagency.ca',
   areaServed: { '@type': 'City', name: 'Mississauga', containedInPlace: { '@type': 'Province', name: 'Ontario' } },
   priceRange: '$$',
-  aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.9', reviewCount: '47', bestRating: '5' },
+  // Rating is declared once on the sitewide organization entity (see lib/site.ts)
+  // to avoid conflicting review counts across per-city LocalBusiness nodes.
 }
 
 const faqSchema = {
@@ -113,6 +114,16 @@ We have worked with Mississauga businesses in healthcare, trades, food service, 
           },
         ]}
         nearbyAreas={['Port Credit', 'Streetsville', 'Erin Mills', 'Meadowvale', 'Malton', 'Toronto', 'Brampton', 'Oakville', 'Burlington', 'Milton']}
+        caseStudy={{
+          title: 'Smile Dental Clinic — Mississauga, ON',
+          role: 'Dr. Priya M., Practice Owner',
+          metric: '#1',
+          metricLabel: 'Map Rank',
+          quote:
+            "Our Google ranking jumped from page 3 to the #1 map position in just over 3 months. We're fully booked two weeks out now. The ROI is incredible for what we pay.",
+          detail:
+            'This Mississauga dental clinic ranked on page three of the local map pack and relied entirely on referrals. We optimized the Google Business Profile, built local citations and on-page content for Mississauga dental searches, and ran a new-patient Google Ads campaign. The clinic now holds the #1 map position for its core terms and books new patients two weeks out.',
+        }}
       />
     </>
   )

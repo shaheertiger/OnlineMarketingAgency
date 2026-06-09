@@ -34,7 +34,8 @@ const localBusinessSchema = {
   email: 'info@onlinemarketingagency.ca',
   areaServed: { '@type': 'City', name: 'Vaughan', containedInPlace: { '@type': 'Province', name: 'Ontario' } },
   priceRange: '$$',
-  aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.9', reviewCount: '47', bestRating: '5' },
+  // Rating is declared once on the sitewide organization entity (see lib/site.ts)
+  // to avoid conflicting review counts across per-city LocalBusiness nodes.
 }
 
 const faqSchema = {
@@ -113,6 +114,16 @@ We keep things simple: no lock-in contracts, no confusing reports, no offshore t
           },
         ]}
         nearbyAreas={['Woodbridge', 'Maple', 'Kleinburg', 'Concord', 'Vellore', 'Richmond Hill', 'King City', 'Brampton', 'Toronto (North York)', 'Caledon']}
+        caseStudy={{
+          title: 'Renovation Contractor — Woodbridge, Vaughan',
+          role: 'Home Improvement Contractor',
+          metric: '–38%',
+          metricLabel: 'Cost Per Lead',
+          quote:
+            'We finally have a steady stream of quote requests instead of waiting on referrals. The leads are local and ready to book — and we know exactly what each one costs.',
+          detail:
+            'This Vaughan renovation contractor depended entirely on word of mouth, with unpredictable months. We launched targeted Google Ads for Woodbridge and Maple, built a focused landing page for kitchen and basement renovations, and added call tracking. Quote requests became consistent and the tracked cost per lead fell 38% over the first two quarters.',
+        }}
       />
     </>
   )

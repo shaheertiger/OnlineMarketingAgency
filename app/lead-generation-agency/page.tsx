@@ -133,6 +133,29 @@ const bodyContent = (
       valuable over time — the opposite of a pure ads approach where costs only increase as competition
       grows and you get nothing if you pause.
     </p>
+
+    <h2 id="landing-pages" className="text-2xl font-black scroll-mt-24" style={{ color: '#0F0F12', letterSpacing: '-0.02em' }}>
+      High-Converting Landing Pages
+    </h2>
+    <p>
+      Sending paid traffic to a generic homepage is one of the most common — and most expensive —
+      mistakes local businesses make. A dedicated landing page that matches the exact service and city a
+      person searched for converts at a far higher rate. We design or rebuild landing pages with a single
+      clear offer, prominent click-to-call, trust signals, and a short lead form, then test headlines and
+      layouts to lift conversion rate over time. Better landing pages mean more leads from the same ad
+      spend.
+    </p>
+
+    <h2 id="conversion-tracking" className="text-2xl font-black scroll-mt-24" style={{ color: '#0F0F12', letterSpacing: '-0.02em' }}>
+      Conversion Tracking &amp; Attribution
+    </h2>
+    <p>
+      You cannot optimize what you cannot measure. We install call tracking on dedicated phone numbers,
+      form-submission events in Google Analytics 4, and conversion tracking in Google Ads so every lead is
+      tied back to the exact channel, campaign, keyword, and ad that produced it. That attribution data is
+      what lets us cut what is not working and scale what is — and it is what your monthly report is built
+      on, so you always know your true cost per lead by source.
+    </p>
   </div>
 )
 

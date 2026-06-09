@@ -20,15 +20,29 @@
 
 ## Industries served
 - [Barbershop Marketing](https://onlinemarketingagency.ca/barber-marketing-agency)
-- [Contractor Marketing](https://onlinemarketingagency.ca/contractor-marketing-agency)
+- [Dental Marketing](https://onlinemarketingagency.ca/dental-marketing-agency)
 - [Clinic Marketing](https://onlinemarketingagency.ca/clinic-marketing-agency)
+- [Contractor Marketing](https://onlinemarketingagency.ca/contractor-marketing-agency)
 - [Restaurant Marketing](https://onlinemarketingagency.ca/restaurant-marketing-agency)
+- [Law Firm Marketing](https://onlinemarketingagency.ca/law-firm-marketing-agency)
+- [Real Estate Marketing](https://onlinemarketingagency.ca/real-estate-marketing-agency)
+- [Auto Shop Marketing](https://onlinemarketingagency.ca/auto-shop-marketing-agency)
 
 ## Locations served
+- [All Locations (GTA)](https://onlinemarketingagency.ca/locations)
 - [Toronto](https://onlinemarketingagency.ca/toronto)
 - [Mississauga](https://onlinemarketingagency.ca/mississauga)
 - [Brampton](https://onlinemarketingagency.ca/brampton)
 - [Vaughan](https://onlinemarketingagency.ca/vaughan)
+- [Local SEO Brampton](https://onlinemarketingagency.ca/local-seo-brampton)
+- [Local SEO Mississauga](https://onlinemarketingagency.ca/local-seo-mississauga)
+- [Google Ads Management Toronto](https://onlinemarketingagency.ca/google-ads-management-toronto)
+
+## Case studies
+- [Case Studies](https://onlinemarketingagency.ca/case-studies): Real results for local businesses across the GTA.
+- [Brampton Barbershop — +500% new clients](https://onlinemarketingagency.ca/case-studies/prestige-barbershop-brampton)
+- [Mississauga Dental Clinic — #1 map rank](https://onlinemarketingagency.ca/case-studies/smile-dental-mississauga)
+- [Toronto HVAC — 4.8× ROAS](https://onlinemarketingagency.ca/case-studies/comfortair-hvac-toronto)
 
 ## Company
 - [About](https://onlinemarketingagency.ca/about): Who we are and how we work.

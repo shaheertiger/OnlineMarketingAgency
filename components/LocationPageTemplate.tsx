@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import FAQSection, { FAQItem } from '@/components/FAQSection'
 import CTASection from '@/components/CTASection'
+import Breadcrumb from '@/components/Breadcrumb'
 
 const allServices = [
   { label: 'Google Ads Management', href: '/google-ads-management', desc: 'High-intent search campaigns that generate calls within days.' },
@@ -28,6 +29,18 @@ export interface LocationFAQ {
   answer: string
 }
 
+export interface LocationCaseStudy {
+  /** e.g. "Smile Dental Clinic — Mississauga, ON" */
+  title: string
+  quote: string
+  /** attribution line, e.g. "Dr. Priya M., Practice Owner" */
+  role: string
+  metric: string
+  metricLabel: string
+  /** 2–3 sentences of added local detail */
+  detail: string
+}
+
 export interface LocationPageTemplateProps {
   city: string
   province: string
@@ -42,6 +55,7 @@ export interface LocationPageTemplateProps {
   industries: string[]
   faqs: FAQItem[]
   nearbyAreas?: string[]
+  caseStudy?: LocationCaseStudy
 }
 
 export default function LocationPageTemplate({
@@ -58,9 +72,20 @@ export default function LocationPageTemplate({
   industries,
   faqs,
   nearbyAreas = [],
+  caseStudy,
 }: LocationPageTemplateProps) {
   return (
     <>
+      {/* ── Breadcrumb (Home → Locations → City) ──────────────────────────────────── */}
+      <div style={{ background: '#0F0F12' }}>
+        <Breadcrumb
+          items={[
+            { label: 'Locations', href: '/locations' },
+            { label: city },
+          ]}
+        />
+      </div>
+
       {/* ── Hero ────────────────────────────────────────────────────────────────── */}
       <section
         className="relative overflow-hidden section-pad"
@@ -215,7 +240,7 @@ export default function LocationPageTemplate({
                 style={{ background: '#F7F6F2', border: '1px solid rgba(0,0,0,0.06)' }}
               >
                 <div className="flex items-start justify-between mb-3">
-                  <h3 className="text-base font-bold" style={{ color: '#0F0F12' }}>{svc.label}</h3>
+                  <h3 className="text-base font-bold" style={{ color: '#0F0F12' }}>{svc.label} in {city}</h3>
                   <svg className="w-4 h-4 shrink-0 mt-0.5 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="#C8FF00" strokeWidth={2.5}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
                   </svg>
@@ -276,6 +301,61 @@ export default function LocationPageTemplate({
                   {area}
                 </span>
               ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* ── Local Case Study ──────────────────────────────────────────────────────── */}
+      {caseStudy && (
+        <section className="section-pad" style={{ background: 'white' }} aria-labelledby="case-study-heading">
+          <div className="container-main">
+            <div className="max-w-4xl mx-auto">
+              <div className="text-center mb-10">
+                <p className="section-label mb-4">Local Proof</p>
+                <h2
+                  id="case-study-heading"
+                  className="text-3xl font-black leading-[1.06]"
+                  style={{ color: '#0F0F12', letterSpacing: '-0.025em' }}
+                >
+                  Results for a {city}-Area Business
+                </h2>
+              </div>
+              <div
+                className="rounded-2xl p-8 sm:p-10"
+                style={{ background: '#0F0F12' }}
+              >
+                <div className="flex flex-wrap items-center justify-between gap-4 mb-6">
+                  <div>
+                    <p className="text-sm font-bold" style={{ color: '#C8FF00' }}>{caseStudy.title}</p>
+                    <p className="text-xs mt-1" style={{ color: 'rgba(255,255,255,0.4)' }}>
+                      {caseStudy.role}
+                    </p>
+                  </div>
+                  <div className="text-right">
+                    <div className="text-3xl font-black leading-none" style={{ color: '#C8FF00', letterSpacing: '-0.03em' }}>
+                      {caseStudy.metric}
+                    </div>
+                    <div className="text-[10px] font-semibold tracking-wider mt-1" style={{ color: 'rgba(255,255,255,0.35)' }}>
+                      {caseStudy.metricLabel.toUpperCase()}
+                    </div>
+                  </div>
+                </div>
+                <blockquote className="text-lg leading-relaxed mb-5" style={{ color: 'rgba(255,255,255,0.8)' }}>
+                  &ldquo;{caseStudy.quote}&rdquo;
+                </blockquote>
+                <p className="text-sm leading-relaxed mb-6" style={{ color: 'rgba(255,255,255,0.5)' }}>
+                  {caseStudy.detail}
+                </p>
+                <div className="flex flex-wrap items-center gap-4">
+                  <Link href="/case-studies" className="btn-primary text-sm px-6 py-3">
+                    See More Case Studies
+                  </Link>
+                  <span className="text-xs" style={{ color: 'rgba(255,255,255,0.35)' }}>
+                    Representative example. Results vary by market and budget.
+                  </span>
+                </div>
+              </div>
             </div>
           </div>
         </section>

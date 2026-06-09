@@ -17,6 +17,46 @@ export const metadata: Metadata = {
 
 const posts = [
   {
+    title: 'How to Rank in the Google Map Pack in Brampton: A Step-by-Step Guide',
+    excerpt:
+      'A practical, step-by-step guide to getting your Brampton business into the Google Map Pack — the three local results that capture most "near me" calls.',
+    category: 'Local SEO',
+    date: '2026-06-01',
+    dateLabel: 'June 2026',
+    slug: 'rank-google-map-pack-brampton',
+    readTime: '8 min read',
+  },
+  {
+    title: 'Google Business Profile Optimization Checklist for Canadian Businesses',
+    excerpt:
+      'A complete, no-fluff Google Business Profile checklist for Canadian local businesses — every field, signal, and ongoing habit that drives local rankings.',
+    category: 'Local SEO',
+    date: '2026-05-20',
+    dateLabel: 'May 2026',
+    slug: 'google-business-profile-checklist-canada',
+    readTime: '7 min read',
+  },
+  {
+    title: 'How Much Should a Small Business in Ontario Spend on Google Ads in 2026?',
+    excerpt:
+      'A practical 2026 guide to Google Ads budgets for Ontario small businesses — realistic minimums, cost-per-click benchmarks, and how to work backwards from your cost per lead.',
+    category: 'Google Ads',
+    date: '2026-05-10',
+    dateLabel: 'May 2026',
+    slug: 'ontario-google-ads-budget-2026',
+    readTime: '7 min read',
+  },
+  {
+    title: 'Dental Marketing in Mississauga: How Clinics Win New Patients in 2026',
+    excerpt:
+      'How dental clinics in Mississauga attract new patients in 2026 — the mix of Google Business Profile, local SEO, and Google Ads that fills the schedule.',
+    category: 'Local SEO',
+    date: '2026-04-28',
+    dateLabel: 'April 2026',
+    slug: 'dental-marketing-mississauga',
+    readTime: '6 min read',
+  },
+  {
     title: 'How To Optimize Your Google Business Profile For More Local Customers',
     excerpt:
       'Your Google Business Profile is one of the most powerful free tools for local businesses. Here is how to optimize it to rank higher in Google Maps and get more calls.',

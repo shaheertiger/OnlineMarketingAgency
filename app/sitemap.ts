@@ -92,6 +92,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
 
+    // Locations hub
+    {
+      url: `${baseUrl}/locations`,
+      lastModified: LAST_UPDATED,
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+
     // City / location pages
     {
       url: `${baseUrl}/toronto`,
@@ -118,6 +126,26 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
 
+    // Service × City (high-intent combo) pages
+    {
+      url: `${baseUrl}/local-seo-brampton`,
+      lastModified: LAST_UPDATED,
+      changeFrequency: 'monthly',
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/google-ads-management-toronto`,
+      lastModified: LAST_UPDATED,
+      changeFrequency: 'monthly',
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/local-seo-mississauga`,
+      lastModified: LAST_UPDATED,
+      changeFrequency: 'monthly',
+      priority: 0.85,
+    },
+
     // Industry pages
     {
       url: `${baseUrl}/barber-marketing-agency`,
@@ -142,6 +170,56 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: LAST_UPDATED,
       changeFrequency: 'monthly',
       priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/dental-marketing-agency`,
+      lastModified: LAST_UPDATED,
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/law-firm-marketing-agency`,
+      lastModified: LAST_UPDATED,
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/real-estate-marketing-agency`,
+      lastModified: LAST_UPDATED,
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/auto-shop-marketing-agency`,
+      lastModified: LAST_UPDATED,
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+
+    // Case studies
+    {
+      url: `${baseUrl}/case-studies`,
+      lastModified: LAST_UPDATED,
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/case-studies/prestige-barbershop-brampton`,
+      lastModified: LAST_UPDATED,
+      changeFrequency: 'yearly',
+      priority: 0.6,
+    },
+    {
+      url: `${baseUrl}/case-studies/smile-dental-mississauga`,
+      lastModified: LAST_UPDATED,
+      changeFrequency: 'yearly',
+      priority: 0.6,
+    },
+    {
+      url: `${baseUrl}/case-studies/comfortair-hvac-toronto`,
+      lastModified: LAST_UPDATED,
+      changeFrequency: 'yearly',
+      priority: 0.6,
     },
 
     // Company pages
@@ -171,6 +249,30 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
 
     // Blog posts
+    {
+      url: `${baseUrl}/blog/rank-google-map-pack-brampton`,
+      lastModified: new Date('2026-06-01'),
+      changeFrequency: 'monthly',
+      priority: 0.6,
+    },
+    {
+      url: `${baseUrl}/blog/google-business-profile-checklist-canada`,
+      lastModified: new Date('2026-05-20'),
+      changeFrequency: 'monthly',
+      priority: 0.6,
+    },
+    {
+      url: `${baseUrl}/blog/ontario-google-ads-budget-2026`,
+      lastModified: new Date('2026-05-10'),
+      changeFrequency: 'monthly',
+      priority: 0.6,
+    },
+    {
+      url: `${baseUrl}/blog/dental-marketing-mississauga`,
+      lastModified: new Date('2026-04-28'),
+      changeFrequency: 'monthly',
+      priority: 0.6,
+    },
     {
       url: `${baseUrl}/blog/optimize-google-business-profile`,
       lastModified: new Date('2026-05-01'),

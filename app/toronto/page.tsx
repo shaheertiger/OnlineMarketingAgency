@@ -34,7 +34,8 @@ const localBusinessSchema = {
   email: 'info@onlinemarketingagency.ca',
   areaServed: { '@type': 'City', name: 'Toronto', containedInPlace: { '@type': 'Province', name: 'Ontario' } },
   priceRange: '$$',
-  aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.9', reviewCount: '47', bestRating: '5' },
+  // Rating is declared once on the sitewide organization entity (see lib/site.ts)
+  // to avoid conflicting review counts across per-city LocalBusiness nodes.
 }
 
 const faqSchema = {
@@ -114,6 +115,16 @@ We have helped Toronto-area businesses in trades, healthcare, legal, food servic
           },
         ]}
         nearbyAreas={['North York', 'Scarborough', 'Etobicoke', 'East York', 'Mississauga', 'Brampton', 'Vaughan', 'Markham', 'Richmond Hill', 'Ajax']}
+        caseStudy={{
+          title: 'ComfortAir HVAC — Toronto, ON',
+          role: 'James T., Owner',
+          metric: '4.8×',
+          metricLabel: 'Avg. ROAS',
+          quote:
+            'Best ROI we have ever seen from a marketing agency. Every dollar we put into Google Ads comes back 5x. They track real calls and bookings, not just clicks.',
+          detail:
+            'This Toronto HVAC company was spending on Google Ads with no call tracking and an unclear cost per lead. We restructured the campaigns around high-intent Toronto neighbourhood searches, added full call and conversion tracking, and trimmed wasted spend with negative keywords. The result was a 4.8× average return on ad spend measured on real booked jobs.',
+        }}
       />
     </>
   )
